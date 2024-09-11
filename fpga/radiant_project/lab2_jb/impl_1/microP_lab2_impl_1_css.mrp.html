@@ -1,8 +1,8 @@
 <HTML>
 <HEAD>
 <TITLE>Map Report</TITLE>
-<link href="file:///C:/Lattice Radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="file:///C:/Lattice Radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<link href="file:///C:/lscc/radiant/2024.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/2024.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
 <style type="text/css">
 #toc {
   position: fixed;
@@ -49,32 +49,33 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Tue Sep 10 23:58:12 2024
+Mapped on: Wed Sep 11 11:34:40 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
-Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radian
-     t_project/lab2_jb/source/impl_1/impl_1.pdc -i microP_lab2_impl_1_syn.udb -o
+Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
+     ct/lab2_jb/source/impl_1/impl_1.pdc -i microP_lab2_impl_1_syn.udb -o
      microP_lab2_impl_1_map.udb -mp microP_lab2_impl_1.mrp -hierrpt -gui -msgset
-      C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/p
-     romote.xml
+      C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.
+     xml
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers:   6 out of  5280 (&lt;1%)
+   Number of slice registers:  26 out of  5280 (&lt;1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            32 out of  5280 (1%)
+   Number of LUT4s:            51 out of  5280 (1%)
       Number of logic LUT4s:              24
-      Number of ripple logic:              4 (8 LUT4s)
-   Number of IO sites used:   22 out of 39 (56%)
-      Number of IO sites used for general PIO: 22
+      Number of inserted feedthru LUT4s:   1
+      Number of ripple logic:             13 (26 LUT4s)
+   Number of IO sites used:   24 out of 39 (62%)
+      Number of IO sites used for general PIO: 24
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 22 out of 36 (61%)
+      Number of IO sites used for PIO+I3C: 24 out of 36 (67%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 22 out of 39 (56%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 24 out of 39 (62%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -88,12 +89,14 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radian
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 4 loads, 4 rising, 0 falling (Driver: Port clk)
+      Net clk_c: 15 loads, 15 rising, 0 falling (Driver: Port clk)
    Number of Clock Enables:  0
    Number of LSRs:  1
-      Net n182: 4 loads, 4 SLICEs
+      Pin reset: 15 loads, 15 SLICEs (Net: reset_c)
    Top 10 highest fanout non-clock nets:
-      Net MOD1.state[5]: 8 loads
+      Net reset_c: 15 loads
+      Net select_c_0: 8 loads
+      Net select_c_1: 8 loads
       Net left_c_0: 7 loads
       Net left_c_1: 7 loads
       Net left_c_2: 7 loads
@@ -101,8 +104,6 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radian
       Net right_c_0: 7 loads
       Net right_c_1: 7 loads
       Net right_c_2: 7 loads
-      Net right_c_3: 7 loads
-      Net n182: 4 loads
 
    Number of warnings:  4
    Number of criticals: 0
@@ -110,12 +111,12 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radian
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Criticals/Warnings</big></U></B>
 
-WARNING &lt;1026001&gt; - map: C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radian
-     t_project/lab2_jb/source/impl_1/impl_1.pdc (14) : No port matched &apos;bin[5]&apos;.
+WARNING &lt;1026001&gt; - map: C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
+     ct/lab2_jb/source/impl_1/impl_1.pdc (14) : No port matched &apos;bin[5]&apos;.
 WARNING &lt;1027013&gt; - map: No port matched &apos;bin[5]&apos;.
-WARNING &lt;1026001&gt; - map: C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radian
-     t_project/lab2_jb/source/impl_1/impl_1.pdc (14) : Can&apos;t resolve object
-     &apos;bin[5]&apos; in constraint &apos;ldc_set_location -site {38} [get_ports {bin[5]}]&apos;.
+WARNING &lt;1026001&gt; - map: C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
+     ct/lab2_jb/source/impl_1/impl_1.pdc (14) : Can&apos;t resolve object &apos;bin[5]&apos; in
+     constraint &apos;ldc_set_location -site {38} [get_ports {bin[5]}]&apos;.
 WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {38}
      [get_ports {bin[5]}]&apos;.
 
@@ -144,6 +145,10 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | clk                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select[0]           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select[1]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -178,7 +183,7 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
-   Total number of constraints: 22
+   Total number of constraints: 24
    Total number of constraints dropped: 1
    Dropped constraint is:
      ldc_set_location -site {38} [get_ports {bin[5]}]
@@ -188,7 +193,7 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 64 MB
-Checksum -- map: 2955f13c1f53382545575244e9830481e15b2a4c
+Checksum -- map: 9025f3b39d1f1fc99fc886ed51dc27816dddd6f7
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

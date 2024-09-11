@@ -1,23 +1,23 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  6 of 5280 (0.114%)
-I/O cells:      22
+Register bits:  26 of 5280 (0.492%)
+I/O cells:      24
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2         4          100.0
-                            FD1P3XZ         6          100.0
+                               CCU2        13          100.0
+                            FD1P3XZ        26          100.0
                                  IB        10          100.0
                                LUT4        22          100.0
-                                 OB        12          100.0
+                                 OB        14          100.0
 SUB MODULES
                   seven_seg_decoder         1
-                              TOTAL        55
+                              TOTAL        86
 ----------------------------------------------------------------------
 Report for cell seven_seg_decoder.v1
 Instance Path : MOD1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         4          100.0
-                            FD1P3XZ         6          100.0
-                               LUT4        21           95.5
-                              TOTAL        31
+                                FA2        13          100.0
+                            FD1P3XZ        26          100.0
+                               LUT4        22          100.0
+                              TOTAL        61

@@ -8,10 +8,11 @@ module top (
 	input logic [3:0] left,
 	input logic [3:0] right,
 	output logic [6:0] seg,
-	output logic [4:0] led
+	output logic [4:0] led,
+	output logic [1:0] select
 	);
 
-	seven_seg_decoder MOD1 (clk, reset, left, right, seg);
+	seven_seg_decoder MOD1 (clk, reset, left, right, seg, select);
 
 	binary_disp_decoder MOD2 (reset, left, right, led);
 
@@ -24,65 +25,85 @@ module seven_seg_decoder (
 	input logic reset,
 	input logic [3:0] left,
 	input logic [3:0] right,
-	output logic [6:0] seg
+	output logic [6:0] seg,
+	output logic [1:0] select
 	);
 
 	//initializing variables
 	logic [23:0] state;
 
+
 	// adding 1 to the value of the state to oscillate based on clk
-	always_ff @(posedge clk) begin
-		if (reset == 0)
-			state <= 24'b0;
-		else
-			state <= state + 1;
-	end
+	//always_ff @(posedge clk) begin
+		//if (reset)
+			//state <= 24'b0;
+		//else
+			//state <= state + 1;
+	//end
+always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+        state <= 24'b0;
+        select <= 2'b00; // Reset select to 00
+    end else begin
+        state <= state + 1;
+
+        // Update select based on the MSB of state
+		if (state[23]) begin
+            select <= 2'b10; // Select left input
+        end else begin
+            select <= 2'b01; // Select right input
+        end
+    end
+end
+
 
  //combinational logic to assign bits to the displays
-	always_comb begin
-		if (state[5] == 0)
-			case(left)
-				4'h0: seg = 7'b0000001;
-				4'h1: seg = 7'b1001111;
-				4'h2: seg = 7'b0010010;
-				4'h3: seg = 7'b0000110;
-				4'h4: seg = 7'b1001100;
-				4'h5: seg = 7'b0100100;
-				4'h6: seg = 7'b0100000;
-				4'h7: seg = 7'b0001111;
-				4'h8: seg = 7'b0000000;
-				4'h9: seg = 7'b0001100;
-				4'hA: seg = 7'b0001000;
-				4'hB: seg = 7'b1100000;
-				4'hC: seg = 7'b0110001;
-				4'hD: seg = 7'b1000010;
-				4'hE: seg = 7'b0110000;
-				4'hF: seg = 7'b0111000;
-				default: seg = 7'b1111111;
-			endcase
+ always_comb begin
+        case (select)
+            2'b10: // Use left input
+                case(left)
+                    4'b0000: seg = 7'b0000001;
+                    4'b0001: seg = 7'b1001111;
+                    4'b0010: seg = 7'b0010010;
+                    4'b0011: seg = 7'b0000110;
+                    4'b0100: seg = 7'b1001100;
+                    4'b0101: seg = 7'b0100100;
+                    4'b0110: seg = 7'b0100000;
+                    4'b0111: seg = 7'b0001111;
+                    4'b1000: seg = 7'b0000000;
+                    4'b1001: seg = 7'b0001100;
+                    4'b1010: seg = 7'b0001000;
+                    4'b1011: seg = 7'b1100000;
+                    4'b1100: seg = 7'b0110001;
+                    4'b1101: seg = 7'b1000010;
+                    4'b1110: seg = 7'b0110000;
+                    4'b1111: seg = 7'b0111000;
+                    default: seg = 7'b1111111;
+                endcase
+            2'b01: // Use right input
+                case(right)
+                    4'b0000: seg = 7'b0000001;
+                    4'b0001: seg = 7'b1001111;
+                    4'b0010: seg = 7'b0010010;
+                    4'b0011: seg = 7'b0000110;
+                    4'b0100: seg = 7'b1001100;
+                    4'b0101: seg = 7'b0100100;
+                    4'b0110: seg = 7'b0100000;
+                    4'b0111: seg = 7'b0001111;
+                    4'b1000: seg = 7'b0000000;
+                    4'b1001: seg = 7'b0001100;
+                    4'b1010: seg = 7'b0001000;
+                    4'b1011: seg = 7'b1100000;
+                    4'b1100: seg = 7'b0110001;
+                    4'b1101: seg = 7'b1000010;
+                    4'b1110: seg = 7'b0110000;
+                    4'b1111: seg = 7'b0111000;
+                    default: seg = 7'b1111111;
+                endcase
+			default: seg = 7'b1111111;
+        endcase
+    end
 
-		else
-			case(right)
-				4'h0: seg = 7'b0000001;
-				4'h1: seg = 7'b1001111;
-				4'h2: seg = 7'b0010010;
-				4'h3: seg = 7'b0000110;
-				4'h4: seg = 7'b1001100;
-				4'h5: seg = 7'b0100100;
-				4'h6: seg = 7'b0100000;
-				4'h7: seg = 7'b0001111;
-				4'h8: seg = 7'b0000000;
-				4'h9: seg = 7'b0001100;
-				4'hA: seg = 7'b0001000;
-				4'hB: seg = 7'b1100000;
-				4'hC: seg = 7'b0110001;
-				4'hD: seg = 7'b1000010;
-				4'hE: seg = 7'b0110000;
-				4'hF: seg = 7'b0111000;
-				default: seg = 7'b1111111;
-			endcase
-
-	end
 
 
 endmodule
