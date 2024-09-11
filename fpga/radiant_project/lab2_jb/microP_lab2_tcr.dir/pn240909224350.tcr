@@ -1,0 +1,7 @@
+#Start recording tcl command: 9/9/2024 16:51:09
+#Project Location: C:/Users/spenc/OneDrive/Desktop/microP_lab2; Project name: microP_lab2
+prj_create -name "microP_lab2" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_add_source "C:/Users/spenc/OneDrive/Desktop/microP_lab2/source/impl_1/impl_1.sdc" "C:/Users/spenc/OneDrive/Desktop/microP_lab2/source/impl_1/impl_1.pdc"
+prj_save 
+prj_add_source "C:/Users/spenc/OneDrive/Desktop/microP_lab2/source/impl_1/verilog_lab2.sv"
+#Stop recording: 9/9/2024 22:43:50

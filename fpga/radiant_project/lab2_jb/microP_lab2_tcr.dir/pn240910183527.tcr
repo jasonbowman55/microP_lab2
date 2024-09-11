@@ -1,0 +1,10 @@
+#Start recording tcl command: 9/10/2024 18:26:16
+#Project Location: C:/Users/spenc/OneDrive/Desktop/microP_lab2; Project name: microP_lab2
+prj_open "C:/Users/spenc/OneDrive/Desktop/microP_lab2/microP_lab2.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 9/10/2024 18:35:27
