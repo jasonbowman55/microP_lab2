@@ -3,20 +3,30 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         51        100.0
-                               LUTGATE	         25        100.0
+                                 IOLGC	       5.00        100.0
+                                  LUT4	         50        100.0
+                               LUTGATE	         24        100.0
                                 LUTCCU	         26        100.0
+                                 IOREG	          5        100.0
                                  IOBUF	         24        100.0
                                 PFUREG	         26        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                     seven_seg_decoder	          1        94.1
+                   binary_disp_decoder	          1         0.0
+                     seven_seg_decoder	          1        96.0
 ---------------------------------------------------
 Report for cell seven_seg_decoder
    Instance path: top/MOD1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         48        94.1
-                               LUTGATE	         22        88.0
+                                  LUT4	         48        96.0
+                               LUTGATE	         22        91.7
                                 LUTCCU	         26        100.0
                                 PFUREG	         26        100.0
+---------------------------------------------------
+Report for cell binary_disp_decoder
+   Instance path: top/MOD2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       4.00        80.0
+                                 IOREG	          4        80.0

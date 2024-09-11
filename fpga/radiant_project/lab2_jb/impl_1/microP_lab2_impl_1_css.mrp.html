@@ -1,8 +1,8 @@
 <HTML>
 <HEAD>
 <TITLE>Map Report</TITLE>
-<link href="file:///C:/lscc/radiant/2024.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="file:///C:/lscc/radiant/2024.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<link href="file:///C:/Lattice Radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/Lattice Radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
 <style type="text/css">
 #toc {
   position: fixed;
@@ -49,22 +49,22 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Sep 11 11:34:40 2024
+Mapped on: Wed Sep 11 14:37:58 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
-Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
-     ct/lab2_jb/source/impl_1/impl_1.pdc -i microP_lab2_impl_1_syn.udb -o
-     microP_lab2_impl_1_map.udb -mp microP_lab2_impl_1.mrp -hierrpt -gui -msgset
-      C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.
-     xml
+Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
+     a/radiant_project/lab2_jb/source/impl_1/impl_1.pdc -i
+     microP_lab2_impl_1_syn.udb -o microP_lab2_impl_1_map.udb -mp
+     microP_lab2_impl_1.mrp -hierrpt -gui -msgset C:/Users/spenc/OneDrive/Deskto
+     p/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
    Number of slice registers:  26 out of  5280 (&lt;1%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            51 out of  5280 (1%)
-      Number of logic LUT4s:              24
+   Number of I/O registers:      5 out of   117 (4%)
+   Number of LUT4s:            50 out of  5280 (1%)
+      Number of logic LUT4s:              23
       Number of inserted feedthru LUT4s:   1
       Number of ripple logic:             13 (26 LUT4s)
    Number of IO sites used:   24 out of 39 (62%)
@@ -89,36 +89,29 @@ Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 15 loads, 15 rising, 0 falling (Driver: Port clk)
+      Net clk_c: 20 loads, 20 rising, 0 falling (Driver: Port clk)
    Number of Clock Enables:  0
    Number of LSRs:  1
       Pin reset: 15 loads, 15 SLICEs (Net: reset_c)
    Top 10 highest fanout non-clock nets:
       Net reset_c: 15 loads
+      Net right_c_2: 9 loads
+      Net left_c_1: 8 loads
+      Net right_c_1: 8 loads
+      Net right_c_3: 8 loads
       Net select_c_0: 8 loads
       Net select_c_1: 8 loads
       Net left_c_0: 7 loads
-      Net left_c_1: 7 loads
       Net left_c_2: 7 loads
       Net left_c_3: 7 loads
-      Net right_c_0: 7 loads
-      Net right_c_1: 7 loads
-      Net right_c_2: 7 loads
 
-   Number of warnings:  4
+   Number of warnings:  0
    Number of criticals: 0
    Number of errors:    0
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Criticals/Warnings</big></U></B>
 
-WARNING &lt;1026001&gt; - map: C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
-     ct/lab2_jb/source/impl_1/impl_1.pdc (14) : No port matched &apos;bin[5]&apos;.
-WARNING &lt;1027013&gt; - map: No port matched &apos;bin[5]&apos;.
-WARNING &lt;1026001&gt; - map: C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
-     ct/lab2_jb/source/impl_1/impl_1.pdc (14) : Can&apos;t resolve object &apos;bin[5]&apos; in
-     constraint &apos;ldc_set_location -site {38} [get_ports {bin[5]}]&apos;.
-WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {38}
-     [get_ports {bin[5]}]&apos;.
+   No error, critical, or warning presents.
 
 <A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
 
@@ -150,15 +143,15 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 +---------------------+-----------+-----------+-------+-------+-----------+
 | select[1]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[0]              | OUTPUT    |           |       |       |           |
+| led[0]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[1]              | OUTPUT    |           |       |       |           |
+| led[1]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[2]              | OUTPUT    |           |       |       |           |
+| led[2]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[3]              | OUTPUT    |           |       |       |           |
+| led[3]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[4]              | OUTPUT    |           |       |       |           |
+| led[4]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | seg[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -177,23 +170,30 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
+Block right_pad[0].vlo_inst was optimized away.
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
+Instance Name: MOD2/led_i2
+         Type: IOLOGIC
+Instance Name: MOD2/led_i4
+         Type: IOLOGIC
+Instance Name: MOD2/led_i3
+         Type: IOLOGIC
+Instance Name: MOD2/led_i1
+         Type: IOLOGIC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
-   Total number of constraints: 24
-   Total number of constraints dropped: 1
-   Dropped constraint is:
-     ldc_set_location -site {38} [get_ports {bin[5]}]
+   Total number of constraints: 23
+   Total number of constraints dropped: 0
 
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 64 MB
-Checksum -- map: 9025f3b39d1f1fc99fc886ed51dc27816dddd6f7
+   Peak Memory Usage: 65 MB
+Checksum -- map: c0c625ecea5a86d08d9e28a08babbef16c71f53d
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

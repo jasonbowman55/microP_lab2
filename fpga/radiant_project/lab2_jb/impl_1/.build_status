@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1726079696">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1726079696"/>
+        <Milestone name="Export" build_result="2" build_time="1726090692">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1726090692"/>
             <Task name="IBIS" build_result="0" update_result="2" update_time="1725925869"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1725925869"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1726079681">
-            <Task name="Map" build_result="2" update_result="0" update_time="1726079681"/>
+        <Milestone name="Map" build_result="2" build_time="1726090678">
+            <Task name="Map" build_result="2" update_result="0" update_time="1726090678"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1725925869"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1726079688">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1726079688"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1726079688"/>
+        <Milestone name="PAR" build_result="2" build_time="1726090687">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1726090687"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1726090688"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="1725925869"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1726079638">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1726079638"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1726079657"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1726090673">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1726090673"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1726090692"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1725925892"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1725925892"/>
         </Milestone>
-        <Report name="microP_lab2_impl_1.bgn" last_build_time="1726079696" last_build_size="1244"/>
-        <Report name="microP_lab2_impl_1.bin" last_build_time="1726079696" last_build_size="104156"/>
+        <Report name="microP_lab2_impl_1.bgn" last_build_time="1726090692" last_build_size="1246"/>
+        <Report name="microP_lab2_impl_1.bin" last_build_time="1726090692" last_build_size="104156"/>
         <Report name="microP_lab2_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="microP_lab2_impl_1.twr.html" last_build_time="1726079688" last_build_size="12674"/>
-        <Report name="microP_lab2_impl_1.udb" last_build_time="1726079688" last_build_size="11334"/>
-        <Report name="microP_lab2_impl_1_map.udb" last_build_time="1726079680" last_build_size="7879"/>
-        <Report name="microP_lab2_impl_1_rtl.udb" last_build_time="1726079638" last_build_size="3946"/>
-        <Report name="microP_lab2_impl_1_syn.udb" last_build_time="1726079638" last_build_size="4859"/>
+        <Report name="microP_lab2_impl_1.twr.html" last_build_time="1726090688" last_build_size="12689"/>
+        <Report name="microP_lab2_impl_1.udb" last_build_time="1726090687" last_build_size="12083"/>
+        <Report name="microP_lab2_impl_1_map.udb" last_build_time="1726090678" last_build_size="8286"/>
+        <Report name="microP_lab2_impl_1_rtl.udb" last_build_time="1726090673" last_build_size="3935"/>
+        <Report name="microP_lab2_impl_1_syn.udb" last_build_time="1726090673" last_build_size="5293"/>
     </Strategy>
 </BuildStatus>
+                        

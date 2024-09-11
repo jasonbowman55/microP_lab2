@@ -14,7 +14,7 @@ module top (
 
 	seven_seg_decoder MOD1 (clk, reset, left, right, seg, select);
 
-	binary_disp_decoder MOD2 (reset, left, right, led);
+	binary_disp_decoder MOD2 (clk, reset, left, right, led);
 
 endmodule
 
@@ -45,7 +45,7 @@ always_ff @(posedge clk or posedge reset) begin
         state <= 24'b0;
         select <= 2'b00; // Reset select to 00
     end else begin
-        state <= state + 1;
+        state <= state + 1'b1;
 
         // Update select based on the MSB of state
 		if (state[23]) begin
@@ -78,7 +78,7 @@ end
                     4'b1101: seg = 7'b1000010;
                     4'b1110: seg = 7'b0110000;
                     4'b1111: seg = 7'b0111000;
-                    default: seg = 7'b1111111;
+                    default: seg = 7'b1111110;
                 endcase
             2'b01: // Use right input
                 case(right)
@@ -98,7 +98,7 @@ end
                     4'b1101: seg = 7'b1000010;
                     4'b1110: seg = 7'b0110000;
                     4'b1111: seg = 7'b0111000;
-                    default: seg = 7'b1111111;
+                    default: seg = 7'b1111110;
                 endcase
 			default: seg = 7'b1111111;
         endcase
@@ -120,6 +120,9 @@ module binary_disp_decoder(
 	always_ff @(posedge clk) begin
 		led[0] = left[1];
 		led[1] = right[1];
+		led[2] = right[2];
+		led[3] = right[2];
+		led[4] = right[3];
 	end
 	
 endmodule

@@ -1,5 +1,5 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2024.1.0.34.2
-Wed Sep 11 11:34:36 2024
+Wed Sep 11 14:13:44 2024
 
 WARNING <1027013> - No port matched 'bin[5]'.
-WARNING <1026001> - C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/source/impl_1/impl_1.pdc (14) : Can't resolve object 'bin[5]' in constraint 'ldc_set_location -site {38} [get_ports {bin[5]}]'.
+WARNING <1026001> - C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/source/impl_1/impl_1.pdc (14) : Can't resolve object 'bin[5]' in constraint 'ldc_set_location -site {38} [get_ports {bin[5]}]'.
