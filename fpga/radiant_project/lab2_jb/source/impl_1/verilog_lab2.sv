@@ -18,7 +18,7 @@ module top (
 endmodule
 
 // MOD1 //////////////////////////////////////
-// 7 segment decoder
+// 7 segment decoder test 
 module seven_seg_decoder (
 	input logic clk,
 	input logic reset,

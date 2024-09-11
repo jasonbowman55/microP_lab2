@@ -1,6 +1,6 @@
 
 timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "microP_lab2_impl_1.twr" "microP_lab2_impl_1.udb" 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/spenc/OneDrive/Desktop/microP_lab2/promote.xml
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/spenc/OneDrive/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
 Starting design reading...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/Lattice Radiant/ispfpga.
 Package Status:                     Preliminary    Version 1.5.
@@ -28,7 +28,7 @@ Changing speed to m;   changing temperature to -40
 STA Runtime and Peak Memory Usage :
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 100 MB
+Peak Memory Usage: 99 MB
 
- 0.667683s wall, 0.515625s user + 0.046875s system = 0.562500s CPU (84.2%)
+ 0.670554s wall, 0.593750s user + 0.015625s system = 0.609375s CPU (90.9%)
 

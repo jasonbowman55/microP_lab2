@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "microP_lab2_impl_1_map.udb"
-Tue Sep 10 23:40:36 2024
+Tue Sep 10 23:58:17 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
@@ -104,7 +104,7 @@ I/O Bank Usage Summary:
 Total Placer CPU time: 2 secs , REAL time: 2 secs 
 
 
-Checksum -- place: 812192295e744a42e32afa7e9b1fea8ca5afeed8
+Checksum -- place: 9cbb7039858f94dce4a3c8eaf7a9f333c402cde3
 Writing design to file microP_lab2_impl_1_par.dir/5_1.udb ...
 
 
@@ -113,7 +113,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 23:40:38 09/10/24
+Start NBR router at 23:58:19 09/10/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -141,7 +141,7 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 23:40:39 09/10/24
+Start NBR section for initial routing at 23:58:20 09/10/24
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
@@ -151,7 +151,7 @@ Routing in Serial Mode ......
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 23:40:39 09/10/24
+Start NBR section for normal routing at 23:58:20 09/10/24
 Level 4, iteration 1
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 Level 4, iteration 2
@@ -161,11 +161,11 @@ Level 4, iteration 3
 Level 4, iteration 4
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 23:40:39 09/10/24
+Start NBR section for post-routing at 23:58:20 09/10/24
 
 End NBR router with 0 unrouted connection(s)
 
-Checksum -- route: 9f476d42b8cbed8b2581ff3af2dcc1ebf3ee84f8
+Checksum -- route: 65070172b4523c536a7b5ea31d89cc163e3f24c8
 
 Total CPU time 0 secs 
 Total REAL time: 0 secs 
@@ -190,7 +190,7 @@ Note: user must run 'timing' for timing closure signoff.
 
 Total CPU  Time: 2 secs 
 Total REAL Time: 3 secs 
-Peak Memory Usage: 106.80 MB
+Peak Memory Usage: 106.87 MB
 
 
 par done!
