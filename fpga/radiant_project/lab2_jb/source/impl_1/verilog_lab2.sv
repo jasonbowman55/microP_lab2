@@ -26,7 +26,8 @@ module seven_seg_decoder (
 	);
 
 	//initializing variables
-	logic [23:0] state;
+	logic [24:0] state;
+	logic int_osc;
 
  // Internal high-speed oscillator for led[2]
    HSOSC #(.CLKHF_DIV(2'b01)) 
@@ -35,7 +36,7 @@ module seven_seg_decoder (
 
 always_ff @(posedge int_osc or posedge reset) begin
     if (reset) begin
-        state <= 24'b0;
+		state <= 24'b0;
         select <= 2'b00; // Reset select to 00
     end else begin
         state <= state + 1'b1;
@@ -72,7 +73,7 @@ end
                     4'b1101: seg = 7'b1000010;
                     4'b1110: seg = 7'b0110000;
                     4'b1111: seg = 7'b0111000;
-                    default: seg = 7'b1111110;
+                    default: seg = 7'b1111111;
                 endcase
             2'b01: // Use right input
                 case(right)
@@ -92,7 +93,7 @@ end
                     4'b1101: seg = 7'b1000010;
                     4'b1110: seg = 7'b0110000;
                     4'b1111: seg = 7'b0111000;
-                    default: seg = 7'b1111110;
+                    default: seg = 7'b1111111;
                 endcase
 			default: seg = 7'b1111111;
         endcase
@@ -111,7 +112,11 @@ module binary_disp_decoder(
 	input logic [3:0] right,
 	output logic [4:0] led
 );
-	always_ff @(posedge clk) begin
-		led = right + left;
-	end
+	always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+			led <= 5'b0;
+        end else begin
+            led <= right + left;
+        end
+    end
 endmodule

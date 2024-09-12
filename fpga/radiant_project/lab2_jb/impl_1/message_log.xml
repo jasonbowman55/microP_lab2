@@ -365,14 +365,10 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(107): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(108): </Dynamic>
             <Dynamic>binary_disp_decoder</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>107</Navigation>
-        </Message>
-        <Message>
-            <ID>35002039</ID>
-            <Severity>1</Severity>
+            <Navigation>108</Navigation>
         </Message>
     </Task>
 </BaliMessageLog>

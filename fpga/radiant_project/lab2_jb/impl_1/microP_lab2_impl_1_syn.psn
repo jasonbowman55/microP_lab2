@@ -17,5 +17,5 @@ Writing output file 'microP_lab2_impl_1_syn.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 40 MB
-Checksum -- postsyn: 77dc5ee999bd4fd08e7f057fa817c0ade96f645b
+Peak Memory Usage: 41 MB
+Checksum -- postsyn: c5653c0d708b16dfa69fb33b8db70b84bb4d565a

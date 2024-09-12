@@ -46,7 +46,7 @@ if (a)
 <A name="Timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.1.0.34.2
 
-Thu Sep 12 10:52:03 2024
+Thu Sep 12 11:31:10 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -97,7 +97,7 @@ create_clock -name {MOD1/int_osc} -period 41.6667 [get_pins {MOD1/hf_osc/CLKHF }
 
 <A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>1.2  Constraint Coverage</big></U></B>
 
-Constraint Coverage: 29.6804%
+Constraint Coverage: 29.9539%
 
 <A name="Timing_rpt_OverallSummary"></A><B><U><big>1.3  Overall Summary</big></U></B>
 
@@ -228,8 +228,8 @@ MOD1/state_36_65__i12/D                  |   33.254 ns
 MOD1/state_36_65__i11/D                  |   33.531 ns 
 MOD1/state_36_65__i10/D                  |   33.808 ns 
 MOD1/state_36_65__i9/D                   |   34.085 ns 
+MOD1/select_i2/D                         |   34.172 ns 
 MOD1/state_36_65__i8/D                   |   34.362 ns 
-MOD1/state_36_65__i7/D                   |   35.194 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -251,8 +251,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i16/D  (SLICE_R13C17A)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i16/D  (SLICE_R12C23A)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 17
@@ -376,8 +376,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -401,8 +401,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -426,8 +426,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -451,8 +451,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -476,8 +476,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -501,8 +501,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -526,8 +526,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -551,8 +551,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -576,8 +576,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.023,
         "delay":0.000
@@ -601,8 +601,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n858",
-            "phy_name":"MOD1.n858"
+            "log_name":"MOD1/n861",
+            "phy_name":"MOD1.n861"
         },
         "arrive":12.300,
         "delay":0.000
@@ -626,8 +626,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n444",
-            "phy_name":"MOD1.n444"
+            "log_name":"MOD1/n443",
+            "phy_name":"MOD1.n443"
         },
         "arrive":12.577,
         "delay":0.000
@@ -651,8 +651,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n861",
-            "phy_name":"MOD1.n861"
+            "log_name":"MOD1/n864",
+            "phy_name":"MOD1.n864"
         },
         "arrive":12.854,
         "delay":0.000
@@ -676,8 +676,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n446",
-            "phy_name":"MOD1.n446"
+            "log_name":"MOD1/n445",
+            "phy_name":"MOD1.n445"
         },
         "arrive":13.131,
         "delay":0.000
@@ -701,8 +701,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n864",
-            "phy_name":"MOD1.n864"
+            "log_name":"MOD1/n867",
+            "phy_name":"MOD1.n867"
         },
         "arrive":13.408,
         "delay":0.000
@@ -726,8 +726,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n448",
-            "phy_name":"MOD1.n448"
+            "log_name":"MOD1/n447",
+            "phy_name":"MOD1.n447"
         },
         "arrive":14.901,
         "delay":1.216
@@ -779,55 +779,55 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.000                 12.023  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.000                 12.023  2       
 MOD1/state_36_65_add_4_11/CI0->MOD1/state_36_65_add_4_11/CO0
-                                          SLICE_R13C16B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-MOD1/n858                                                    NET DELAY               0.000                 12.300  2       
+                                          SLICE_R12C22B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+MOD1/n861                                                    NET DELAY               0.000                 12.300  2       
 MOD1/state_36_65_add_4_11/CI1->MOD1/state_36_65_add_4_11/CO1
-                                          SLICE_R13C16B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-MOD1/n444                                                    NET DELAY               0.000                 12.577  2       
+                                          SLICE_R12C22B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+MOD1/n443                                                    NET DELAY               0.000                 12.577  2       
 MOD1/state_36_65_add_4_13/CI0->MOD1/state_36_65_add_4_13/CO0
-                                          SLICE_R13C16C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-MOD1/n861                                                    NET DELAY               0.000                 12.854  2       
+                                          SLICE_R12C22C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+MOD1/n864                                                    NET DELAY               0.000                 12.854  2       
 MOD1/state_36_65_add_4_13/CI1->MOD1/state_36_65_add_4_13/CO1
-                                          SLICE_R13C16C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-MOD1/n446                                                    NET DELAY               0.000                 13.131  2       
+                                          SLICE_R12C22C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+MOD1/n445                                                    NET DELAY               0.000                 13.131  2       
 MOD1/state_36_65_add_4_15/CI0->MOD1/state_36_65_add_4_15/CO0
-                                          SLICE_R13C16D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
-MOD1/n864                                                    NET DELAY               0.000                 13.408  2       
+                                          SLICE_R12C22D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+MOD1/n867                                                    NET DELAY               0.000                 13.408  2       
 MOD1/state_36_65_add_4_15/CI1->MOD1/state_36_65_add_4_15/CO1
-                                          SLICE_R13C16D      CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
-MOD1/n448                                                    NET DELAY               1.216                 14.901  2       
+                                          SLICE_R12C22D      CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+MOD1/n447                                                    NET DELAY               1.216                 14.901  2       
 MOD1/state_36_65_add_4_17/D0->MOD1/state_36_65_add_4_17/S0
-                                          SLICE_R13C17A      D0_TO_F0_DELAY          0.476                 15.377  1       
+                                          SLICE_R12C23A      D0_TO_F0_DELAY          0.476                 15.377  1       
 MOD1/state_15__N_1[15]                                       NET DELAY               0.000                 15.377  1       
 MOD1/state_36_65__i16/D                                      ENDPOINT                0.000                 15.377  1       
 
@@ -912,8 +912,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i15/D  (SLICE_R13C16D)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i15/D  (SLICE_R12C22D)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 16
@@ -1037,8 +1037,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -1062,8 +1062,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -1087,8 +1087,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -1112,8 +1112,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -1137,8 +1137,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -1162,8 +1162,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -1187,8 +1187,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -1212,8 +1212,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -1237,8 +1237,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.023,
         "delay":0.000
@@ -1262,8 +1262,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n858",
-            "phy_name":"MOD1.n858"
+            "log_name":"MOD1/n861",
+            "phy_name":"MOD1.n861"
         },
         "arrive":12.300,
         "delay":0.000
@@ -1287,8 +1287,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n444",
-            "phy_name":"MOD1.n444"
+            "log_name":"MOD1/n443",
+            "phy_name":"MOD1.n443"
         },
         "arrive":12.577,
         "delay":0.000
@@ -1312,8 +1312,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n861",
-            "phy_name":"MOD1.n861"
+            "log_name":"MOD1/n864",
+            "phy_name":"MOD1.n864"
         },
         "arrive":12.854,
         "delay":0.000
@@ -1337,8 +1337,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n446",
-            "phy_name":"MOD1.n446"
+            "log_name":"MOD1/n445",
+            "phy_name":"MOD1.n445"
         },
         "arrive":13.131,
         "delay":0.000
@@ -1362,8 +1362,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n864",
-            "phy_name":"MOD1.n864"
+            "log_name":"MOD1/n867",
+            "phy_name":"MOD1.n867"
         },
         "arrive":14.069,
         "delay":0.661
@@ -1415,52 +1415,52 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.000                 12.023  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.000                 12.023  2       
 MOD1/state_36_65_add_4_11/CI0->MOD1/state_36_65_add_4_11/CO0
-                                          SLICE_R13C16B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-MOD1/n858                                                    NET DELAY               0.000                 12.300  2       
+                                          SLICE_R12C22B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+MOD1/n861                                                    NET DELAY               0.000                 12.300  2       
 MOD1/state_36_65_add_4_11/CI1->MOD1/state_36_65_add_4_11/CO1
-                                          SLICE_R13C16B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-MOD1/n444                                                    NET DELAY               0.000                 12.577  2       
+                                          SLICE_R12C22B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+MOD1/n443                                                    NET DELAY               0.000                 12.577  2       
 MOD1/state_36_65_add_4_13/CI0->MOD1/state_36_65_add_4_13/CO0
-                                          SLICE_R13C16C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-MOD1/n861                                                    NET DELAY               0.000                 12.854  2       
+                                          SLICE_R12C22C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+MOD1/n864                                                    NET DELAY               0.000                 12.854  2       
 MOD1/state_36_65_add_4_13/CI1->MOD1/state_36_65_add_4_13/CO1
-                                          SLICE_R13C16C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-MOD1/n446                                                    NET DELAY               0.000                 13.131  2       
+                                          SLICE_R12C22C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+MOD1/n445                                                    NET DELAY               0.000                 13.131  2       
 MOD1/state_36_65_add_4_15/CI0->MOD1/state_36_65_add_4_15/CO0
-                                          SLICE_R13C16D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
-MOD1/n864                                                    NET DELAY               0.661                 14.069  2       
+                                          SLICE_R12C22D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+MOD1/n867                                                    NET DELAY               0.661                 14.069  2       
 MOD1/state_36_65_add_4_15/D1->MOD1/state_36_65_add_4_15/S1
-                                          SLICE_R13C16D      D1_TO_F1_DELAY          0.476                 14.545  1       
+                                          SLICE_R12C22D      D1_TO_F1_DELAY          0.476                 14.545  1       
 MOD1/state_15__N_1[14]                                       NET DELAY               0.000                 14.545  1       
 MOD1/state_36_65__i15/D                                      ENDPOINT                0.000                 14.545  1       
 
@@ -1546,8 +1546,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i14/D  (SLICE_R13C16D)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i14/D  (SLICE_R12C22D)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 15
@@ -1671,8 +1671,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -1696,8 +1696,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -1721,8 +1721,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -1746,8 +1746,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -1771,8 +1771,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -1796,8 +1796,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -1821,8 +1821,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -1846,8 +1846,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -1871,8 +1871,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.023,
         "delay":0.000
@@ -1896,8 +1896,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n858",
-            "phy_name":"MOD1.n858"
+            "log_name":"MOD1/n861",
+            "phy_name":"MOD1.n861"
         },
         "arrive":12.300,
         "delay":0.000
@@ -1921,8 +1921,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n444",
-            "phy_name":"MOD1.n444"
+            "log_name":"MOD1/n443",
+            "phy_name":"MOD1.n443"
         },
         "arrive":12.577,
         "delay":0.000
@@ -1946,8 +1946,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n861",
-            "phy_name":"MOD1.n861"
+            "log_name":"MOD1/n864",
+            "phy_name":"MOD1.n864"
         },
         "arrive":12.854,
         "delay":0.000
@@ -1971,8 +1971,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n446",
-            "phy_name":"MOD1.n446"
+            "log_name":"MOD1/n445",
+            "phy_name":"MOD1.n445"
         },
         "arrive":13.792,
         "delay":0.661
@@ -2024,49 +2024,49 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.000                 12.023  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.000                 12.023  2       
 MOD1/state_36_65_add_4_11/CI0->MOD1/state_36_65_add_4_11/CO0
-                                          SLICE_R13C16B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-MOD1/n858                                                    NET DELAY               0.000                 12.300  2       
+                                          SLICE_R12C22B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+MOD1/n861                                                    NET DELAY               0.000                 12.300  2       
 MOD1/state_36_65_add_4_11/CI1->MOD1/state_36_65_add_4_11/CO1
-                                          SLICE_R13C16B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-MOD1/n444                                                    NET DELAY               0.000                 12.577  2       
+                                          SLICE_R12C22B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+MOD1/n443                                                    NET DELAY               0.000                 12.577  2       
 MOD1/state_36_65_add_4_13/CI0->MOD1/state_36_65_add_4_13/CO0
-                                          SLICE_R13C16C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-MOD1/n861                                                    NET DELAY               0.000                 12.854  2       
+                                          SLICE_R12C22C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+MOD1/n864                                                    NET DELAY               0.000                 12.854  2       
 MOD1/state_36_65_add_4_13/CI1->MOD1/state_36_65_add_4_13/CO1
-                                          SLICE_R13C16C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-MOD1/n446                                                    NET DELAY               0.661                 13.792  2       
+                                          SLICE_R12C22C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+MOD1/n445                                                    NET DELAY               0.661                 13.792  2       
 MOD1/state_36_65_add_4_15/D0->MOD1/state_36_65_add_4_15/S0
-                                          SLICE_R13C16D      D0_TO_F0_DELAY          0.476                 14.268  1       
+                                          SLICE_R12C22D      D0_TO_F0_DELAY          0.476                 14.268  1       
 MOD1/state_15__N_1[13]                                       NET DELAY               0.000                 14.268  1       
 MOD1/state_36_65__i14/D                                      ENDPOINT                0.000                 14.268  1       
 
@@ -2152,8 +2152,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i13/D  (SLICE_R13C16C)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i13/D  (SLICE_R12C22C)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 14
@@ -2277,8 +2277,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -2302,8 +2302,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -2327,8 +2327,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -2352,8 +2352,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -2377,8 +2377,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -2402,8 +2402,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -2427,8 +2427,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -2452,8 +2452,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -2477,8 +2477,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.023,
         "delay":0.000
@@ -2502,8 +2502,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n858",
-            "phy_name":"MOD1.n858"
+            "log_name":"MOD1/n861",
+            "phy_name":"MOD1.n861"
         },
         "arrive":12.300,
         "delay":0.000
@@ -2527,8 +2527,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n444",
-            "phy_name":"MOD1.n444"
+            "log_name":"MOD1/n443",
+            "phy_name":"MOD1.n443"
         },
         "arrive":12.577,
         "delay":0.000
@@ -2552,8 +2552,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n861",
-            "phy_name":"MOD1.n861"
+            "log_name":"MOD1/n864",
+            "phy_name":"MOD1.n864"
         },
         "arrive":13.515,
         "delay":0.661
@@ -2605,46 +2605,46 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.000                 12.023  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.000                 12.023  2       
 MOD1/state_36_65_add_4_11/CI0->MOD1/state_36_65_add_4_11/CO0
-                                          SLICE_R13C16B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-MOD1/n858                                                    NET DELAY               0.000                 12.300  2       
+                                          SLICE_R12C22B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+MOD1/n861                                                    NET DELAY               0.000                 12.300  2       
 MOD1/state_36_65_add_4_11/CI1->MOD1/state_36_65_add_4_11/CO1
-                                          SLICE_R13C16B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-MOD1/n444                                                    NET DELAY               0.000                 12.577  2       
+                                          SLICE_R12C22B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+MOD1/n443                                                    NET DELAY               0.000                 12.577  2       
 MOD1/state_36_65_add_4_13/CI0->MOD1/state_36_65_add_4_13/CO0
-                                          SLICE_R13C16C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-MOD1/n861                                                    NET DELAY               0.661                 13.515  2       
+                                          SLICE_R12C22C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+MOD1/n864                                                    NET DELAY               0.661                 13.515  2       
 MOD1/state_36_65_add_4_13/D1->MOD1/state_36_65_add_4_13/S1
-                                          SLICE_R13C16C      D1_TO_F1_DELAY          0.476                 13.991  1       
+                                          SLICE_R12C22C      D1_TO_F1_DELAY          0.476                 13.991  1       
 MOD1/state_15__N_1[12]                                       NET DELAY               0.000                 13.991  1       
 MOD1/state_36_65__i13/D                                      ENDPOINT                0.000                 13.991  1       
 
@@ -2730,8 +2730,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i12/D  (SLICE_R13C16C)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i12/D  (SLICE_R12C22C)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 13
@@ -2855,8 +2855,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -2880,8 +2880,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -2905,8 +2905,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -2930,8 +2930,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -2955,8 +2955,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -2980,8 +2980,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -3005,8 +3005,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -3030,8 +3030,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -3055,8 +3055,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.023,
         "delay":0.000
@@ -3080,8 +3080,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n858",
-            "phy_name":"MOD1.n858"
+            "log_name":"MOD1/n861",
+            "phy_name":"MOD1.n861"
         },
         "arrive":12.300,
         "delay":0.000
@@ -3105,8 +3105,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n444",
-            "phy_name":"MOD1.n444"
+            "log_name":"MOD1/n443",
+            "phy_name":"MOD1.n443"
         },
         "arrive":13.238,
         "delay":0.661
@@ -3158,43 +3158,43 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.000                 12.023  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.000                 12.023  2       
 MOD1/state_36_65_add_4_11/CI0->MOD1/state_36_65_add_4_11/CO0
-                                          SLICE_R13C16B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-MOD1/n858                                                    NET DELAY               0.000                 12.300  2       
+                                          SLICE_R12C22B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+MOD1/n861                                                    NET DELAY               0.000                 12.300  2       
 MOD1/state_36_65_add_4_11/CI1->MOD1/state_36_65_add_4_11/CO1
-                                          SLICE_R13C16B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-MOD1/n444                                                    NET DELAY               0.661                 13.238  2       
+                                          SLICE_R12C22B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+MOD1/n443                                                    NET DELAY               0.661                 13.238  2       
 MOD1/state_36_65_add_4_13/D0->MOD1/state_36_65_add_4_13/S0
-                                          SLICE_R13C16C      D0_TO_F0_DELAY          0.476                 13.714  1       
+                                          SLICE_R12C22C      D0_TO_F0_DELAY          0.476                 13.714  1       
 MOD1/state_15__N_1[11]                                       NET DELAY               0.000                 13.714  1       
 MOD1/state_36_65__i12/D                                      ENDPOINT                0.000                 13.714  1       
 
@@ -3280,8 +3280,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i11/D  (SLICE_R13C16B)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i11/D  (SLICE_R12C22B)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 12
@@ -3405,8 +3405,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -3430,8 +3430,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -3455,8 +3455,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -3480,8 +3480,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -3505,8 +3505,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -3530,8 +3530,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -3555,8 +3555,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -3580,8 +3580,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -3605,8 +3605,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.023,
         "delay":0.000
@@ -3630,8 +3630,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n858",
-            "phy_name":"MOD1.n858"
+            "log_name":"MOD1/n861",
+            "phy_name":"MOD1.n861"
         },
         "arrive":12.961,
         "delay":0.661
@@ -3683,40 +3683,40 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.000                 12.023  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.000                 12.023  2       
 MOD1/state_36_65_add_4_11/CI0->MOD1/state_36_65_add_4_11/CO0
-                                          SLICE_R13C16B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-MOD1/n858                                                    NET DELAY               0.661                 12.961  2       
+                                          SLICE_R12C22B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+MOD1/n861                                                    NET DELAY               0.661                 12.961  2       
 MOD1/state_36_65_add_4_11/D1->MOD1/state_36_65_add_4_11/S1
-                                          SLICE_R13C16B      D1_TO_F1_DELAY          0.476                 13.437  1       
+                                          SLICE_R12C22B      D1_TO_F1_DELAY          0.476                 13.437  1       
 MOD1/state_15__N_1[10]                                       NET DELAY               0.000                 13.437  1       
 MOD1/state_36_65__i11/D                                      ENDPOINT                0.000                 13.437  1       
 
@@ -3802,8 +3802,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i10/D  (SLICE_R13C16B)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i10/D  (SLICE_R12C22B)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 11
@@ -3927,8 +3927,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -3952,8 +3952,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -3977,8 +3977,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -4002,8 +4002,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -4027,8 +4027,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -4052,8 +4052,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -4077,8 +4077,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -4102,8 +4102,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":11.746,
         "delay":0.000
@@ -4127,8 +4127,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n442",
-            "phy_name":"MOD1.n442"
+            "log_name":"MOD1/n441",
+            "phy_name":"MOD1.n441"
         },
         "arrive":12.684,
         "delay":0.661
@@ -4180,37 +4180,37 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.000                 11.746  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.000                 11.746  2       
 MOD1/state_36_65_add_4_9/CI1->MOD1/state_36_65_add_4_9/CO1
-                                          SLICE_R13C16A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-MOD1/n442                                                    NET DELAY               0.661                 12.684  2       
+                                          SLICE_R12C22A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+MOD1/n441                                                    NET DELAY               0.661                 12.684  2       
 MOD1/state_36_65_add_4_11/D0->MOD1/state_36_65_add_4_11/S0
-                                          SLICE_R13C16B      D0_TO_F0_DELAY          0.476                 13.160  1       
+                                          SLICE_R12C22B      D0_TO_F0_DELAY          0.476                 13.160  1       
 MOD1/state_15__N_1[9]                                        NET DELAY               0.000                 13.160  1       
 MOD1/state_36_65__i10/D                                      ENDPOINT                0.000                 13.160  1       
 
@@ -4296,8 +4296,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i9/D  (SLICE_R13C16A)
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i9/D  (SLICE_R12C22A)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 10
@@ -4421,8 +4421,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -4446,8 +4446,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -4471,8 +4471,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -4496,8 +4496,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -4521,8 +4521,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -4546,8 +4546,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -4571,8 +4571,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":11.469,
         "delay":0.555
@@ -4596,8 +4596,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n855",
-            "phy_name":"MOD1.n855"
+            "log_name":"MOD1/n858",
+            "phy_name":"MOD1.n858"
         },
         "arrive":12.407,
         "delay":0.661
@@ -4649,34 +4649,34 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               0.555                 11.469  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               0.555                 11.469  2       
 MOD1/state_36_65_add_4_9/CI0->MOD1/state_36_65_add_4_9/CO0
-                                          SLICE_R13C16A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-MOD1/n855                                                    NET DELAY               0.661                 12.407  2       
+                                          SLICE_R12C22A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+MOD1/n858                                                    NET DELAY               0.661                 12.407  2       
 MOD1/state_36_65_add_4_9/D1->MOD1/state_36_65_add_4_9/S1
-                                          SLICE_R13C16A      D1_TO_F1_DELAY          0.476                 12.883  1       
+                                          SLICE_R12C22A      D1_TO_F1_DELAY          0.476                 12.883  1       
 MOD1/state_15__N_1[8]                                        NET DELAY               0.000                 12.883  1       
 MOD1/state_36_65__i9/D                                       ENDPOINT                0.000                 12.883  1       
 
@@ -4762,8 +4762,248 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i8/D  (SLICE_R13C16A)
+Path Begin       : MOD1/state_36_65__i16/Q  (SLICE_R12C23A)
+Path End         : MOD1/select_i2/D  (SLICE_R13C2D)
+Source Clock     : MOD1/int_osc (R)
+Destination Clock: MOD1/int_osc (R)
+Logic Level      : 2
+Delay Ratio      : 74.5% (route), 25.5% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 41.666 ns 
+Path Slack       : 34.171 ns  (Passed)
+
+
+Source Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"MOD1/hf_osc/CLKHF",
+        "phy_name":"MOD1.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"MOD1/state_36_65__i16/CK",
+        "phy_name":"MOD1.SLICE_0/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"MOD1/int_osc",
+            "phy_name":"MOD1.int_osc"
+        },
+        "arrive":5.499,
+        "delay":5.499
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":5.499,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+MOD1.hf_osc/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  11      
+MOD1/int_osc                                                 NET DELAY           5.499                  5.499  11      
+MOD1/state_36_65__i16/CK                                     CLOCK PIN           0.000                  5.499  1       
+
+
+Data Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"MOD1/state_36_65__i16/Q",
+        "phy_name":"MOD1.SLICE_0/Q0"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"MOD1/select_i2/D",
+        "phy_name":"MOD1.SLICE_9/DI0"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"MOD1/state_36_65__i16/CK",
+            "phy_name":"MOD1.SLICE_0/CLK"
+        },
+        "pin1":
+        {
+            "log_name":"MOD1/state_36_65__i16/Q",
+            "phy_name":"MOD1.SLICE_0/Q0"
+        },
+        "arrive":6.887,
+        "delay":1.388
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"MOD1/state[15]",
+            "phy_name":"MOD1.state[15]"
+        },
+        "arrive":12.320,
+        "delay":5.433
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"MOD1.SLICE_9/C0",
+            "phy_name":"MOD1.SLICE_9/C0"
+        },
+        "pin1":
+        {
+            "log_name":"MOD1.SLICE_9/F0",
+            "phy_name":"MOD1.SLICE_9/F0"
+        },
+        "arrive":12.796,
+        "delay":0.476
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"MOD1.state[15].sig_000.FeedThruLUT",
+            "phy_name":"MOD1.state[15].sig_000.FeedThruLUT"
+        },
+        "arrive":12.796,
+        "delay":0.000
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":12.796,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+MOD1/state_36_65__i16/CK->MOD1/state_36_65__i16/Q
+                                          SLICE_R12C23A      CLK_TO_Q0_DELAY     1.388                  6.887  3       
+MOD1/state[15]                                               NET DELAY           5.433                 12.320  3       
+MOD1.SLICE_9/C0->MOD1.SLICE_9/F0          SLICE_R13C2D       C0_TO_F0_DELAY      0.476                 12.796  1       
+MOD1.state[15].sig_000.FeedThruLUT                           NET DELAY           0.000                 12.796  1       
+MOD1/select_i2/D                                             ENDPOINT            0.000                 12.796  1       
+
+
+Destination Clock Path
+<tapath class="path_info">
+<xmp>
+{
+    "path_begin":
+    {
+        "type":"pin",
+        "log_name":"MOD1/hf_osc/CLKHF",
+        "phy_name":"MOD1.hf_osc/CLKHF"
+    },
+    "path_end":
+    {
+        "type":"pin",
+        "log_name":"MOD1/select_i2/CK",
+        "phy_name":"MOD1.SLICE_9/CLK"
+    },
+    "path_sections":[
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":41.666,
+        "delay":0.000
+    },
+    {
+        "type":"net_delay",
+        "net":
+        {
+            "log_name":"MOD1/int_osc",
+            "phy_name":"MOD1.int_osc"
+        },
+        "arrive":47.165,
+        "delay":5.499
+    },
+    {
+        "type":"site_delay",
+        "pin0":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "pin1":
+        {
+            "log_name":"",
+            "phy_name":""
+        },
+        "arrive":47.165,
+        "delay":0.000
+    }
+    ]
+}
+</xmp>
+</tapath>
+Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+                                                             CONSTRAINT          0.000                 41.666  1       
+MOD1.hf_osc/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  11      
+MOD1/int_osc                                                 NET DELAY           5.499                 47.165  11      
+{MOD1/select_i2/CK   MOD1/select_i1/CK}                      CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(12.795)  
+----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                   34.171  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R12C21A)
+Path End         : MOD1/state_36_65__i8/D  (SLICE_R12C22A)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 9
@@ -4887,8 +5127,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
+            "log_name":"MOD1/n433",
+            "phy_name":"MOD1.n433"
         },
         "arrive":9.252,
         "delay":0.000
@@ -4912,8 +5152,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
+            "log_name":"MOD1/n849",
+            "phy_name":"MOD1.n849"
         },
         "arrive":9.529,
         "delay":0.000
@@ -4937,8 +5177,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
+            "log_name":"MOD1/n435",
+            "phy_name":"MOD1.n435"
         },
         "arrive":9.806,
         "delay":0.000
@@ -4962,8 +5202,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
+            "log_name":"MOD1/n852",
+            "phy_name":"MOD1.n852"
         },
         "arrive":10.083,
         "delay":0.000
@@ -4987,8 +5227,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
+            "log_name":"MOD1/n437",
+            "phy_name":"MOD1.n437"
         },
         "arrive":10.360,
         "delay":0.000
@@ -5012,8 +5252,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
+            "log_name":"MOD1/n855",
+            "phy_name":"MOD1.n855"
         },
         "arrive":10.637,
         "delay":0.000
@@ -5037,8 +5277,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"MOD1/n440",
-            "phy_name":"MOD1.n440"
+            "log_name":"MOD1/n439",
+            "phy_name":"MOD1.n439"
         },
         "arrive":12.130,
         "delay":1.216
@@ -5090,31 +5330,31 @@ Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+                                          SLICE_R12C21A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
 MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
+                                          SLICE_R12C21A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
+MOD1/n433                                                    NET DELAY               0.000                  9.252  2       
 MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
+                                          SLICE_R12C21B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+MOD1/n849                                                    NET DELAY               0.000                  9.529  2       
 MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
+                                          SLICE_R12C21B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+MOD1/n435                                                    NET DELAY               0.000                  9.806  2       
 MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
+                                          SLICE_R12C21C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+MOD1/n852                                                    NET DELAY               0.000                 10.083  2       
 MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
+                                          SLICE_R12C21C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+MOD1/n437                                                    NET DELAY               0.000                 10.360  2       
 MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.000                 10.637  2       
+                                          SLICE_R12C21D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+MOD1/n855                                                    NET DELAY               0.000                 10.637  2       
 MOD1/state_36_65_add_4_7/CI1->MOD1/state_36_65_add_4_7/CO1
-                                          SLICE_R13C15D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-MOD1/n440                                                    NET DELAY               1.216                 12.130  2       
+                                          SLICE_R12C21D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+MOD1/n439                                                    NET DELAY               1.216                 12.130  2       
 MOD1/state_36_65_add_4_9/D0->MOD1/state_36_65_add_4_9/S0
-                                          SLICE_R13C16A      D0_TO_F0_DELAY          0.476                 12.606  1       
+                                          SLICE_R12C22A      D0_TO_F0_DELAY          0.476                 12.606  1       
 MOD1/state_15__N_1[7]                                        NET DELAY               0.000                 12.606  1       
 MOD1/state_36_65__i8/D                                       ENDPOINT                0.000                 12.606  1       
 
@@ -5197,416 +5437,6 @@ Path Slack  (Passed)                                                            
 
 
 
-
-++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-
-Path Begin       : MOD1/state_36_65__i1/Q  (SLICE_R13C15A)
-Path End         : MOD1/state_36_65__i7/D  (SLICE_R13C15D)
-Source Clock     : MOD1/int_osc (R)
-Destination Clock: MOD1/int_osc (R)
-Logic Level      : 8
-Delay Ratio      : 42.8% (route), 57.2% (logic)
-Clock Skew       : 0.000 ns 
-Setup Constraint : 41.666 ns 
-Path Slack       : 35.193 ns  (Passed)
-
-
-Source Clock Path
-<tapath class="path_info">
-<xmp>
-{
-    "path_begin":
-    {
-        "type":"pin",
-        "log_name":"MOD1/hf_osc/CLKHF",
-        "phy_name":"MOD1.hf_osc/CLKHF"
-    },
-    "path_end":
-    {
-        "type":"pin",
-        "log_name":"MOD1/state_36_65__i1/CK",
-        "phy_name":"MOD1.SLICE_8/CLK"
-    },
-    "path_sections":[
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/int_osc",
-            "phy_name":"MOD1.int_osc"
-        },
-        "arrive":5.499,
-        "delay":5.499
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "pin1":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "arrive":5.499,
-        "delay":0.000
-    }
-    ]
-}
-</xmp>
-</tapath>
-Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-MOD1.hf_osc/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  11      
-MOD1/int_osc                                                 NET DELAY               5.499                  5.499  11      
-MOD1/state_36_65__i1/CK                                      CLOCK PIN               0.000                  5.499  1       
-
-
-Data Path
-<tapath class="path_info">
-<xmp>
-{
-    "path_begin":
-    {
-        "type":"pin",
-        "log_name":"MOD1/state_36_65__i1/Q",
-        "phy_name":"MOD1.SLICE_8/Q1"
-    },
-    "path_end":
-    {
-        "type":"pin",
-        "log_name":"MOD1/state_36_65__i7/D",
-        "phy_name":"MOD1.SLICE_5/DI1"
-    },
-    "path_sections":[
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65__i1/CK",
-            "phy_name":"MOD1.SLICE_8/CLK"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65__i1/Q",
-            "phy_name":"MOD1.SLICE_8/Q1"
-        },
-        "arrive":6.887,
-        "delay":1.388
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n16",
-            "phy_name":"MOD1.n16"
-        },
-        "arrive":8.909,
-        "delay":2.022
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_1/C1",
-            "phy_name":"MOD1.SLICE_8/C1"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_1/CO1",
-            "phy_name":"MOD1.SLICE_8/COUT1"
-        },
-        "arrive":9.252,
-        "delay":0.343
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n434",
-            "phy_name":"MOD1.n434"
-        },
-        "arrive":9.252,
-        "delay":0.000
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_3/CI0",
-            "phy_name":"MOD1.SLICE_7/CIN0"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_3/CO0",
-            "phy_name":"MOD1.SLICE_7/COUT0"
-        },
-        "arrive":9.529,
-        "delay":0.277
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n846",
-            "phy_name":"MOD1.n846"
-        },
-        "arrive":9.529,
-        "delay":0.000
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_3/CI1",
-            "phy_name":"MOD1.SLICE_7/CIN1"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_3/CO1",
-            "phy_name":"MOD1.SLICE_7/COUT1"
-        },
-        "arrive":9.806,
-        "delay":0.277
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n436",
-            "phy_name":"MOD1.n436"
-        },
-        "arrive":9.806,
-        "delay":0.000
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_5/CI0",
-            "phy_name":"MOD1.SLICE_6/CIN0"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_5/CO0",
-            "phy_name":"MOD1.SLICE_6/COUT0"
-        },
-        "arrive":10.083,
-        "delay":0.277
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n849",
-            "phy_name":"MOD1.n849"
-        },
-        "arrive":10.083,
-        "delay":0.000
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_5/CI1",
-            "phy_name":"MOD1.SLICE_6/CIN1"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_5/CO1",
-            "phy_name":"MOD1.SLICE_6/COUT1"
-        },
-        "arrive":10.360,
-        "delay":0.277
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n438",
-            "phy_name":"MOD1.n438"
-        },
-        "arrive":10.360,
-        "delay":0.000
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_7/CI0",
-            "phy_name":"MOD1.SLICE_5/CIN0"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_7/CO0",
-            "phy_name":"MOD1.SLICE_5/COUT0"
-        },
-        "arrive":10.637,
-        "delay":0.277
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/n852",
-            "phy_name":"MOD1.n852"
-        },
-        "arrive":11.298,
-        "delay":0.661
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"MOD1/state_36_65_add_4_7/D1",
-            "phy_name":"MOD1.SLICE_5/D1"
-        },
-        "pin1":
-        {
-            "log_name":"MOD1/state_36_65_add_4_7/S1",
-            "phy_name":"MOD1.SLICE_5/F1"
-        },
-        "arrive":11.774,
-        "delay":0.476
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/state_15__N_1[6]",
-            "phy_name":"MOD1.state_15__N_1[6]"
-        },
-        "arrive":11.774,
-        "delay":0.000
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "pin1":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "arrive":11.774,
-        "delay":0.000
-    }
-    ]
-}
-</xmp>
-</tapath>
-Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-MOD1/state_36_65__i1/CK->MOD1/state_36_65__i1/Q
-                                          SLICE_R13C15A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
-MOD1/n16                                                     NET DELAY               2.022                  8.909  1       
-MOD1/state_36_65_add_4_1/C1->MOD1/state_36_65_add_4_1/CO1
-                                          SLICE_R13C15A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-MOD1/n434                                                    NET DELAY               0.000                  9.252  2       
-MOD1/state_36_65_add_4_3/CI0->MOD1/state_36_65_add_4_3/CO0
-                                          SLICE_R13C15B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-MOD1/n846                                                    NET DELAY               0.000                  9.529  2       
-MOD1/state_36_65_add_4_3/CI1->MOD1/state_36_65_add_4_3/CO1
-                                          SLICE_R13C15B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-MOD1/n436                                                    NET DELAY               0.000                  9.806  2       
-MOD1/state_36_65_add_4_5/CI0->MOD1/state_36_65_add_4_5/CO0
-                                          SLICE_R13C15C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-MOD1/n849                                                    NET DELAY               0.000                 10.083  2       
-MOD1/state_36_65_add_4_5/CI1->MOD1/state_36_65_add_4_5/CO1
-                                          SLICE_R13C15C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-MOD1/n438                                                    NET DELAY               0.000                 10.360  2       
-MOD1/state_36_65_add_4_7/CI0->MOD1/state_36_65_add_4_7/CO0
-                                          SLICE_R13C15D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-MOD1/n852                                                    NET DELAY               0.661                 11.298  2       
-MOD1/state_36_65_add_4_7/D1->MOD1/state_36_65_add_4_7/S1
-                                          SLICE_R13C15D      D1_TO_F1_DELAY          0.476                 11.774  1       
-MOD1/state_15__N_1[6]                                        NET DELAY               0.000                 11.774  1       
-MOD1/state_36_65__i7/D                                       ENDPOINT                0.000                 11.774  1       
-
-
-Destination Clock Path
-<tapath class="path_info">
-<xmp>
-{
-    "path_begin":
-    {
-        "type":"pin",
-        "log_name":"MOD1/hf_osc/CLKHF",
-        "phy_name":"MOD1.hf_osc/CLKHF"
-    },
-    "path_end":
-    {
-        "type":"pin",
-        "log_name":"MOD1/state_36_65__i6/CK",
-        "phy_name":"MOD1.SLICE_5/CLK"
-    },
-    "path_sections":[
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "pin1":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "arrive":41.666,
-        "delay":0.000
-    },
-    {
-        "type":"net_delay",
-        "net":
-        {
-            "log_name":"MOD1/int_osc",
-            "phy_name":"MOD1.int_osc"
-        },
-        "arrive":47.165,
-        "delay":5.499
-    },
-    {
-        "type":"site_delay",
-        "pin0":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "pin1":
-        {
-            "log_name":"",
-            "phy_name":""
-        },
-        "arrive":47.165,
-        "delay":0.000
-    }
-    ]
-}
-</xmp>
-</tapath>
-Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-                                                             CONSTRAINT              0.000                 41.666  1       
-MOD1.hf_osc/CLKHF                         HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  11      
-MOD1/int_osc                                                 NET DELAY               5.499                 47.165  11      
-{MOD1/state_36_65__i6/CK   MOD1/state_36_65__i7/CK}
-                                                             CLOCK PIN               0.000                 47.165  1       
-                                                             Uncertainty          -(0.000)                 47.165  
-                                                             Setup time           -(0.198)                 46.967  
-----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-Required Time                                                                                              46.967  
-Arrival Time                                                                                            -(11.773)  
-----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                       35.193  
-
-
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     End of Detailed Report for timing paths 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -5652,8 +5482,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : MOD1/state_36_65__i7/Q  (SLICE_R13C15D)
-Path End         : MOD1/state_36_65__i7/D  (SLICE_R13C15D)
+Path Begin       : MOD1/state_36_65__i7/Q  (SLICE_R12C21D)
+Path End         : MOD1/state_36_65__i7/D  (SLICE_R12C21D)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -5806,10 +5636,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i7/CK->MOD1/state_36_65__i7/Q
-                                          SLICE_R13C15D      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C21D      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 MOD1/n10                                                     NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_7/C1->MOD1/state_36_65_add_4_7/S1
-                                          SLICE_R13C15D      C1_TO_F1_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C21D      C1_TO_F1_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[6]                                        NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i7/D                                       ENDPOINT         0.000                  4.997  1       
 
@@ -5895,8 +5725,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i8/Q  (SLICE_R13C16A)
-Path End         : MOD1/state_36_65__i8/D  (SLICE_R13C16A)
+Path Begin       : MOD1/state_36_65__i8/Q  (SLICE_R12C22A)
+Path End         : MOD1/state_36_65__i8/D  (SLICE_R12C22A)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -6049,10 +5879,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i8/CK->MOD1/state_36_65__i8/Q
-                                          SLICE_R13C16A      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22A      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 MOD1/n9                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_9/C0->MOD1/state_36_65_add_4_9/S0
-                                          SLICE_R13C16A      C0_TO_F0_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22A      C0_TO_F0_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[7]                                        NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i8/D                                       ENDPOINT         0.000                  4.997  1       
 
@@ -6138,8 +5968,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i9/Q  (SLICE_R13C16A)
-Path End         : MOD1/state_36_65__i9/D  (SLICE_R13C16A)
+Path Begin       : MOD1/state_36_65__i9/Q  (SLICE_R12C22A)
+Path End         : MOD1/state_36_65__i9/D  (SLICE_R12C22A)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -6292,10 +6122,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i9/CK->MOD1/state_36_65__i9/Q
-                                          SLICE_R13C16A      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22A      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 MOD1/n8                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_9/C1->MOD1/state_36_65_add_4_9/S1
-                                          SLICE_R13C16A      C1_TO_F1_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22A      C1_TO_F1_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[8]                                        NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i9/D                                       ENDPOINT         0.000                  4.997  1       
 
@@ -6381,8 +6211,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i10/Q  (SLICE_R13C16B)
-Path End         : MOD1/state_36_65__i10/D  (SLICE_R13C16B)
+Path Begin       : MOD1/state_36_65__i10/Q  (SLICE_R12C22B)
+Path End         : MOD1/state_36_65__i10/D  (SLICE_R12C22B)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -6535,10 +6365,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i10/CK->MOD1/state_36_65__i10/Q
-                                          SLICE_R13C16B      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22B      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 MOD1/n7                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_11/C0->MOD1/state_36_65_add_4_11/S0
-                                          SLICE_R13C16B      C0_TO_F0_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22B      C0_TO_F0_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[9]                                        NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i10/D                                      ENDPOINT         0.000                  4.997  1       
 
@@ -6624,8 +6454,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i11/Q  (SLICE_R13C16B)
-Path End         : MOD1/state_36_65__i11/D  (SLICE_R13C16B)
+Path Begin       : MOD1/state_36_65__i11/Q  (SLICE_R12C22B)
+Path End         : MOD1/state_36_65__i11/D  (SLICE_R12C22B)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -6778,10 +6608,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i11/CK->MOD1/state_36_65__i11/Q
-                                          SLICE_R13C16B      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22B      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 MOD1/n6                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_11/C1->MOD1/state_36_65_add_4_11/S1
-                                          SLICE_R13C16B      C1_TO_F1_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22B      C1_TO_F1_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[10]                                       NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i11/D                                      ENDPOINT         0.000                  4.997  1       
 
@@ -6867,8 +6697,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i12/Q  (SLICE_R13C16C)
-Path End         : MOD1/state_36_65__i12/D  (SLICE_R13C16C)
+Path Begin       : MOD1/state_36_65__i12/Q  (SLICE_R12C22C)
+Path End         : MOD1/state_36_65__i12/D  (SLICE_R12C22C)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -7021,10 +6851,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i12/CK->MOD1/state_36_65__i12/Q
-                                          SLICE_R13C16C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 MOD1/n5                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_13/C0->MOD1/state_36_65_add_4_13/S0
-                                          SLICE_R13C16C      C0_TO_F0_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22C      C0_TO_F0_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[11]                                       NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i12/D                                      ENDPOINT         0.000                  4.997  1       
 
@@ -7110,8 +6940,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i13/Q  (SLICE_R13C16C)
-Path End         : MOD1/state_36_65__i13/D  (SLICE_R13C16C)
+Path Begin       : MOD1/state_36_65__i13/Q  (SLICE_R12C22C)
+Path End         : MOD1/state_36_65__i13/D  (SLICE_R12C22C)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -7264,10 +7094,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i13/CK->MOD1/state_36_65__i13/Q
-                                          SLICE_R13C16C      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22C      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 MOD1/n4                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_13/C1->MOD1/state_36_65_add_4_13/S1
-                                          SLICE_R13C16C      C1_TO_F1_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22C      C1_TO_F1_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[12]                                       NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i13/D                                      ENDPOINT         0.000                  4.997  1       
 
@@ -7353,8 +7183,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i14/Q  (SLICE_R13C16D)
-Path End         : MOD1/state_36_65__i14/D  (SLICE_R13C16D)
+Path Begin       : MOD1/state_36_65__i14/Q  (SLICE_R12C22D)
+Path End         : MOD1/state_36_65__i14/D  (SLICE_R12C22D)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -7507,10 +7337,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i14/CK->MOD1/state_36_65__i14/Q
-                                          SLICE_R13C16D      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22D      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 MOD1/n3                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_15/C0->MOD1/state_36_65_add_4_15/S0
-                                          SLICE_R13C16D      C0_TO_F0_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22D      C0_TO_F0_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[13]                                       NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i14/D                                      ENDPOINT         0.000                  4.997  1       
 
@@ -7596,8 +7426,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i15/Q  (SLICE_R13C16D)
-Path End         : MOD1/state_36_65__i15/D  (SLICE_R13C16D)
+Path Begin       : MOD1/state_36_65__i15/Q  (SLICE_R12C22D)
+Path End         : MOD1/state_36_65__i15/D  (SLICE_R12C22D)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -7750,10 +7580,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i15/CK->MOD1/state_36_65__i15/Q
-                                          SLICE_R13C16D      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+                                          SLICE_R12C22D      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 MOD1/n2                                                      NET DELAY        0.882                  4.745  1       
 MOD1/state_36_65_add_4_15/C1->MOD1/state_36_65_add_4_15/S1
-                                          SLICE_R13C16D      C1_TO_F1_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C22D      C1_TO_F1_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[14]                                       NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i15/D                                      ENDPOINT         0.000                  4.997  1       
 
@@ -7839,8 +7669,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : MOD1/state_36_65__i16/Q  (SLICE_R13C17A)
-Path End         : MOD1/state_36_65__i16/D  (SLICE_R13C17A)
+Path Begin       : MOD1/state_36_65__i16/Q  (SLICE_R12C23A)
+Path End         : MOD1/state_36_65__i16/D  (SLICE_R12C23A)
 Source Clock     : MOD1/int_osc (R)
 Destination Clock: MOD1/int_osc (R)
 Logic Level      : 2
@@ -7992,10 +7822,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 MOD1/state_36_65__i16/CK->MOD1/state_36_65__i16/Q
-                                          SLICE_R13C17A      CLK_TO_Q0_DELAY  0.779                  3.863  3       
+                                          SLICE_R12C23A      CLK_TO_Q0_DELAY  0.779                  3.863  3       
 MOD1/state[15]                                               NET DELAY        0.882                  4.745  3       
 MOD1/state_36_65_add_4_17/C0->MOD1/state_36_65_add_4_17/S0
-                                          SLICE_R13C17A      C0_TO_F0_DELAY   0.252                  4.997  1       
+                                          SLICE_R12C23A      C0_TO_F0_DELAY   0.252                  4.997  1       
 MOD1/state_15__N_1[15]                                       NET DELAY        0.000                  4.997  1       
 MOD1/state_36_65__i16/D                                      ENDPOINT         0.000                  4.997  1       
 

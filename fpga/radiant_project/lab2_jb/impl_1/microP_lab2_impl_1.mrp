@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Thu Sep 12 10:51:52 2024
+Mapped on: Thu Sep 12 11:31:00 2024
 
 Design Information
 ------------------
@@ -22,10 +22,10 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
 Design Summary
 --------------
 
-   Number of slice registers:  19 out of  5280 (<1%)
-   Number of I/O registers:      4 out of   117 (3%)
-   Number of LUT4s:            50 out of  5280 (1%)
-      Number of logic LUT4s:              31
+   Number of slice registers:  23 out of  5280 (<1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            49 out of  5280 (1%)
+      Number of logic LUT4s:              30
       Number of inserted feedthru LUT4s:   1
       Number of ripple logic:              9 (18 LUT4s)
    Number of IO sites used:   24 out of 39 (62%)
@@ -55,11 +55,11 @@ Design Summary
       Net clk_c: 5 loads, 5 rising, 0 falling (Driver: Port clk)
    Number of Clock Enables:  1
       Net select_pad[0].vcc: 1 loads, 0 SLICEs
-   Number of LSRs:  2
-      Pin reset: 11 loads, 11 SLICEs (Net: reset_c)
-      Net MOD2.n135: 1 loads, 1 SLICEs
+   Number of LSRs:  1
+      Pin reset: 16 loads, 16 SLICEs (Net: reset_c)
    Top 10 highest fanout non-clock nets:
-      Net reset_c: 11 loads
+      Net reset_c: 16 loads
+      Net left_c_0: 10 loads
 
                                     Page 1
 
@@ -69,15 +69,14 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net left_c_0: 10 loads
-      Net left_c_2: 10 loads
-      Net left_c_3: 10 loads
       Net right_c_0: 10 loads
-      Net right_c_2: 10 loads
       Net left_c_1: 9 loads
+      Net left_c_2: 9 loads
+      Net left_c_3: 9 loads
       Net right_c_1: 9 loads
+      Net right_c_2: 9 loads
       Net right_c_3: 9 loads
-      Net select_c_1: 8 loads
+      Net select_c_0: 8 loads
 
 
 
@@ -123,10 +122,11 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | select[1]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[0]              | OUTPUT    |           | O     |       |           |
+| led[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[1]              | OUTPUT    |           | O     |       |           |
+| led[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| led[2]              | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
@@ -136,9 +136,8 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
-| led[2]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| led[3]              | OUTPUT    |           | O     |       |           |
+| led[3]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -177,14 +176,6 @@ ASIC Components
 
 Instance Name: MOD1/hf_osc
          Type: HFOSC
-Instance Name: MOD2/led_i4
-         Type: IOLOGIC
-Instance Name: MOD2/led_i3
-         Type: IOLOGIC
-Instance Name: MOD2/led_i2
-         Type: IOLOGIC
-Instance Name: MOD2/led_i1
-         Type: IOLOGIC
 
 Constraint Summary
 ------------------
@@ -192,75 +183,18 @@ Constraint Summary
    Total number of constraints: 24
    Total number of constraints dropped: 0
 
-
-
-                                    Page 3
-
-
-
-
-
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 64 MB
-Checksum -- map: 3867aaf9f68185dda56dbc1a95e638b5120680c2
+Checksum -- map: b9c43eca76060c85c89bb9163e9d57c8a9eaebe6
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    Page 4
+                                    Page 3
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

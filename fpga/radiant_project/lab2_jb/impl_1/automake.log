@@ -9,7 +9,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Sep 12 10:51:42 2024
+Thu Sep 12 11:30:49 2024
 
 
 Command Line:  C:\Lattice Radiant\ispfpga\bin\nt64\synthesis.exe -f microP_lab2_impl_1_lattice.synproj -logfile microP_lab2_impl_1_lattice.srp -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml 
@@ -140,7 +140,7 @@ Top module name (Verilog, mixed language): top
 INFO <35901018> - c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(1): compiling module top. VERI-1018
 INFO <35901018> - c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(19): compiling module seven_seg_decoder. VERI-1018
 INFO <35901018> - C:/Lattice Radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2&apos;b01). VERI-1018
-INFO <35901018> - c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(107): compiling module binary_disp_decoder. VERI-1018
+INFO <35901018> - c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(108): compiling module binary_disp_decoder. VERI-1018
                                                          
 
 
@@ -168,16 +168,14 @@ INFO <35901018> - c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radia
 
 
 
-INFO <35002039> - Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 19 of 5280 (0 % )
+Number of register bits => 23 of 5280 (0 % )
 CCU2 => 9
-FD1P3XZ => 19
+FD1P3XZ => 23
 HSOSC_CORE => 1
 IB => 10
-IOL_B => 4
-LUT4 => 30
+LUT4 => 29
 OB => 14
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -191,11 +189,11 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : reset_c, loads : 18
+  Net : reset_c, loads : 23
   Net : MOD1/int_osc, loads : 18
-  Net : left_c_3, loads : 10
   Net : left_c_0, loads : 10
   Net : right_c_0, loads : 10
+  Net : left_c_3, loads : 9
   Net : left_c_2, loads : 9
   Net : left_c_1, loads : 9
   Net : right_c_3, loads : 9
@@ -213,13 +211,13 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 91 MB
+Peak Memory Usage: 90 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
-Total REAL Time: 5 secs 
+Total REAL Time: 6 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: fa98eb2c82366fdec9930ca363c2d1b29344887f
+Checksum -- synthesis -- netlist: 2354d599c46b2d41c89820233836d99b34ca9cf
 
 
 
@@ -231,7 +229,7 @@ Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V 
    Package:          SG48
    Performance:      High-Performance_1.2V
 Reading input file 'microP_lab2_impl_1.vm' ...
-CPU Time to convert: 0.078125
+CPU Time to convert: 0.09375
 REAL Time to convert: 0
 convert PEAK Memory Usage: 32 MB
 convert CURRENT Memory Usage: 32 MB
@@ -247,8 +245,8 @@ Writing output file 'microP_lab2_impl_1_syn.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 40 MB
-Checksum -- postsyn: 77dc5ee999bd4fd08e7f057fa817c0ade96f645b
+Peak Memory Usage: 41 MB
+Checksum -- postsyn: c5653c0d708b16dfa69fb33b8db70b84bb4d565a
 
 
 
@@ -280,10 +278,10 @@ Running general design DRC...
 
 
 Design Summary:
-   Number of slice registers:  19 out of  5280 (<1%)
-   Number of I/O registers:      4 out of   117 (3%)
-   Number of LUT4s:            50 out of  5280 (1%)
-      Number of logic LUT4s:              31
+   Number of slice registers:  23 out of  5280 (<1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            49 out of  5280 (1%)
+      Number of logic LUT4s:              30
       Number of inserted feedthru LUT4s:   1
       Number of ripple logic:              9 (18 LUT4s)
    Number of IO sites used:   24 out of 39 (62%)
@@ -312,20 +310,19 @@ Design Summary:
       Net clk_c: 5 loads, 5 rising, 0 falling (Driver: Port clk)
    Number of Clock Enables:  1
       Net select_pad[0].vcc: 1 loads, 0 SLICEs
-   Number of LSRs:  2
-      Pin reset: 11 loads, 11 SLICEs (Net: reset_c)
-      Net MOD2.n135: 1 loads, 1 SLICEs
+   Number of LSRs:  1
+      Pin reset: 16 loads, 16 SLICEs (Net: reset_c)
    Top 10 highest fanout non-clock nets:
-      Net reset_c: 11 loads
+      Net reset_c: 16 loads
       Net left_c_0: 10 loads
-      Net left_c_2: 10 loads
-      Net left_c_3: 10 loads
       Net right_c_0: 10 loads
-      Net right_c_2: 10 loads
       Net left_c_1: 9 loads
+      Net left_c_2: 9 loads
+      Net left_c_3: 9 loads
       Net right_c_1: 9 loads
+      Net right_c_2: 9 loads
       Net right_c_3: 9 loads
-      Net select_c_1: 8 loads
+      Net select_c_0: 8 loads
 Running physical design DRC...
 
  
@@ -344,13 +341,13 @@ Total CPU Time: 0 secs
 Total REAL Time: 0 secs  
 Peak Memory Usage: 64 MB
 
-Checksum -- map: 3867aaf9f68185dda56dbc1a95e638b5120680c2
+Checksum -- map: b9c43eca76060c85c89bb9163e9d57c8a9eaebe6
 Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /0 secs 
 
 pnmainc -log pnmain "microP_lab2_impl_1_par.tcl"
 
 Lattice Place and Route Report for Design "microP_lab2_impl_1_map.udb"
-Thu Sep 12 10:51:56 2024
+Thu Sep 12 11:31:04 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
@@ -373,16 +370,16 @@ Constraint Summary
    Total number of constraints: 24
    Total number of constraints dropped: 0
 
-Number of Signals: 99
+Number of Signals: 98
 Number of Connections: 230
 Device utilization summary:
 
-   SLICE (est.)      26/2640          1% used
-     LUT             50/5280          1% used
-     REG             19/5280         <1% used
+   SLICE (est.)      25/2640          1% used
+     LUT             49/5280          1% used
+     REG             23/5280         <1% used
    PIO               24/56           43% used
                      24/36           66% bonded
-   IOLOGIC            4/56            7% used
+   IOLOGIC            0/56            0% used
    DSP                0/8             0% used
    I2C                0/2             0% used
    HFOSC              1/1           100% used
@@ -402,7 +399,7 @@ Device utilization summary:
 Pin Constraint Summary:
    23 out of 24 pins locked (95% locked).
 .
-..........
+.........
 Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
 
 
@@ -413,17 +410,17 @@ Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 22001.
+Placer score = 21653.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             26/2640         <1% used
+   SLICE             25/2640         <1% used
 
 Finished Placer Phase 1. CPU time: 3 secs , REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  21847
+Placer score =  21627
 Finished Placer Phase 2.  CPU time: 3 secs , REAL time: 4 secs 
 
 
@@ -455,11 +452,11 @@ I/O Bank Usage Summary:
 Total Placer CPU time: 3 secs , REAL time: 4 secs 
 
 
-Checksum -- place: 176b654956d9074415272b7b2281ea38eefe991f
+Checksum -- place: e2ca60bf398cc353790d010e9af0a7ada5d85604
 Writing design to file microP_lab2_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 10:52:00 09/12/24
+Start NBR router at 11:31:08 09/12/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -478,7 +475,7 @@ Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
 1 global clock signals routed
-50 connections routed (of 228 total) (21.93%)
+50 connections routed (of 224 total) (22.32%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
@@ -486,7 +483,7 @@ Primary clocks (1 used out of 8 available):
        Clock   loads: 10    out of    10 routed (100.00%)
 Other clocks:
     Signal "clk_c"
-       Clock   loads: 0     out of     5 routed (  0.00%)
+       Clock   loads: 0     out of     3 routed (  0.00%)
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
@@ -495,35 +492,35 @@ Completed routing resource preassignment
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                 
-Start NBR section for initial routing at 10:52:01 09/12/24
+Start NBR section for initial routing at 11:31:09 09/12/24
 Level 4, iteration 1
-        0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+        1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
 Estimated worst slack/total negative slack<setup>: 31.590ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 10:52:01 09/12/24
+Start NBR section for normal routing at 11:31:09 09/12/24
 Level 4, iteration 1
         0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
 Estimated worst slack/total negative slack<setup>: 31.590ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 10:52:01 09/12/24
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:31:09 09/12/24
 Changing speed to m;   changing temperature to -40
 Changing speed to 6;   changing temperature to 100
 
-Start NBR section for post-routing at 10:52:02 09/12/24
+Start NBR section for post-routing at 11:31:09 09/12/24
 
 End NBR router with 0 unrouted connection(s)
 Changing speed to m;   changing temperature to -40
 Changing speed to 6;   changing temperature to 100
 
-Checksum -- route: ea61fdba8d3f3c0b56cd1c1d09feae0faf226bd
+Checksum -- route: 357187517f391fc3184ddd855f3b32a91f9c8672
 
 Total CPU time 1 secs 
-Total REAL time: 2 secs 
+Total REAL time: 0 secs 
 Completely routed.
-End of route.  228 routed (100.00%); 0 unrouted.
+End of route.  224 routed (100.00%); 0 unrouted.
 
 Writing design to file microP_lab2_impl_1_par.dir/5_1.udb ...
 
@@ -540,7 +537,7 @@ Note: user must run 'timing' for timing closure signoff.
 
 Total CPU  Time: 4 secs 
 Total REAL Time: 6 secs 
-Peak Memory Usage: 127.11 MB
+Peak Memory Usage: 125.91 MB
 
 
 par done!
@@ -567,7 +564,7 @@ Performance Grade:   High-Performance_1.2V
 
 
 
-Successfully loading udb, 0.00 seconds
+Successfully loading udb, 0.02 seconds
 
 Initializing timer
 Starting design annotation....
@@ -575,15 +572,15 @@ High-Performance_1.2V
 
 Starting full timing analysis...
 Performance Hardware Data Status:   Advanced       Version 1.0.
-Connections ignored  15  counted  219  covered  65
+Connections ignored  13  counted  217  covered  65
 Changing speed to m;   changing temperature to -40
 
 STA Runtime and Peak Memory Usage :
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 101 MB
+Peak Memory Usage: 102 MB
 
- 0.779593s wall, 0.640625s user + 0.015625s system = 0.656250s CPU (84.2%)
+ 0.777667s wall, 0.578125s user + 0.093750s system = 0.671875s CPU (86.4%)
 
 
 tmcheck -par "microP_lab2_impl_1.par"  
@@ -635,6 +632,6 @@ Bitstream generation complete!
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 114 MB
+Peak Memory Usage: 115 MB
 
 Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /0 secs 
