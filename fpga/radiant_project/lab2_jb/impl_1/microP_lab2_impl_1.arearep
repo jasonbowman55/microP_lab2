@@ -1,37 +1,36 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  25 of 5280 (0.473%)
+Register bits:  19 of 5280 (0.360%)
 I/O cells:      24
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        13          100.0
-                            FD1P3XZ        25          100.0
+                               CCU2         9          100.0
+                            FD1P3XZ        19          100.0
                          HSOSC_CORE         1          100.0
                                  IB        10          100.0
-                              IOL_B        13          100.0
-                               LUT4        31          100.0
+                              IOL_B         4          100.0
+                               LUT4        30          100.0
                                  OB        14          100.0
 SUB MODULES
                 binary_disp_decoder         1
                   seven_seg_decoder         1
-                              TOTAL       109
-----------------------------------------------------------------------
-Report for cell binary_disp_decoder.v1
-Instance Path : MOD2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3XZ         1            4.0
-                              IOL_B         4           30.8
-                               LUT4         8           25.8
-                              TOTAL        13
+                              TOTAL        89
 ----------------------------------------------------------------------
 Report for cell seven_seg_decoder.v1
 Instance Path : MOD1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        13          100.0
-                            FD1P3XZ        24           96.0
+                                FA2         9          100.0
+                            FD1P3XZ        18           94.7
                          HSOSC_CORE         1          100.0
-                              IOL_B         9           69.2
-                               LUT4        23           74.2
-                              TOTAL        70
+                               LUT4        22           73.3
+                              TOTAL        50
+----------------------------------------------------------------------
+Report for cell binary_disp_decoder.v1
+Instance Path : MOD2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         1            5.3
+                              IOL_B         4          100.0
+                               LUT4         8           26.7
+                              TOTAL        13

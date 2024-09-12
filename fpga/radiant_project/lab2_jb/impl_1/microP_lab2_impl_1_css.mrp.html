@@ -1,8 +1,8 @@
 <HTML>
 <HEAD>
 <TITLE>Map Report</TITLE>
-<link href="file:///C:/lscc/radiant/2024.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="file:///C:/lscc/radiant/2024.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<link href="file:///C:/Lattice Radiant/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/Lattice Radiant/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
 <style type="text/css">
 #toc {
   position: fixed;
@@ -49,23 +49,24 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Sep 11 21:52:05 2024
+Mapped on: Thu Sep 12 10:51:52 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
-Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
-     ct/lab2_jb/source/impl_1/impl_1.pdc -i microP_lab2_impl_1_syn.udb -o
-     microP_lab2_impl_1_map.udb -mp microP_lab2_impl_1.mrp -hierrpt -gui -msgset
-      C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.
-     xml
+Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
+     a/radiant_project/lab2_jb/source/impl_1/impl_1.pdc -i
+     microP_lab2_impl_1_syn.udb -o microP_lab2_impl_1_map.udb -mp
+     microP_lab2_impl_1.mrp -hierrpt -gui -msgset C:/Users/spenc/OneDrive/Deskto
+     p/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers:  25 out of  5280 (&lt;1%)
-   Number of I/O registers:     13 out of   117 (11%)
-   Number of LUT4s:            58 out of  5280 (1%)
-      Number of logic LUT4s:              32
-      Number of ripple logic:             13 (26 LUT4s)
+   Number of slice registers:  19 out of  5280 (&lt;1%)
+   Number of I/O registers:      4 out of   117 (3%)
+   Number of LUT4s:            50 out of  5280 (1%)
+      Number of logic LUT4s:              31
+      Number of inserted feedthru LUT4s:   1
+      Number of ripple logic:              9 (18 LUT4s)
    Number of IO sites used:   24 out of 39 (62%)
       Number of IO sites used for general PIO: 24
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -88,25 +89,25 @@ Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  2
-      Net clk_c: 5 loads, 5 rising, 0 falling (Driver: Port clk)
-      Net MOD1.int_osc: 22 loads, 22 rising, 0 falling (Driver: Pin
+      Net MOD1.int_osc: 11 loads, 11 rising, 0 falling (Driver: Pin
      MOD1.hf_osc/CLKHF)
-   Number of Clock Enables:  2
+      Net clk_c: 5 loads, 5 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  1
       Net select_pad[0].vcc: 1 loads, 0 SLICEs
-      Net MOD1.int_osc_enable_9: 9 loads, 0 SLICEs
-   Number of LSRs:  1
-      Net MOD2.n61: 1 loads, 1 SLICEs
+   Number of LSRs:  2
+      Pin reset: 11 loads, 11 SLICEs (Net: reset_c)
+      Net MOD2.n135: 1 loads, 1 SLICEs
    Top 10 highest fanout non-clock nets:
+      Net reset_c: 11 loads
       Net left_c_0: 10 loads
       Net left_c_2: 10 loads
       Net left_c_3: 10 loads
-      Net MOD1.int_osc_enable_9: 10 loads
-      Net MOD1.state[23]: 10 loads
       Net right_c_0: 10 loads
       Net right_c_2: 10 loads
       Net left_c_1: 9 loads
       Net right_c_1: 9 loads
       Net right_c_3: 9 loads
+      Net select_c_1: 8 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -142,9 +143,9 @@ Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
 +---------------------+-----------+-----------+-------+-------+-----------+
 | clk                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| select[0]           | OUTPUT    |           | O     |       |           |
+| select[0]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| select[1]           | OUTPUT    |           | O     |       |           |
+| select[1]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[0]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -156,19 +157,19 @@ Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[0]              | OUTPUT    |           | O     |       |           |
+| seg[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[1]              | OUTPUT    |           | O     |       |           |
+| seg[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[2]              | OUTPUT    |           | O     |       |           |
+| seg[2]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[3]              | OUTPUT    |           | O     |       |           |
+| seg[3]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[4]              | OUTPUT    |           | O     |       |           |
+| seg[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[5]              | OUTPUT    |           | O     |       |           |
+| seg[5]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[6]              | OUTPUT    |           | O     |       |           |
+| seg[6]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
@@ -186,6 +187,8 @@ OSC 1:                                 Pin/Node Value
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
+Instance Name: MOD1/hf_osc
+         Type: HFOSC
 Instance Name: MOD2/led_i4
          Type: IOLOGIC
 Instance Name: MOD2/led_i3
@@ -193,26 +196,6 @@ Instance Name: MOD2/led_i3
 Instance Name: MOD2/led_i2
          Type: IOLOGIC
 Instance Name: MOD2/led_i1
-         Type: IOLOGIC
-Instance Name: MOD1/hf_osc
-         Type: HFOSC
-Instance Name: MOD1/seg_i0_i6
-         Type: IOLOGIC
-Instance Name: MOD1/seg_i0_i5
-         Type: IOLOGIC
-Instance Name: MOD1/seg_i0_i4
-         Type: IOLOGIC
-Instance Name: MOD1/seg_i0_i3
-         Type: IOLOGIC
-Instance Name: MOD1/seg_i0_i2
-         Type: IOLOGIC
-Instance Name: MOD1/seg_i0_i1
-         Type: IOLOGIC
-Instance Name: MOD1/seg_i0_i7
-         Type: IOLOGIC
-Instance Name: MOD1/select_i0_i1
-         Type: IOLOGIC
-Instance Name: MOD1/select_i0_i2
          Type: IOLOGIC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
@@ -225,7 +208,7 @@ Instance Name: MOD1/select_i0_i2
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 64 MB
-Checksum -- map: 651da0a84734bb2774c76aed0a76c87be02160d
+Checksum -- map: 3867aaf9f68185dda56dbc1a95e638b5120680c2
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

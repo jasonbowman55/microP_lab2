@@ -4,10 +4,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Sep 11 21:43:06 2024
+Thu Sep 12 10:52:07 2024
 
 
-Command: bitgen -w -gui -msgset C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml -freq 0 microP_lab2_impl_1.udb C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1 
+Command: bitgen -w -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml -freq 0 microP_lab2_impl_1.udb C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1 
 
 Running DRC.
 DRC detected 0 errors and 0 warnings.
@@ -21,5 +21,5 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1.bin".
+Saving bit stream in "C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1.bin".
 Bitstream generation complete!
