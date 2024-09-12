@@ -60,3 +60,5 @@ add wave -position end  sim:/top/seg
 add wave -position end  sim:/top/led
 add wave -position end  sim:/top/select
 run 1000
+# End time: 21:28:49 on Sep 11,2024, Elapsed time: 1:42:26
+# Errors: 0, Warnings: 1
