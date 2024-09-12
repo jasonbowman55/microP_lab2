@@ -1,34 +1,81 @@
+eal time: 43 secs 
+Level 4, iteration 194
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 43 secs 
+Level 4, iteration 195
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 43 secs 
+Level 4, iteration 196
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 43 secs 
+Level 4, iteration 197
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 44 secs 
+Level 4, iteration 198
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 44 secs 
+Level 4, iteration 199
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 44 secs 
+Level 4, iteration 200
+        2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.819ns/0.000ns; real time: 44 secs 
 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "microP_lab2_impl_1.twr" "microP_lab2_impl_1.udb" 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
-Starting design reading...
-Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.1/ispfpga.
-Package Status:                     Preliminary    Version 1.5.
-Performance Hardware Data Status:   Advanced       Version 1.0.
-Loading udb::Database ...
-Design:  top
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-
-
-
-Successfully loading udb, 0.03 seconds
-
-Initializing timer
-Starting design annotation....
-High-Performance_1.2V
-
-Starting full timing analysis...
-Performance Hardware Data Status:   Advanced       Version 1.0.
-Connections ignored  31  counted  345  covered  0
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:52:57 09/11/24
 Changing speed to m;   changing temperature to -40
+Changing speed to 6;   changing temperature to 100
 
-STA Runtime and Peak Memory Usage :
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 100 MB
+Start NBR section for post-routing at 21:52:57 09/11/24
 
- 0.662191s wall, 0.593750s user + 0.078125s system = 0.671875s CPU (101.5%)
+*****************************************************************************
+WARNING: The number of iterations in the router exceeds the maximum value
+specified. The router will clean up the data and exit soon.
+The workaround is to set -exp nbrCongestionEffortLevel=5.
+*****************************************************************************
 
+
+End NBR router with 2 unrouted connection(s)
+Changing speed to m;   changing temperature to -40
+Changing speed to 6;   changing temperature to 100
+
+Checksum -- route: 4ca0f38e7a92fdf2e3ce20dcbc0d0304855a2006
+
+Total CPU time 44 secs 
+Total REAL time: 45 secs 
+*****************************************************************
+!!! WARNING !!! 
+SKIP the function reportstates since skip_check_drc is set to 1.
+*****************************************************************
+
+Writing design to file microP_lab2_impl_1_par.dir/5_1.udb ...
+
+ERROR <60001013> - 2 connections in 1 signal are not completely routed.
+
+PAR_SUMMARY::Run status = Failed
+PAR_SUMMARY::Number of unrouted conns = 2
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Estimated worst slack<hold/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold/<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 1
+
+Note: user must run 'timing' for timing closure signoff.
+
+Total CPU  Time: 48 secs 
+Total REAL Time: 49 secs 
+Peak Memory Usage: 125.57 MB
+
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+INFO <60001136> - Iteration 5_1 failed because some connections were not able to be routed.
+ERROR <60001150> - No iteration could yield a fully routed design.
+Please check the Place and Route reports (.par) for the individual iterations under the directory "C:\Users\jbowman\Desktop\microP_lab2\fpga\radiant_project\lab2_jb\impl_1\microP_lab2_impl_1_par.dir\" and review your device utilization and timing constraints.
+Error: the command par_run failed.
+
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /49 secs 

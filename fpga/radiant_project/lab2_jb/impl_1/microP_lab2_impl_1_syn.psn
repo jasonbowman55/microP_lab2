@@ -10,12 +10,12 @@ Removing unused logic ...
 Starting design annotation....
  
 Constraint Summary:
-   Total number of constraints: 0
+   Total number of constraints: 1
    Total number of constraints dropped: 0
  
 Writing output file 'microP_lab2_impl_1_syn.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 39 MB
-Checksum -- postsyn: ec83cd45c7dc16a7f80b641fc236c00bcdfebc6
+Peak Memory Usage: 40 MB
+Checksum -- postsyn: 711851f39129b0c1718655a3adcfd0c75e0ddc6c

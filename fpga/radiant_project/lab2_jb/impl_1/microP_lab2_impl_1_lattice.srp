@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Sep 11 21:25:40 2024
+Wed Sep 11 21:52:00 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f microP_lab2_impl_1_lattice.synproj -logfile microP_lab2_impl_1_lattice.srp -gui -msgset C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml 
@@ -134,7 +134,8 @@ Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO <35901018> - synthesis: c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(5): compiling module top. VERI-1018
 INFO <35901018> - synthesis: c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(23): compiling module seven_seg_decoder. VERI-1018
-INFO <35901018> - synthesis: c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(104): compiling module binary_disp_decoder. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
+INFO <35901018> - synthesis: c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(102): compiling module binary_disp_decoder. VERI-1018
                                                          
 
 
@@ -159,94 +160,19 @@ INFO <35901018> - synthesis: c:/users/jbowman/desktop/microp_lab2/fpga/radiant_p
                                                          
 
 
-WARNING <35002064> - synthesis: c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(44): Register driving state[23:0] has both asynchronous set and reset.
-Your design may not work on the board. Lattice recommends you change your RTL.
-This warning is only issued once, although it may apply to other registers as well.
 
 
 
-
-WARNING <35002032> - synthesis: Register \MOD1/state_i0 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i1 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i2 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i3 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i4 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i5 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i6 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i7 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i8 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i9 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i10 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i11 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i12 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i13 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i14 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i15 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i16 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i17 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i18 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i19 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i20 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i21 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i22 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-WARNING <35002032> - synthesis: Register \MOD1/state_i23 with asynchronous clock enable is not supported. (c:/users/jbowman/desktop/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv 44[5] 94[8])
-CRITICAL <35001783> - synthesis: Mapping latch i217 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i221 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i225 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i229 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i233 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i237 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i241 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i245 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i249 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i253 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i257 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i261 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i265 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i269 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i273 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i277 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i281 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i285 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i289 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i293 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i297 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i301 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i305 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001783> - synthesis: Mapping latch i213 to logic since no latches found in device. Possible simulation mismatch. Please check if or case statements
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i13_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i4_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i12_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i23_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i3_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i22_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i21_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i7_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i11_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i20_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i19_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i18_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i17_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i10_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i16_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i15_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i14_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i6_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i2_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i9_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i1_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i0_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i5_reset is stuck at Zero
-CRITICAL <35001752> - synthesis: mRegister \MOD1/state_i8_reset is stuck at Zero
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 18 of 5280 (0 % )
-CCU2 => 9
-FD1P3XZ => 18
+Number of register bits => 25 of 5280 (0 % )
+CCU2 => 13
+FD1P3XZ => 25
+HSOSC_CORE => 1
 IB => 10
 IOL_B => 13
-LUT4 => 82
+LUT4 => 31
 OB => 14
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -260,16 +186,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : reset_c, loads : 35
+  Net : MOD1/int_osc, loads : 33
   Net : left_c_3, loads : 10
   Net : left_c_0, loads : 10
   Net : right_c_0, loads : 10
-  Net : MOD1/state[15], loads : 10
+  Net : MOD1/state[23], loads : 10
+  Net : MOD1/int_osc_enable_9, loads : 10
   Net : left_c_2, loads : 9
   Net : left_c_1, loads : 9
   Net : right_c_3, loads : 9
   Net : right_c_2, loads : 9
-  Net : right_c_1, loads : 9
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -288,4 +214,4 @@ Peak Memory Usage: 88 MB
 Total CPU Time: 1 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 11b44a9dc1252eefe09610a0ad01c39ff5b58651
+Checksum -- synthesis -- netlist: bb21492356a1e82c48e8969cde03fe1b18a9376a

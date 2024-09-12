@@ -31,16 +31,22 @@ module seven_seg_decoder (
 
 	//initializing variables
 	logic [23:0] state;
+	
+	// Internal high-speed oscillator for led[2]
+   HSOSC #(.CLKHF_DIV(2'b01)) 
+         hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
-always_ff @(posedge clk or posedge reset) begin
+
+always_ff @(posedge int_osc or posedge reset) begin
     if (reset) begin
-        state <= state + 1'b1;
+        //state <= 24'b0;
+        //select <= 2'b00; // Reset select to 00
     end else begin
-		state <= 24'b0;
-        select <= 2'b00; // Reset select to 00
+		state <= state + 1'b1;
+
 
         // Update select based on the MSB of state
-		if (state[15]) begin
+		if (state[23]) begin
             select <= 2'b10; // Select left input
 			case(left)
                     4'b0000: seg = 7'b0000001;
