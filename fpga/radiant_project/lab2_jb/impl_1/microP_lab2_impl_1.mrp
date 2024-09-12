@@ -8,26 +8,25 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Sep 11 14:37:58 2024
+Mapped on: Wed Sep 11 21:25:45 2024
 
 Design Information
 ------------------
 
-Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
-     a/radiant_project/lab2_jb/source/impl_1/impl_1.pdc -i
-     microP_lab2_impl_1_syn.udb -o microP_lab2_impl_1_map.udb -mp
-     microP_lab2_impl_1.mrp -hierrpt -gui -msgset C:/Users/spenc/OneDrive/Deskto
-     p/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
+Command line:   map -pdc C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_proje
+     ct/lab2_jb/source/impl_1/impl_1.pdc -i microP_lab2_impl_1_syn.udb -o
+     microP_lab2_impl_1_map.udb -mp microP_lab2_impl_1.mrp -hierrpt -gui -msgset
+      C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.
+     xml
 
 Design Summary
 --------------
 
-   Number of slice registers:  26 out of  5280 (<1%)
-   Number of I/O registers:      5 out of   117 (4%)
-   Number of LUT4s:            50 out of  5280 (1%)
-      Number of logic LUT4s:              23
-      Number of inserted feedthru LUT4s:   1
-      Number of ripple logic:             13 (26 LUT4s)
+   Number of slice registers:  18 out of  5280 (<1%)
+   Number of I/O registers:     13 out of   117 (11%)
+   Number of LUT4s:           118 out of  5280 (2%)
+      Number of logic LUT4s:             100
+      Number of ripple logic:              9 (18 LUT4s)
    Number of IO sites used:   24 out of 39 (62%)
       Number of IO sites used for general PIO: 24
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -50,16 +49,17 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 20 loads, 20 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  0
-   Number of LSRs:  1
-      Pin reset: 15 loads, 15 SLICEs (Net: reset_c)
-   Top 10 highest fanout non-clock nets:
-      Net reset_c: 15 loads
-      Net right_c_2: 9 loads
-      Net left_c_1: 8 loads
-      Net right_c_1: 8 loads
-      Net right_c_3: 8 loads
+      Net clk_c: 31 loads, 31 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  1
+      Net clk_c_enable_9: 9 loads, 0 SLICEs
+   Number of LSRs:  18
+      Net MOD2.n59: 1 loads, 1 SLICEs
+      Net MOD1.state_13__N_21: 1 loads, 1 SLICEs
+      Net MOD1.state_4__N_39: 1 loads, 1 SLICEs
+      Net MOD1.state_12__N_23: 1 loads, 1 SLICEs
+      Net MOD1.state_14__N_19: 1 loads, 1 SLICEs
+      Net MOD1.state_7__N_33: 1 loads, 1 SLICEs
+      Net MOD1.state_3__N_41: 1 loads, 1 SLICEs
 
                                     Page 1
 
@@ -69,11 +69,28 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net select_c_0: 8 loads
-      Net select_c_1: 8 loads
-      Net left_c_0: 7 loads
-      Net left_c_2: 7 loads
-      Net left_c_3: 7 loads
+      Net MOD1.state_11__N_25: 1 loads, 1 SLICEs
+      Net MOD1.state_16__N_15: 1 loads, 1 SLICEs
+      Net MOD1.state_10__N_27: 1 loads, 1 SLICEs
+      Net MOD1.state_15__N_17: 1 loads, 1 SLICEs
+      Net MOD1.state_2__N_43: 1 loads, 1 SLICEs
+      Net MOD1.state_6__N_35: 1 loads, 1 SLICEs
+      Net MOD1.state_9__N_29: 1 loads, 1 SLICEs
+      Net MOD1.state_1__N_45: 1 loads, 1 SLICEs
+      Net MOD1.state_0__N_47: 1 loads, 1 SLICEs
+      Net MOD1.state_5__N_37: 1 loads, 1 SLICEs
+      Net MOD1.state_8__N_31: 1 loads, 1 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset_c: 35 loads
+      Net left_c_0: 10 loads
+      Net left_c_2: 10 loads
+      Net left_c_3: 10 loads
+      Net MOD1.n2702: 10 loads
+      Net right_c_0: 10 loads
+      Net right_c_2: 10 loads
+      Net clk_c_enable_9: 9 loads
+      Net left_c_1: 9 loads
+      Net MOD1.n324: 9 loads
 
 
 
@@ -110,23 +127,6 @@ IO (PIO) Attributes
 | left[2]             | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | left[3]             | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| reset               | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| select[0]           | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| select[1]           | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led[0]              | OUTPUT    |           | O     |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led[1]              | OUTPUT    |           | O     |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led[2]              | OUTPUT    |           | O     |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led[3]              | OUTPUT    |           | O     |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 2
 
@@ -136,21 +136,38 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
-| led[4]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[0]              | OUTPUT    |           |       |       |           |
+| reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[1]              | OUTPUT    |           |       |       |           |
+| clk                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[2]              | OUTPUT    |           |       |       |           |
+| select[0]           | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[3]              | OUTPUT    |           |       |       |           |
+| select[1]           | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[4]              | OUTPUT    |           |       |       |           |
+| led[0]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[5]              | OUTPUT    |           |       |       |           |
+| led[1]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| seg[6]              | OUTPUT    |           |       |       |           |
+| led[2]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| led[3]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| led[4]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[0]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[1]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[2]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[3]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[4]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[5]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| seg[6]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
@@ -163,17 +180,44 @@ ASIC Components
 
 Instance Name: MOD2/led_i2
          Type: IOLOGIC
-Instance Name: MOD2/led_i4
-         Type: IOLOGIC
 Instance Name: MOD2/led_i3
          Type: IOLOGIC
+Instance Name: MOD2/led_i4
+         Type: IOLOGIC
 Instance Name: MOD2/led_i1
+         Type: IOLOGIC
+Instance Name: MOD1/select_i0_i1
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i6
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i5
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i4
+
+                                    Page 3
+
+
+
+
+
+ASIC Components (cont)
+----------------------
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i3
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i2
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i1
+         Type: IOLOGIC
+Instance Name: MOD1/seg_i0_i7
+         Type: IOLOGIC
+Instance Name: MOD1/select_i0_i2
          Type: IOLOGIC
 
 Constraint Summary
 ------------------
 
-   Total number of constraints: 23
+   Total number of constraints: 21
    Total number of constraints dropped: 0
 
 Run Time and Memory Usage
@@ -181,8 +225,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 65 MB
-Checksum -- map: c0c625ecea5a86d08d9e28a08babbef16c71f53d
+   Peak Memory Usage: 64 MB
+Checksum -- map: 10882b6240e85d1c11799fdada7a867d5f85f4e8
 
 
 
@@ -194,7 +238,29 @@ Checksum -- map: c0c625ecea5a86d08d9e28a08babbef16c71f53d
 
 
 
-                                    Page 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

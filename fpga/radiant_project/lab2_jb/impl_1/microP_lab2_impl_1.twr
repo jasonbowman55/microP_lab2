@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.1.0.34.2
 
-Wed Sep 11 14:38:07 2024
+Wed Sep 11 21:25:53 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -8,7 +8,7 @@ Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/jbowman/Desktop/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
 
 -----------------------------------------
 Design:          top
@@ -123,7 +123,109 @@ nition                                  |                         1
 
 1.5  Combinational Loop
 ========================
-None
+Combinational Loops
+-------------------
+++++ Loop1
+MOD1/add_4_add_5_17/S1	->	MOD1/i386_3_lut/Z
+
+++++ Loop2
+MOD1/i386_3_lut/A	->	MOD1/i386_3_lut/Z
+
+++++ Loop3
+MOD1/add_4_add_5_5/S1	->	MOD1/i326_3_lut/Z
+
+++++ Loop4
+MOD1/add_4_add_5_7/B1	->	MOD1/add_4_add_5_7/S1
+
+++++ Loop5
+MOD1/add_4_add_5_9/B1	->	MOD1/add_4_add_5_9/S1
+
+++++ Loop6
+MOD1/add_4_add_5_11/B1	->	MOD1/add_4_add_5_11/S1
+
+++++ Loop7
+MOD1/add_4_add_5_13/B1	->	MOD1/add_4_add_5_13/S1
+
+++++ Loop8
+MOD1/add_4_add_5_15/B1	->	MOD1/add_4_add_5_15/S1
+
+++++ Loop9
+MOD1/i381_3_lut/A	->	MOD1/i381_3_lut/Z
+
+++++ Loop10
+MOD1/add_4_add_5_17/B0	->	MOD1/add_4_add_5_17/S0
+
+++++ Loop11
+MOD1/i376_3_lut/A	->	MOD1/i376_3_lut/Z
+
+++++ Loop12
+MOD1/add_4_add_5_15/B0	->	MOD1/add_4_add_5_15/S0
+
+++++ Loop13
+MOD1/i371_3_lut/A	->	MOD1/i371_3_lut/Z
+
+++++ Loop14
+MOD1/i366_3_lut/A	->	MOD1/i366_3_lut/Z
+
+++++ Loop15
+MOD1/add_4_add_5_13/B0	->	MOD1/add_4_add_5_13/S0
+
+++++ Loop16
+MOD1/i361_3_lut/A	->	MOD1/i361_3_lut/Z
+
+++++ Loop17
+MOD1/i356_3_lut/A	->	MOD1/i356_3_lut/Z
+
+++++ Loop18
+MOD1/add_4_add_5_11/B0	->	MOD1/add_4_add_5_11/S0
+
+++++ Loop19
+MOD1/i351_3_lut/A	->	MOD1/i351_3_lut/Z
+
+++++ Loop20
+MOD1/i346_3_lut/A	->	MOD1/i346_3_lut/Z
+
+++++ Loop21
+MOD1/add_4_add_5_9/B0	->	MOD1/add_4_add_5_9/S0
+
+++++ Loop22
+MOD1/i341_3_lut/A	->	MOD1/i341_3_lut/Z
+
+++++ Loop23
+MOD1/i336_3_lut/A	->	MOD1/i336_3_lut/Z
+
+++++ Loop24
+MOD1/add_4_add_5_7/B0	->	MOD1/add_4_add_5_7/S0
+
+++++ Loop25
+MOD1/i331_3_lut/A	->	MOD1/i331_3_lut/Z
+
+++++ Loop26
+MOD1/i326_3_lut/A	->	MOD1/i326_3_lut/Z
+
+++++ Loop27
+MOD1/add_4_add_5_3/S0	->	MOD1/i311_3_lut/Z
+
+++++ Loop28
+MOD1/add_4_add_5_3/B1	->	MOD1/add_4_add_5_3/S1
+
+++++ Loop29
+MOD1/add_4_add_5_5/B0	->	MOD1/add_4_add_5_5/S0
+
+++++ Loop30
+MOD1/i321_3_lut/A	->	MOD1/i321_3_lut/Z
+
+++++ Loop31
+MOD1/i316_3_lut/A	->	MOD1/i316_3_lut/Z
+
+++++ Loop32
+MOD1/i311_3_lut/A	->	MOD1/i311_3_lut/Z
+
+++++ Loop33
+MOD1/add_4_add_5_1/S1	->	MOD1/i426_3_lut/Z
+
+++++ Loop34
+MOD1/i426_3_lut/A	->	MOD1/i426_3_lut/Z
 
 ===============================================================
 2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees

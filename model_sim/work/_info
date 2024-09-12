@@ -1,0 +1,83 @@
+m255
+K4
+z2
+!s11f vlog 2022.3 2022.07, Jul 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Program Files/Modelsim/examples
+vbinary_disp_decoder
+Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z1 !s110 1726109330
+!i10b 1
+!s100 4C4J7ABLfDl]7E`Em@Xg`0
+ICef>4abWK>6RSUob9@17h3
+S1
+Z2 dC:/Users/jbowman/Desktop/microP_lab2/model_sim
+Z3 w1726108875
+Z4 8C:/Users/jbowman/Desktop/microP_lab2/model_sim/lab2_debug.sv
+Z5 FC:/Users/jbowman/Desktop/microP_lab2/model_sim/lab2_debug.sv
+!i122 1
+L0 113 12
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OP;L;2022.3;75
+r1
+!s85 0
+31
+Z8 !s108 1726109329.000000
+!s107 C:/Users/jbowman/Desktop/microP_lab2/model_sim/lab2_debug.sv|
+Z9 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/jbowman/Desktop/microP_lab2/model_sim/lab2_debug.sv|
+!i113 1
+Z10 o-work work -sv
+Z11 tCvgOpt 0
+vseven_seg_decoder
+R0
+R1
+!i10b 1
+!s100 Hm4hjk9h;[U>4a6za6U1U1
+IGnP>DmkGBgB:77?hm]S7_3
+S1
+R2
+R3
+R4
+R5
+!i122 1
+L0 23 87
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 C:/Users/jbowman/Desktop/microP_lab2/model_sim/lab2_debug.sv|
+R9
+!i113 1
+R10
+R11
+vtop
+R0
+R1
+!i10b 1
+!s100 RV^l4T5ecUmMm2YQKmS0h1
+IGTU?OMGzLOV27f2[MiZbQ1
+S1
+R2
+R3
+R4
+R5
+!i122 1
+L0 5 15
+R6
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 1
+R10
+R11
