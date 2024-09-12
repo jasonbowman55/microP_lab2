@@ -21,7 +21,7 @@
 -fix_gated_clocks 1
 -loop_limit 1950
 
-
+-decode_unreachable_states
 
 
 

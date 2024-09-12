@@ -35,7 +35,7 @@ module seven_seg_decoder (
 
 
 always_ff @(posedge int_osc or posedge reset) begin
-    if (reset) begin
+    if (!reset) begin
 		state <= 24'b0;
         select <= 2'b00; // Reset select to 00
     end else begin
@@ -113,7 +113,7 @@ module binary_disp_decoder(
 	output logic [4:0] led
 );
 	always_ff @(posedge clk or posedge reset) begin
-        if (reset) begin
+        if (!reset) begin
 			led <= 5'b0;
         end else begin
             led <= right + left;
