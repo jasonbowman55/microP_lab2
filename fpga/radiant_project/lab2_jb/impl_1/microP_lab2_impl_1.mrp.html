@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Thu Sep 12 11:31:00 2024
+Mapped on: Fri Sep 13 18:03:49 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -61,21 +61,20 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers:  23 out of  5280 (&lt;1%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            49 out of  5280 (1%)
-      Number of logic LUT4s:              30
-      Number of inserted feedthru LUT4s:   1
-      Number of ripple logic:              9 (18 LUT4s)
-   Number of IO sites used:   24 out of 39 (62%)
-      Number of IO sites used for general PIO: 24
+   Number of slice registers:  28 out of  5280 (1%)
+   Number of I/O registers:      2 out of   117 (2%)
+   Number of LUT4s:            41 out of  5280 (1%)
+      Number of logic LUT4s:              15
+      Number of ripple logic:             13 (26 LUT4s)
+   Number of IO sites used:   27 out of 39 (69%)
+      Number of IO sites used for general PIO: 27
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 24 out of 36 (67%)
+      Number of IO sites used for PIO+I3C: 27 out of 36 (75%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 24 out of 39 (62%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 27 out of 39 (69%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  1 out of 1 (100%)
@@ -88,25 +87,24 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  2
-      Net MOD1.int_osc: 11 loads, 11 rising, 0 falling (Driver: Pin
-     MOD1.hf_osc/CLKHF)
-      Net clk_c: 5 loads, 5 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  1
-      Net select_pad[0].vcc: 1 loads, 0 SLICEs
+   Number of Clocks:  1
+      Net int_osc: 19 loads, 19 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  2
+      Net VCC_net: 1 loads, 0 SLICEs
+      Pin reset: 6 loads, 4 SLICEs (Net: reset_c)
    Number of LSRs:  1
-      Pin reset: 16 loads, 16 SLICEs (Net: reset_c)
+      Net n273: 13 loads, 13 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net reset_c: 16 loads
-      Net left_c_0: 10 loads
-      Net right_c_0: 10 loads
-      Net left_c_1: 9 loads
-      Net left_c_2: 9 loads
-      Net left_c_3: 9 loads
-      Net right_c_1: 9 loads
-      Net right_c_2: 9 loads
-      Net right_c_3: 9 loads
+      Net n273: 13 loads
       Net select_c_0: 8 loads
+      Net select_c_1: 8 loads
+      Net select_c_2: 8 loads
+      Net select_c_3: 8 loads
+      Net reset_c: 7 loads
+      Net state[23]: 7 loads
+      Net VCC_net: 3 loads
+      Net n327: 2 loads
+      Net n760: 2 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -140,11 +138,17 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
 +---------------------+-----------+-----------+-------+-------+-----------+
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | INPUT     |           |       |       |           |
+| osc[0]              | OUTPUT    |           | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| osc[1]              | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | select[0]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | select[1]           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select[2]           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select[3]           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | led[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -173,21 +177,24 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block right_pad[0].vlo_inst was optimized away.
 
 <A name="mrp_osc"></A><B><U><big>OSC Summary</big></U></B>
 
 OSC 1:                                 Pin/Node Value
-  OSC Instance Name:                            MOD1/hf_osc
-  Power UP:                            NODE     select_pad[0].vcc
-  Enable Signal:                       NODE     select_pad[0].vcc
-  OSC Output:                          NODE     MOD1.int_osc
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     int_osc
   DIV Setting:                                  01
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
-Instance Name: MOD1/hf_osc
+Instance Name: hf_osc
          Type: HFOSC
+Instance Name: osc_i0_i2
+         Type: IOLOGIC
+Instance Name: osc_i0_i1
+         Type: IOLOGIC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
@@ -199,7 +206,7 @@ Instance Name: MOD1/hf_osc
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 64 MB
-Checksum -- map: b9c43eca76060c85c89bb9163e9d57c8a9eaebe6
+Checksum -- map: a090abe1fd81bae8474f2ddddd1d30c771db5937
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

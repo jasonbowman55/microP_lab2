@@ -339,6 +339,14 @@
             <Dynamic>C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1</Dynamic>
         </Message>
         <Message>
+            <ID>35901318</ID>
+            <Severity>32</Severity>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(37): </Dynamic>
+            <Dynamic>select</Dynamic>
+            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(1): </Dynamic>
@@ -349,47 +357,30 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(19): </Dynamic>
-            <Dynamic>seven_seg_decoder</Dynamic>
-            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>19</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>1</Severity>
             <Dynamic>C:/Lattice Radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
             <Dynamic>HSOSC(CLKHF_DIV=2'b01)</Dynamic>
             <Navigation>C:/Lattice Radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
             <Navigation>756</Navigation>
         </Message>
         <Message>
-            <ID>35902548</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(38): </Dynamic>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(45): </Dynamic>
+            <Dynamic>seven_seg_decoder</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>38</Navigation>
+            <Navigation>45</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(108): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(78): </Dynamic>
             <Dynamic>binary_disp_decoder</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>108</Navigation>
+            <Navigation>78</Navigation>
         </Message>
         <Message>
-            <ID>35902548</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(116): </Dynamic>
-            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>116</Navigation>
-        </Message>
-        <Message>
-            <ID>35002065</ID>
-            <Severity>4096</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Dynamic>
-            <Dynamic>38</Dynamic>
-            <Dynamic>state[24:0]</Dynamic>
+            <ID>35002039</ID>
+            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>

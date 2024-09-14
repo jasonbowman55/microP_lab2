@@ -1,34 +1,23 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  23 of 5280 (0.436%)
-I/O cells:      24
+Register bits:  28 of 5280 (0.530%)
+I/O cells:      27
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2         9          100.0
-                            FD1P3XZ        23          100.0
+                               CCU2        13          100.0
+                            FD1P3XZ        28          100.0
                          HSOSC_CORE         1          100.0
-                                 IB        10          100.0
-                               LUT4        29          100.0
-                                 OB        14          100.0
+                                 IB         9          100.0
+                              IOL_B         2          100.0
+                               LUT4        13          100.0
+                                 OB        18          100.0
 SUB MODULES
-                binary_disp_decoder         1
                   seven_seg_decoder         1
-                              TOTAL        88
+                              TOTAL        85
 ----------------------------------------------------------------------
 Report for cell seven_seg_decoder.v1
 Instance Path : MOD1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         9          100.0
-                            FD1P3XZ        18           78.3
-                         HSOSC_CORE         1          100.0
-                               LUT4        22           75.9
-                              TOTAL        50
-----------------------------------------------------------------------
-Report for cell binary_disp_decoder.v1
-Instance Path : MOD2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3XZ         5           21.7
-                               LUT4         7           24.1
-                              TOTAL        12
+                               LUT4         7           53.8
+                              TOTAL         7

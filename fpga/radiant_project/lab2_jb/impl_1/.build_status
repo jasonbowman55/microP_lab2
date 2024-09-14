@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="0" build_time="1726167697">
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="1726167697"/>
+        <Milestone name="Export" build_result="2" build_time="1726275847">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1726275847"/>
             <Task name="IBIS" build_result="0" update_result="2" update_time="1725925869"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1725925869"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1726167697">
-            <Task name="Map" build_result="0" update_result="2" update_time="1726167697"/>
+        <Milestone name="Map" build_result="2" build_time="1726275829">
+            <Task name="Map" build_result="2" update_result="0" update_time="1726275829"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1725925869"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1726167697">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1726167697"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1726167697"/>
+        <Milestone name="PAR" build_result="2" build_time="1726275842">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1726275842"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1726275842"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="1725925869"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="1" build_time="1726167722">
-            <Task name="Lattice_Synthesis" build_result="1" update_result="2" update_time="1726167722"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1726167722"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1726275523">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1726275523"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1726275523"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1726108940"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1726108940"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0"/>
-        <Report name="microP_lab2_impl_1.bgn" last_build_time="1726165875" last_build_size="1246"/>
-        <Report name="microP_lab2_impl_1.bin" last_build_time="1726165875" last_build_size="104156"/>
+        <Report name="microP_lab2_impl_1.bgn" last_build_time="1726275847" last_build_size="1246"/>
+        <Report name="microP_lab2_impl_1.bin" last_build_time="1726275847" last_build_size="104156"/>
         <Report name="microP_lab2_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="microP_lab2_impl_1.twr.html" last_build_time="1726165870" last_build_size="256186"/>
-        <Report name="microP_lab2_impl_1.udb" last_build_time="1726165870" last_build_size="11868"/>
-        <Report name="microP_lab2_impl_1_map.udb" last_build_time="1726165860" last_build_size="8258"/>
-        <Report name="microP_lab2_impl_1_rtl.udb" last_build_time="1726167722" last_build_size="5902"/>
-        <Report name="microP_lab2_impl_1_syn.udb" last_build_time="1726165855" last_build_size="5281"/>
+        <Report name="microP_lab2_impl_1.twr.html" last_build_time="1726275842" last_build_size="308446"/>
+        <Report name="microP_lab2_impl_1.udb" last_build_time="1726275842" last_build_size="10578"/>
+        <Report name="microP_lab2_impl_1_map.udb" last_build_time="1726275829" last_build_size="7666"/>
+        <Report name="microP_lab2_impl_1_rtl.udb" last_build_time="1726275522" last_build_size="4443"/>
+        <Report name="microP_lab2_impl_1_syn.udb" last_build_time="1726275523" last_build_size="4733"/>
     </Strategy>
 </BuildStatus>
+                
