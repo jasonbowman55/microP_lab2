@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Fri Sep 13 18:03:49 2024
+Mapped on: Sun Sep 15 15:42:18 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -61,11 +61,11 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers:  28 out of  5280 (1%)
+   Number of slice registers:  17 out of  5280 (&lt;1%)
    Number of I/O registers:      2 out of   117 (2%)
-   Number of LUT4s:            41 out of  5280 (1%)
-      Number of logic LUT4s:              15
-      Number of ripple logic:             13 (26 LUT4s)
+   Number of LUT4s:            35 out of  5280 (1%)
+      Number of logic LUT4s:              21
+      Number of ripple logic:              7 (14 LUT4s)
    Number of IO sites used:   27 out of 39 (69%)
       Number of IO sites used for general PIO: 27
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -88,23 +88,22 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net int_osc: 19 loads, 19 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-   Number of Clock Enables:  2
+      Net int_osc: 13 loads, 13 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  1
       Net VCC_net: 1 loads, 0 SLICEs
-      Pin reset: 6 loads, 4 SLICEs (Net: reset_c)
    Number of LSRs:  1
-      Net n273: 13 loads, 13 SLICEs
+      Net n297: 7 loads, 7 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net n273: 13 loads
       Net select_c_0: 8 loads
       Net select_c_1: 8 loads
       Net select_c_2: 8 loads
       Net select_c_3: 8 loads
-      Net reset_c: 7 loads
-      Net state[23]: 7 loads
-      Net VCC_net: 3 loads
-      Net n327: 2 loads
-      Net n760: 2 loads
+      Net n297: 7 loads
+      Net state[12]: 7 loads
+      Net left_c_0: 4 loads
+      Net right_c_0: 4 loads
+      Net left_c_2: 3 loads
+      Net left_c_3: 3 loads
 
    Number of warnings:  0
    Number of criticals: 0
@@ -177,6 +176,7 @@ Command line:   map -pdc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpg
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
+Block i1 was optimized away.
 
 <A name="mrp_osc"></A><B><U><big>OSC Summary</big></U></B>
 
@@ -191,9 +191,9 @@ OSC 1:                                 Pin/Node Value
 
 Instance Name: hf_osc
          Type: HFOSC
-Instance Name: osc_i0_i2
+Instance Name: osc_i2
          Type: IOLOGIC
-Instance Name: osc_i0_i1
+Instance Name: osc_i1
          Type: IOLOGIC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
@@ -206,7 +206,7 @@ Instance Name: osc_i0_i1
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 64 MB
-Checksum -- map: a090abe1fd81bae8474f2ddddd1d30c771db5937
+Checksum -- map: 50bd2e79c4c3cea1191f1ed9a48ba72a331d51
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

@@ -341,18 +341,18 @@
         <Message>
             <ID>35901318</ID>
             <Severity>32</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(37): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(44): </Dynamic>
             <Dynamic>select</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>37</Navigation>
+            <Navigation>44</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(1): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(5): </Dynamic>
             <Dynamic>top</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>1</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -365,18 +365,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(45): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(52): </Dynamic>
             <Dynamic>seven_seg_decoder</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>45</Navigation>
+            <Navigation>52</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(78): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(86): </Dynamic>
             <Dynamic>binary_disp_decoder</Dynamic>
             <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>78</Navigation>
+            <Navigation>86</Navigation>
         </Message>
         <Message>
             <ID>35002039</ID>

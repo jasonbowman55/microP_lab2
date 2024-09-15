@@ -1,3 +1,7 @@
+// Jason Bowman
+// jbowman@g.hmc.edu
+// 9-8-24
+
 module top (
 	input logic reset,
 	input logic [3:0] left,
@@ -15,20 +19,23 @@ HSOSC #(.CLKHF_DIV(2'b01))
 	hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
 always_ff @(posedge int_osc) begin
-    if (!reset) begin
+    if (reset == 0)
 		state <= 24'b0;
-    end else begin
+    else
         state <= state + 1'b1;
+end
 		
-
+always_ff @(posedge int_osc) begin
         //Update select based on the MSB of states
-		if (state[23]) begin
-            select = right; // Select left input
-			osc = 2'b10;
-        end else begin
-            select = left; // Select right input
-			osc = 2'b01;
-        end
+	if (state[12] == 0) begin
+		select <= right; // Select left input/
+		osc[0] <= 1;
+		osc[1] <= 0;
+	end
+    else begin
+        select <= left; // Select right input
+		osc[0] <= 0;
+		osc[1] <= 1;
     end
 end
 ////////////////////////////////
@@ -49,6 +56,7 @@ module seven_seg_decoder (
 	);
 
  //combinational logic to assign bits to the displays
+ 
  always_comb begin
 	case(select)
 		4'b0000: seg = 7'b0000001;
@@ -80,5 +88,12 @@ module binary_disp_decoder(
 	input logic [3:0] right,
 	output logic [4:0] led
 );
-		assign led = 5'b00000;
+logic [4:0] sum;
+
+always_comb begin
+	sum = ~right + ~left;
+end
+
+assign led = sum;
+
 endmodule

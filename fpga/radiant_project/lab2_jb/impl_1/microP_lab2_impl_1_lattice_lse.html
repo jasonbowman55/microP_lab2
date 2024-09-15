@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Sep 13 17:58:37 2024
+Sun Sep 15 15:42:07 2024
 
 
 Command Line:  C:\Lattice Radiant\ispfpga\bin\nt64\synthesis.exe -f microP_lab2_impl_1_lattice.synproj -logfile microP_lab2_impl_1_lattice.srp -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml 
@@ -175,11 +175,11 @@ INFO <35921014> - synthesis: c:/lattice radiant/ip/pmi/pmi_ice40up.vhd(4): analy
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
-WARNING <35901318> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(37): variable select might have multiple concurrent drivers. VERI-1318
-INFO <35901018> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(1): compiling module top. VERI-1018
+WARNING <35901318> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(44): variable select might have multiple concurrent drivers. VERI-1318
+INFO <35901018> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(5): compiling module top. VERI-1018
 INFO <35901018> - synthesis: C:/Lattice Radiant/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
-INFO <35901018> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(45): compiling module seven_seg_decoder. VERI-1018
-INFO <35901018> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(78): compiling module binary_disp_decoder. VERI-1018
+INFO <35901018> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(52): compiling module seven_seg_decoder. VERI-1018
+INFO <35901018> - synthesis: c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(86): compiling module binary_disp_decoder. VERI-1018
                                                          
 
 
@@ -213,17 +213,17 @@ INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for Thunde
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (top)######################
-Number of register bits => 28 of 5280 (0 % )
-CCU2 => 13
-FD1P3XZ => 28
+Number of register bits => 17 of 5280 (0 % )
+CCU2 => 7
+FD1P3XZ => 17
 HSOSC_CORE => 1
 IB => 9
 IOL_B => 2
-LUT4 => 13
+LUT4 => 20
 OB => 18
 ################### End Area Report ##################
-Number of odd-length carry chains : 0
-Number of even-length carry chains : 1
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 0
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -236,16 +236,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n273, loads : 24
+  Net : n297, loads : 13
   Net : select_c_3, loads : 8
   Net : select_c_2, loads : 8
   Net : select_c_1, loads : 8
   Net : select_c_0, loads : 8
-  Net : reset_c, loads : 7
-  Net : state[23], loads : 7
-  Net : n727, loads : 2
-  Net : n760, loads : 2
-  Net : n327, loads : 2
+  Net : state[12], loads : 7
+  Net : left_c_0, loads : 4
+  Net : right_c_0, loads : 4
+  Net : left_c_3, loads : 3
+  Net : left_c_2, loads : 3
 ################### End Clock Report ##################
 
 
@@ -265,9 +265,9 @@ Peak Memory Usage: 90 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
-Total REAL Time: 5 secs 
+Total REAL Time: 6 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 9f45e033303e8fd542da484ed1741e5dacbf3a70
+Checksum -- synthesis -- netlist: 884ab2d1dd7a6b25458bcbe0acaa9599e64b10fd
 
 
 
