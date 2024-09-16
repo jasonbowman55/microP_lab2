@@ -1,6 +1,7 @@
 // Jason Bowman
 // jbowman@g.hmc.edu
 // 9-8-24
+// This lab uses the UPduino FPGA to time-multiplex a dual 7-segment display, showing independent hexadecimal values (1-F) from separate binary DIP switch inputs
 
 module top (
 	input logic reset,
@@ -11,44 +12,46 @@ module top (
 	output logic [3:0] select, 
 	output logic [1:0] osc
 	);
-// variable initialization
-	logic [24:0] state;
+// internal counter variable instantiation
+	logic [24:0] counter;
 	
-// HSOSC logic //////////////////
+// HSOSC logic used to increment the counter variable, allowing selection of toggle speed between displays
 HSOSC #(.CLKHF_DIV(2'b01)) 
 	hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
 always_ff @(posedge int_osc) begin
     if (reset == 0)
-		state <= 24'b0;
+		counter <= 24'b0;
     else
-        state <= state + 1'b1;
+        counter <= counter + 1'b1;
 end
-		
+
+// controls display toggle speed and updates corresponding inputs for binary-to-hexadecimal combinational logic
 always_ff @(posedge int_osc) begin
-        //Update select based on the MSB of states
-	if (state[12] == 0) begin
-		select <= right; // Select left input/
-		osc[0] <= 1;
+    // counter[#] controlls toggle speed
+	if (counter[12] == 0) begin
+		select <= right; // Select left DIP-switch input
+		osc[0] <= 1; // turn on left display
 		osc[1] <= 0;
 	end
     else begin
-        select <= left; // Select right input
+        select <= left; // Select right DIP-switch input
 		osc[0] <= 0;
-		osc[1] <= 1;
+		osc[1] <= 1; // turn on right display
     end
 end
-////////////////////////////////
 
-// instantiated modules
+// instantiated submodules
 seven_seg_decoder MOD1 (reset, seg, select);
 
 binary_disp_decoder MOD2 (left, right, led);
+//**
 
 endmodule
 
-// MOD1 //////////////////////////////////////
-// 7 segment decoder test 
+
+
+// MOD1: 7 segment decoder combinational logic 
 module seven_seg_decoder (
 	input logic reset,
 	output logic [6:0] seg,
@@ -56,7 +59,6 @@ module seven_seg_decoder (
 	);
 
  //combinational logic to assign bits to the displays
- 
  always_comb begin
 	case(select)
 		4'b0000: seg = 7'b0000001;
@@ -80,20 +82,28 @@ module seven_seg_decoder (
 end
 
 endmodule
-///////////////////////////////////////////
 
-// MOD2 //////////////////////////////////////////
+
+
+// MOD2: controls 5-bit binary LED logic 
 module binary_disp_decoder(
 	input logic [3:0] left,
 	input logic [3:0] right,
 	output logic [4:0] led
 );
+//instantiation of internal variabe
 logic [4:0] sum;
 
-always_comb begin
-	sum = ~right + ~left;
-end
+	// sum right and left DIP-switch binary inputs
+	always_comb begin
+		sum = ~right + ~left;
+	end
 
-assign led = sum;
+	// assign ouput bits
+	assign led[0] = sum[0];
+	assign led[1] = sum[1];
+	assign led[2] = sum[2];
+	assign led[3] = sum[3];
+	assign led[4] = sum[4];
 
 endmodule

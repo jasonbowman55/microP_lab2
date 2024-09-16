@@ -1,11 +1,11 @@
 POSTSYN: Post Synthesis Process Radiant Software (64-bit) 2024.1.0.34.2
-Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o microP_lab2_impl_1_syn.udb -ldc C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1.ldc -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml microP_lab2_impl_1.vm 
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o microP_lab2_impl_1_syn.udb -ldc C:/Users/spenc/OneDrive/Desktop/microPs/microP-lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1.ldc -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP-lab2/fpga/radiant_project/lab2_jb/promote.xml microP_lab2_impl_1.vm 
    Architecture:     iCE40UP
    Device:           iCE40UP5K
    Package:          SG48
    Performance:      High-Performance_1.2V
 Reading input file 'microP_lab2_impl_1.vm' ...
-Reading constraint file 'C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1.ldc' ...
+Reading constraint file 'C:/Users/spenc/OneDrive/Desktop/microPs/microP-lab2/fpga/radiant_project/lab2_jb/impl_1/microP_lab2_impl_1.ldc' ...
 Removing unused logic ...
 Starting design annotation....
  
@@ -18,4 +18,4 @@ POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
 Peak Memory Usage: 41 MB
-Checksum -- postsyn: f9bc904ba47ad3a272866748fc96484cb614331d
+Checksum -- postsyn: d61186ded55e618f63412b93de5effaa1a781c8b

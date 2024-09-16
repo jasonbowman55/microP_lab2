@@ -336,23 +336,23 @@
             <ID>35921504</ID>
             <Severity>1</Severity>
             <Dynamic></Dynamic>
-            <Dynamic>C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/impl_1</Dynamic>
+            <Dynamic>C:/Users/spenc/OneDrive/Desktop/microPs/microP-lab2/fpga/radiant_project/lab2_jb/impl_1</Dynamic>
         </Message>
         <Message>
             <ID>35901318</ID>
             <Severity>32</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(44): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(45): </Dynamic>
             <Dynamic>select</Dynamic>
-            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>44</Navigation>
+            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
+            <Navigation>45</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(5): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(6): </Dynamic>
             <Dynamic>top</Dynamic>
-            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>5</Navigation>
+            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
+            <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -365,18 +365,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(52): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(55): </Dynamic>
             <Dynamic>seven_seg_decoder</Dynamic>
-            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>52</Navigation>
+            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
+            <Navigation>55</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(86): </Dynamic>
+            <Dynamic>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv(89): </Dynamic>
             <Dynamic>binary_disp_decoder</Dynamic>
-            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp_lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
-            <Navigation>86</Navigation>
+            <Navigation>c:/users/spenc/onedrive/desktop/microps/microp-lab2/fpga/radiant_project/lab2_jb/source/impl_1/verilog_lab2.sv</Navigation>
+            <Navigation>89</Navigation>
         </Message>
         <Message>
             <ID>35002039</ID>

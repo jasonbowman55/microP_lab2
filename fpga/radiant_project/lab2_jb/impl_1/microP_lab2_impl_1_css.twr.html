@@ -46,7 +46,7 @@ if (a)
 <A name="Timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.1.0.34.2
 
-Sun Sep 15 15:42:28 2024
+Mon Sep 16 11:42:26 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -54,7 +54,7 @@ Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP_lab2/fpga/radiant_project/lab2_jb/promote.xml
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt microP_lab2_impl_1.twr microP_lab2_impl_1.udb -gui -msgset C:/Users/spenc/OneDrive/Desktop/microPs/microP-lab2/fpga/radiant_project/lab2_jb/promote.xml
 
 -----------------------------------------
 Design:          top
@@ -129,19 +129,19 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
           Listing 7 End Points          |           Type           
 -------------------------------------------------------------------
-{state_19_55__i12/SR   state_19_55__i13/SR}                           
+{counter_19_55__i12/SR   counter_19_55__i13/SR}                           
                                         |           No arrival time
-{state_19_55__i10/SR   state_19_55__i11/SR}                           
+{counter_19_55__i10/SR   counter_19_55__i11/SR}                           
                                         |           No arrival time
-{state_19_55__i8/SR   state_19_55__i9/SR}                           
+{counter_19_55__i8/SR   counter_19_55__i9/SR}                           
                                         |           No arrival time
-{state_19_55__i6/SR   state_19_55__i7/SR}                           
+{counter_19_55__i6/SR   counter_19_55__i7/SR}                           
                                         |           No arrival time
-{state_19_55__i4/SR   state_19_55__i5/SR}                           
+{counter_19_55__i4/SR   counter_19_55__i5/SR}                           
                                         |           No arrival time
-{state_19_55__i2/SR   state_19_55__i3/SR}                           
+{counter_19_55__i2/SR   counter_19_55__i3/SR}                           
                                         |           No arrival time
-state_19_55__i1/SR                      |           No arrival time
+counter_19_55__i1/SR                    |           No arrival time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
@@ -218,11 +218,11 @@ osc_i2/DO0                               |   32.781 ns
 select_i3/D                              |   32.785 ns 
 select_i4/D                              |   32.851 ns 
 select_i2/D                              |   32.956 ns 
-state_19_55__i13/D                       |   32.977 ns 
+counter_19_55__i13/D                     |   32.977 ns 
 select_i1/D                              |   33.022 ns 
-state_19_55__i12/D                       |   33.254 ns 
-state_19_55__i11/D                       |   33.531 ns 
-state_19_55__i10/D                       |   33.808 ns 
+counter_19_55__i12/D                     |   33.254 ns 
+counter_19_55__i11/D                     |   33.531 ns 
+counter_19_55__i10/D                     |   33.808 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -244,7 +244,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
 Path End         : osc_i1/DO0  (IOLOGIC_IOL_L17A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
@@ -268,7 +268,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -305,7 +305,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  12      
 int_osc                                                      NET DELAY           5.499                  5.499  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
@@ -316,7 +316,7 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
@@ -330,12 +330,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":6.887,
@@ -345,8 +345,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":13.919,
         "delay":7.032
@@ -397,8 +397,9 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
-state[12]                                                    NET DELAY           7.032                 13.919  7       
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
+counter[12]                                                  NET DELAY           7.032                 13.919  7       
 i10_1_lut/A->i10_1_lut/Z                  SLICE_R17C2A       D0_TO_F0_DELAY      0.449                 14.368  1       
 osc_c_0_N_30                                                 NET DELAY           2.763                 17.131  1       
 osc_i1/DO0                                                   ENDPOINT            0.000                 17.131  1       
@@ -484,7 +485,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
 Path End         : osc_i2/DO0  (IOLOGIC_IOL_L19B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
@@ -508,7 +509,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -545,7 +546,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  12      
 int_osc                                                      NET DELAY           5.499                  5.499  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
@@ -556,7 +557,7 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
@@ -570,12 +571,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":6.887,
@@ -585,8 +586,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":14.183,
         "delay":7.296
@@ -612,8 +613,9 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
-state[12]                                                    NET DELAY           7.296                 14.183  7       
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
+counter[12]                                                  NET DELAY           7.296                 14.183  7       
 osc_i2/DO0                                                   ENDPOINT            0.000                 14.183  1       
 
 
@@ -697,7 +699,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
 Path End         : select_i3/D  (SLICE_R16C3C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
@@ -721,7 +723,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -758,7 +760,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  12      
 int_osc                                                      NET DELAY           5.499                  5.499  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
@@ -769,7 +771,7 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
@@ -783,12 +785,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":6.887,
@@ -798,8 +800,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":13.707,
         "delay":6.820
@@ -850,8 +852,9 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
-state[12]                                                    NET DELAY           6.820                 13.707  7       
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
+counter[12]                                                  NET DELAY           6.820                 13.707  7       
 mux_10_i3_3_lut/C->mux_10_i3_3_lut/Z      SLICE_R16C3C       A0_TO_F0_DELAY      0.476                 14.183  1       
 select_c_3_N_26[2]                                           NET DELAY           0.000                 14.183  1       
 select_i3/D                                                  ENDPOINT            0.000                 14.183  1       
@@ -937,7 +940,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
 Path End         : select_i4/D  (SLICE_R16C3C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
@@ -961,7 +964,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -998,7 +1001,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  12      
 int_osc                                                      NET DELAY           5.499                  5.499  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
@@ -1009,7 +1012,7 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
@@ -1023,12 +1026,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":6.887,
@@ -1038,8 +1041,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":13.641,
         "delay":6.754
@@ -1090,8 +1093,9 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
-state[12]                                                    NET DELAY           6.754                 13.641  7       
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
+counter[12]                                                  NET DELAY           6.754                 13.641  7       
 mux_10_i4_3_lut/C->mux_10_i4_3_lut/Z      SLICE_R16C3C       B1_TO_F1_DELAY      0.476                 14.117  1       
 select_c_3_N_26[3]                                           NET DELAY           0.000                 14.117  1       
 select_i4/D                                                  ENDPOINT            0.000                 14.117  1       
@@ -1177,7 +1181,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
 Path End         : select_i2/D  (SLICE_R16C2A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
@@ -1201,7 +1205,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -1238,7 +1242,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  12      
 int_osc                                                      NET DELAY           5.499                  5.499  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
@@ -1249,7 +1253,7 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
@@ -1263,12 +1267,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":6.887,
@@ -1278,8 +1282,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":13.536,
         "delay":6.649
@@ -1330,8 +1334,9 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
-state[12]                                                    NET DELAY           6.649                 13.536  7       
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
+counter[12]                                                  NET DELAY           6.649                 13.536  7       
 mux_10_i2_3_lut/C->mux_10_i2_3_lut/Z      SLICE_R16C2A       A0_TO_F0_DELAY      0.476                 14.012  1       
 select_c_3_N_26[1]                                           NET DELAY           0.000                 14.012  1       
 select_i2/D                                                  ENDPOINT            0.000                 14.012  1       
@@ -1417,8 +1422,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i1/Q  (SLICE_R15C30A)
-Path End         : state_19_55__i13/D  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i1/Q  (SLICE_R15C30A)
+Path End         : counter_19_55__i13/D  (SLICE_R15C31C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 14
@@ -1441,7 +1446,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/CK",
+        "log_name":"counter_19_55__i1/CK",
         "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
@@ -1478,7 +1483,7 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  12      
 int_osc                                                      NET DELAY               5.499                  5.499  12      
-state_19_55__i1/CK                                           CLOCK PIN               0.000                  5.499  1       
+counter_19_55__i1/CK                                         CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
@@ -1488,13 +1493,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/Q",
+        "log_name":"counter_19_55__i1/Q",
         "phy_name":"SLICE_6/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/D",
+        "log_name":"counter_19_55__i13/D",
         "phy_name":"SLICE_0/DI1"
     },
     "path_sections":[
@@ -1502,12 +1507,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i1/CK",
+            "log_name":"counter_19_55__i1/CK",
             "phy_name":"SLICE_6/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i1/Q",
+            "log_name":"counter_19_55__i1/Q",
             "phy_name":"SLICE_6/Q1"
         },
         "arrive":6.887,
@@ -1527,12 +1532,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_1/C1",
+            "log_name":"counter_19_55_add_4_1/C1",
             "phy_name":"SLICE_6/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_1/CO1",
+            "log_name":"counter_19_55_add_4_1/CO1",
             "phy_name":"SLICE_6/COUT1"
         },
         "arrive":9.252,
@@ -1552,12 +1557,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI0",
+            "log_name":"counter_19_55_add_4_3/CI0",
             "phy_name":"SLICE_5/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO0",
+            "log_name":"counter_19_55_add_4_3/CO0",
             "phy_name":"SLICE_5/COUT0"
         },
         "arrive":9.529,
@@ -1577,12 +1582,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI1",
+            "log_name":"counter_19_55_add_4_3/CI1",
             "phy_name":"SLICE_5/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO1",
+            "log_name":"counter_19_55_add_4_3/CO1",
             "phy_name":"SLICE_5/COUT1"
         },
         "arrive":9.806,
@@ -1602,12 +1607,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI0",
+            "log_name":"counter_19_55_add_4_5/CI0",
             "phy_name":"SLICE_4/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO0",
+            "log_name":"counter_19_55_add_4_5/CO0",
             "phy_name":"SLICE_4/COUT0"
         },
         "arrive":10.083,
@@ -1627,12 +1632,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI1",
+            "log_name":"counter_19_55_add_4_5/CI1",
             "phy_name":"SLICE_4/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO1",
+            "log_name":"counter_19_55_add_4_5/CO1",
             "phy_name":"SLICE_4/COUT1"
         },
         "arrive":10.360,
@@ -1652,12 +1657,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI0",
+            "log_name":"counter_19_55_add_4_7/CI0",
             "phy_name":"SLICE_3/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO0",
+            "log_name":"counter_19_55_add_4_7/CO0",
             "phy_name":"SLICE_3/COUT0"
         },
         "arrive":10.637,
@@ -1677,12 +1682,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI1",
+            "log_name":"counter_19_55_add_4_7/CI1",
             "phy_name":"SLICE_3/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO1",
+            "log_name":"counter_19_55_add_4_7/CO1",
             "phy_name":"SLICE_3/COUT1"
         },
         "arrive":10.914,
@@ -1702,12 +1707,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI0",
+            "log_name":"counter_19_55_add_4_9/CI0",
             "phy_name":"SLICE_2/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO0",
+            "log_name":"counter_19_55_add_4_9/CO0",
             "phy_name":"SLICE_2/COUT0"
         },
         "arrive":11.746,
@@ -1727,12 +1732,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI1",
+            "log_name":"counter_19_55_add_4_9/CI1",
             "phy_name":"SLICE_2/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO1",
+            "log_name":"counter_19_55_add_4_9/CO1",
             "phy_name":"SLICE_2/COUT1"
         },
         "arrive":12.023,
@@ -1752,12 +1757,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/CI0",
+            "log_name":"counter_19_55_add_4_11/CI0",
             "phy_name":"SLICE_1/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/CO0",
+            "log_name":"counter_19_55_add_4_11/CO0",
             "phy_name":"SLICE_1/COUT0"
         },
         "arrive":12.300,
@@ -1777,12 +1782,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/CI1",
+            "log_name":"counter_19_55_add_4_11/CI1",
             "phy_name":"SLICE_1/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/CO1",
+            "log_name":"counter_19_55_add_4_11/CO1",
             "phy_name":"SLICE_1/COUT1"
         },
         "arrive":12.577,
@@ -1802,12 +1807,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_13/CI0",
+            "log_name":"counter_19_55_add_4_13/CI0",
             "phy_name":"SLICE_0/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_13/CO0",
+            "log_name":"counter_19_55_add_4_13/CO0",
             "phy_name":"SLICE_0/COUT0"
         },
         "arrive":12.854,
@@ -1827,12 +1832,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_13/D1",
+            "log_name":"counter_19_55_add_4_13/D1",
             "phy_name":"SLICE_0/D1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_13/S1",
+            "log_name":"counter_19_55_add_4_13/S1",
             "phy_name":"SLICE_0/F1"
         },
         "arrive":13.991,
@@ -1869,48 +1874,49 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-state_19_55__i1/CK->state_19_55__i1/Q     SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+counter_19_55__i1/CK->counter_19_55__i1/Q
+                                          SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 n13                                                          NET DELAY               2.022                  8.909  1       
-state_19_55_add_4_1/C1->state_19_55_add_4_1/CO1
+counter_19_55_add_4_1/C1->counter_19_55_add_4_1/CO1
                                           SLICE_R15C30A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
 n370                                                         NET DELAY               0.000                  9.252  2       
-state_19_55_add_4_3/CI0->state_19_55_add_4_3/CO0
+counter_19_55_add_4_3/CI0->counter_19_55_add_4_3/CO0
                                           SLICE_R15C30B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
 n668                                                         NET DELAY               0.000                  9.529  2       
-state_19_55_add_4_3/CI1->state_19_55_add_4_3/CO1
+counter_19_55_add_4_3/CI1->counter_19_55_add_4_3/CO1
                                           SLICE_R15C30B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
 n372                                                         NET DELAY               0.000                  9.806  2       
-state_19_55_add_4_5/CI0->state_19_55_add_4_5/CO0
+counter_19_55_add_4_5/CI0->counter_19_55_add_4_5/CO0
                                           SLICE_R15C30C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
 n671                                                         NET DELAY               0.000                 10.083  2       
-state_19_55_add_4_5/CI1->state_19_55_add_4_5/CO1
+counter_19_55_add_4_5/CI1->counter_19_55_add_4_5/CO1
                                           SLICE_R15C30C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
 n374                                                         NET DELAY               0.000                 10.360  2       
-state_19_55_add_4_7/CI0->state_19_55_add_4_7/CO0
+counter_19_55_add_4_7/CI0->counter_19_55_add_4_7/CO0
                                           SLICE_R15C30D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
 n674                                                         NET DELAY               0.000                 10.637  2       
-state_19_55_add_4_7/CI1->state_19_55_add_4_7/CO1
+counter_19_55_add_4_7/CI1->counter_19_55_add_4_7/CO1
                                           SLICE_R15C30D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
 n376                                                         NET DELAY               0.555                 11.469  2       
-state_19_55_add_4_9/CI0->state_19_55_add_4_9/CO0
+counter_19_55_add_4_9/CI0->counter_19_55_add_4_9/CO0
                                           SLICE_R15C31A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
 n677                                                         NET DELAY               0.000                 11.746  2       
-state_19_55_add_4_9/CI1->state_19_55_add_4_9/CO1
+counter_19_55_add_4_9/CI1->counter_19_55_add_4_9/CO1
                                           SLICE_R15C31A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
 n378                                                         NET DELAY               0.000                 12.023  2       
-state_19_55_add_4_11/CI0->state_19_55_add_4_11/CO0
+counter_19_55_add_4_11/CI0->counter_19_55_add_4_11/CO0
                                           SLICE_R15C31B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
 n680                                                         NET DELAY               0.000                 12.300  2       
-state_19_55_add_4_11/CI1->state_19_55_add_4_11/CO1
+counter_19_55_add_4_11/CI1->counter_19_55_add_4_11/CO1
                                           SLICE_R15C31B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
 n380                                                         NET DELAY               0.000                 12.577  2       
-state_19_55_add_4_13/CI0->state_19_55_add_4_13/CO0
+counter_19_55_add_4_13/CI0->counter_19_55_add_4_13/CO0
                                           SLICE_R15C31C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
 n683                                                         NET DELAY               0.661                 13.515  2       
-state_19_55_add_4_13/D1->state_19_55_add_4_13/S1
+counter_19_55_add_4_13/D1->counter_19_55_add_4_13/S1
                                           SLICE_R15C31C      D1_TO_F1_DELAY          0.476                 13.991  1       
 n58                                                          NET DELAY               0.000                 13.991  1       
-state_19_55__i13/D                                           ENDPOINT                0.000                 13.991  1       
+counter_19_55__i13/D                                         ENDPOINT                0.000                 13.991  1       
 
 
 Destination Clock Path
@@ -1926,7 +1932,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -1979,7 +1985,7 @@ Name                                      Cell/Site Name     Delay Name         
                                                              CONSTRAINT              0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  12      
 int_osc                                                      NET DELAY               5.499                 47.165  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN               0.000                 47.165  1       
                                                              Uncertainty          -(0.000)                 47.165  
                                                              Setup time           -(0.198)                 46.967  
@@ -1994,7 +2000,7 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
 Path End         : select_i1/D  (SLICE_R16C2A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
@@ -2018,7 +2024,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -2055,7 +2061,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  12      
 int_osc                                                      NET DELAY           5.499                  5.499  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
@@ -2066,7 +2072,7 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
@@ -2080,12 +2086,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":6.887,
@@ -2095,8 +2101,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":13.470,
         "delay":6.583
@@ -2147,8 +2153,9 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
-state[12]                                                    NET DELAY           6.583                 13.470  7       
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY     1.388                  6.887  7       
+counter[12]                                                  NET DELAY           6.583                 13.470  7       
 mux_10_i1_3_lut/C->mux_10_i1_3_lut/Z      SLICE_R16C2A       B1_TO_F1_DELAY      0.476                 13.946  1       
 select_c_3_N_26[0]                                           NET DELAY           0.000                 13.946  1       
 select_i1/D                                                  ENDPOINT            0.000                 13.946  1       
@@ -2234,8 +2241,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i1/Q  (SLICE_R15C30A)
-Path End         : state_19_55__i12/D  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i1/Q  (SLICE_R15C30A)
+Path End         : counter_19_55__i12/D  (SLICE_R15C31C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 13
@@ -2258,7 +2265,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/CK",
+        "log_name":"counter_19_55__i1/CK",
         "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
@@ -2295,7 +2302,7 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  12      
 int_osc                                                      NET DELAY               5.499                  5.499  12      
-state_19_55__i1/CK                                           CLOCK PIN               0.000                  5.499  1       
+counter_19_55__i1/CK                                         CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
@@ -2305,13 +2312,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/Q",
+        "log_name":"counter_19_55__i1/Q",
         "phy_name":"SLICE_6/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/D",
+        "log_name":"counter_19_55__i12/D",
         "phy_name":"SLICE_0/DI0"
     },
     "path_sections":[
@@ -2319,12 +2326,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i1/CK",
+            "log_name":"counter_19_55__i1/CK",
             "phy_name":"SLICE_6/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i1/Q",
+            "log_name":"counter_19_55__i1/Q",
             "phy_name":"SLICE_6/Q1"
         },
         "arrive":6.887,
@@ -2344,12 +2351,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_1/C1",
+            "log_name":"counter_19_55_add_4_1/C1",
             "phy_name":"SLICE_6/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_1/CO1",
+            "log_name":"counter_19_55_add_4_1/CO1",
             "phy_name":"SLICE_6/COUT1"
         },
         "arrive":9.252,
@@ -2369,12 +2376,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI0",
+            "log_name":"counter_19_55_add_4_3/CI0",
             "phy_name":"SLICE_5/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO0",
+            "log_name":"counter_19_55_add_4_3/CO0",
             "phy_name":"SLICE_5/COUT0"
         },
         "arrive":9.529,
@@ -2394,12 +2401,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI1",
+            "log_name":"counter_19_55_add_4_3/CI1",
             "phy_name":"SLICE_5/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO1",
+            "log_name":"counter_19_55_add_4_3/CO1",
             "phy_name":"SLICE_5/COUT1"
         },
         "arrive":9.806,
@@ -2419,12 +2426,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI0",
+            "log_name":"counter_19_55_add_4_5/CI0",
             "phy_name":"SLICE_4/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO0",
+            "log_name":"counter_19_55_add_4_5/CO0",
             "phy_name":"SLICE_4/COUT0"
         },
         "arrive":10.083,
@@ -2444,12 +2451,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI1",
+            "log_name":"counter_19_55_add_4_5/CI1",
             "phy_name":"SLICE_4/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO1",
+            "log_name":"counter_19_55_add_4_5/CO1",
             "phy_name":"SLICE_4/COUT1"
         },
         "arrive":10.360,
@@ -2469,12 +2476,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI0",
+            "log_name":"counter_19_55_add_4_7/CI0",
             "phy_name":"SLICE_3/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO0",
+            "log_name":"counter_19_55_add_4_7/CO0",
             "phy_name":"SLICE_3/COUT0"
         },
         "arrive":10.637,
@@ -2494,12 +2501,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI1",
+            "log_name":"counter_19_55_add_4_7/CI1",
             "phy_name":"SLICE_3/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO1",
+            "log_name":"counter_19_55_add_4_7/CO1",
             "phy_name":"SLICE_3/COUT1"
         },
         "arrive":10.914,
@@ -2519,12 +2526,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI0",
+            "log_name":"counter_19_55_add_4_9/CI0",
             "phy_name":"SLICE_2/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO0",
+            "log_name":"counter_19_55_add_4_9/CO0",
             "phy_name":"SLICE_2/COUT0"
         },
         "arrive":11.746,
@@ -2544,12 +2551,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI1",
+            "log_name":"counter_19_55_add_4_9/CI1",
             "phy_name":"SLICE_2/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO1",
+            "log_name":"counter_19_55_add_4_9/CO1",
             "phy_name":"SLICE_2/COUT1"
         },
         "arrive":12.023,
@@ -2569,12 +2576,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/CI0",
+            "log_name":"counter_19_55_add_4_11/CI0",
             "phy_name":"SLICE_1/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/CO0",
+            "log_name":"counter_19_55_add_4_11/CO0",
             "phy_name":"SLICE_1/COUT0"
         },
         "arrive":12.300,
@@ -2594,12 +2601,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/CI1",
+            "log_name":"counter_19_55_add_4_11/CI1",
             "phy_name":"SLICE_1/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/CO1",
+            "log_name":"counter_19_55_add_4_11/CO1",
             "phy_name":"SLICE_1/COUT1"
         },
         "arrive":12.577,
@@ -2619,12 +2626,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_13/D0",
+            "log_name":"counter_19_55_add_4_13/D0",
             "phy_name":"SLICE_0/D0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_13/S0",
+            "log_name":"counter_19_55_add_4_13/S0",
             "phy_name":"SLICE_0/F0"
         },
         "arrive":13.714,
@@ -2661,45 +2668,46 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-state_19_55__i1/CK->state_19_55__i1/Q     SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+counter_19_55__i1/CK->counter_19_55__i1/Q
+                                          SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 n13                                                          NET DELAY               2.022                  8.909  1       
-state_19_55_add_4_1/C1->state_19_55_add_4_1/CO1
+counter_19_55_add_4_1/C1->counter_19_55_add_4_1/CO1
                                           SLICE_R15C30A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
 n370                                                         NET DELAY               0.000                  9.252  2       
-state_19_55_add_4_3/CI0->state_19_55_add_4_3/CO0
+counter_19_55_add_4_3/CI0->counter_19_55_add_4_3/CO0
                                           SLICE_R15C30B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
 n668                                                         NET DELAY               0.000                  9.529  2       
-state_19_55_add_4_3/CI1->state_19_55_add_4_3/CO1
+counter_19_55_add_4_3/CI1->counter_19_55_add_4_3/CO1
                                           SLICE_R15C30B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
 n372                                                         NET DELAY               0.000                  9.806  2       
-state_19_55_add_4_5/CI0->state_19_55_add_4_5/CO0
+counter_19_55_add_4_5/CI0->counter_19_55_add_4_5/CO0
                                           SLICE_R15C30C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
 n671                                                         NET DELAY               0.000                 10.083  2       
-state_19_55_add_4_5/CI1->state_19_55_add_4_5/CO1
+counter_19_55_add_4_5/CI1->counter_19_55_add_4_5/CO1
                                           SLICE_R15C30C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
 n374                                                         NET DELAY               0.000                 10.360  2       
-state_19_55_add_4_7/CI0->state_19_55_add_4_7/CO0
+counter_19_55_add_4_7/CI0->counter_19_55_add_4_7/CO0
                                           SLICE_R15C30D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
 n674                                                         NET DELAY               0.000                 10.637  2       
-state_19_55_add_4_7/CI1->state_19_55_add_4_7/CO1
+counter_19_55_add_4_7/CI1->counter_19_55_add_4_7/CO1
                                           SLICE_R15C30D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
 n376                                                         NET DELAY               0.555                 11.469  2       
-state_19_55_add_4_9/CI0->state_19_55_add_4_9/CO0
+counter_19_55_add_4_9/CI0->counter_19_55_add_4_9/CO0
                                           SLICE_R15C31A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
 n677                                                         NET DELAY               0.000                 11.746  2       
-state_19_55_add_4_9/CI1->state_19_55_add_4_9/CO1
+counter_19_55_add_4_9/CI1->counter_19_55_add_4_9/CO1
                                           SLICE_R15C31A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
 n378                                                         NET DELAY               0.000                 12.023  2       
-state_19_55_add_4_11/CI0->state_19_55_add_4_11/CO0
+counter_19_55_add_4_11/CI0->counter_19_55_add_4_11/CO0
                                           SLICE_R15C31B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
 n680                                                         NET DELAY               0.000                 12.300  2       
-state_19_55_add_4_11/CI1->state_19_55_add_4_11/CO1
+counter_19_55_add_4_11/CI1->counter_19_55_add_4_11/CO1
                                           SLICE_R15C31B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
 n380                                                         NET DELAY               0.661                 13.238  2       
-state_19_55_add_4_13/D0->state_19_55_add_4_13/S0
+counter_19_55_add_4_13/D0->counter_19_55_add_4_13/S0
                                           SLICE_R15C31C      D0_TO_F0_DELAY          0.476                 13.714  1       
 n59                                                          NET DELAY               0.000                 13.714  1       
-state_19_55__i12/D                                           ENDPOINT                0.000                 13.714  1       
+counter_19_55__i12/D                                         ENDPOINT                0.000                 13.714  1       
 
 
 Destination Clock Path
@@ -2715,7 +2723,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -2768,7 +2776,7 @@ Name                                      Cell/Site Name     Delay Name         
                                                              CONSTRAINT              0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  12      
 int_osc                                                      NET DELAY               5.499                 47.165  12      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN               0.000                 47.165  1       
                                                              Uncertainty          -(0.000)                 47.165  
                                                              Setup time           -(0.198)                 46.967  
@@ -2783,8 +2791,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i1/Q  (SLICE_R15C30A)
-Path End         : state_19_55__i11/D  (SLICE_R15C31B)
+Path Begin       : counter_19_55__i1/Q  (SLICE_R15C30A)
+Path End         : counter_19_55__i11/D  (SLICE_R15C31B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 12
@@ -2807,7 +2815,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/CK",
+        "log_name":"counter_19_55__i1/CK",
         "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
@@ -2844,7 +2852,7 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  12      
 int_osc                                                      NET DELAY               5.499                  5.499  12      
-state_19_55__i1/CK                                           CLOCK PIN               0.000                  5.499  1       
+counter_19_55__i1/CK                                         CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
@@ -2854,13 +2862,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/Q",
+        "log_name":"counter_19_55__i1/Q",
         "phy_name":"SLICE_6/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i11/D",
+        "log_name":"counter_19_55__i11/D",
         "phy_name":"SLICE_1/DI1"
     },
     "path_sections":[
@@ -2868,12 +2876,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i1/CK",
+            "log_name":"counter_19_55__i1/CK",
             "phy_name":"SLICE_6/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i1/Q",
+            "log_name":"counter_19_55__i1/Q",
             "phy_name":"SLICE_6/Q1"
         },
         "arrive":6.887,
@@ -2893,12 +2901,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_1/C1",
+            "log_name":"counter_19_55_add_4_1/C1",
             "phy_name":"SLICE_6/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_1/CO1",
+            "log_name":"counter_19_55_add_4_1/CO1",
             "phy_name":"SLICE_6/COUT1"
         },
         "arrive":9.252,
@@ -2918,12 +2926,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI0",
+            "log_name":"counter_19_55_add_4_3/CI0",
             "phy_name":"SLICE_5/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO0",
+            "log_name":"counter_19_55_add_4_3/CO0",
             "phy_name":"SLICE_5/COUT0"
         },
         "arrive":9.529,
@@ -2943,12 +2951,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI1",
+            "log_name":"counter_19_55_add_4_3/CI1",
             "phy_name":"SLICE_5/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO1",
+            "log_name":"counter_19_55_add_4_3/CO1",
             "phy_name":"SLICE_5/COUT1"
         },
         "arrive":9.806,
@@ -2968,12 +2976,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI0",
+            "log_name":"counter_19_55_add_4_5/CI0",
             "phy_name":"SLICE_4/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO0",
+            "log_name":"counter_19_55_add_4_5/CO0",
             "phy_name":"SLICE_4/COUT0"
         },
         "arrive":10.083,
@@ -2993,12 +3001,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI1",
+            "log_name":"counter_19_55_add_4_5/CI1",
             "phy_name":"SLICE_4/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO1",
+            "log_name":"counter_19_55_add_4_5/CO1",
             "phy_name":"SLICE_4/COUT1"
         },
         "arrive":10.360,
@@ -3018,12 +3026,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI0",
+            "log_name":"counter_19_55_add_4_7/CI0",
             "phy_name":"SLICE_3/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO0",
+            "log_name":"counter_19_55_add_4_7/CO0",
             "phy_name":"SLICE_3/COUT0"
         },
         "arrive":10.637,
@@ -3043,12 +3051,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI1",
+            "log_name":"counter_19_55_add_4_7/CI1",
             "phy_name":"SLICE_3/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO1",
+            "log_name":"counter_19_55_add_4_7/CO1",
             "phy_name":"SLICE_3/COUT1"
         },
         "arrive":10.914,
@@ -3068,12 +3076,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI0",
+            "log_name":"counter_19_55_add_4_9/CI0",
             "phy_name":"SLICE_2/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO0",
+            "log_name":"counter_19_55_add_4_9/CO0",
             "phy_name":"SLICE_2/COUT0"
         },
         "arrive":11.746,
@@ -3093,12 +3101,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI1",
+            "log_name":"counter_19_55_add_4_9/CI1",
             "phy_name":"SLICE_2/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO1",
+            "log_name":"counter_19_55_add_4_9/CO1",
             "phy_name":"SLICE_2/COUT1"
         },
         "arrive":12.023,
@@ -3118,12 +3126,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/CI0",
+            "log_name":"counter_19_55_add_4_11/CI0",
             "phy_name":"SLICE_1/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/CO0",
+            "log_name":"counter_19_55_add_4_11/CO0",
             "phy_name":"SLICE_1/COUT0"
         },
         "arrive":12.300,
@@ -3143,12 +3151,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/D1",
+            "log_name":"counter_19_55_add_4_11/D1",
             "phy_name":"SLICE_1/D1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/S1",
+            "log_name":"counter_19_55_add_4_11/S1",
             "phy_name":"SLICE_1/F1"
         },
         "arrive":13.437,
@@ -3185,42 +3193,43 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-state_19_55__i1/CK->state_19_55__i1/Q     SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+counter_19_55__i1/CK->counter_19_55__i1/Q
+                                          SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 n13                                                          NET DELAY               2.022                  8.909  1       
-state_19_55_add_4_1/C1->state_19_55_add_4_1/CO1
+counter_19_55_add_4_1/C1->counter_19_55_add_4_1/CO1
                                           SLICE_R15C30A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
 n370                                                         NET DELAY               0.000                  9.252  2       
-state_19_55_add_4_3/CI0->state_19_55_add_4_3/CO0
+counter_19_55_add_4_3/CI0->counter_19_55_add_4_3/CO0
                                           SLICE_R15C30B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
 n668                                                         NET DELAY               0.000                  9.529  2       
-state_19_55_add_4_3/CI1->state_19_55_add_4_3/CO1
+counter_19_55_add_4_3/CI1->counter_19_55_add_4_3/CO1
                                           SLICE_R15C30B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
 n372                                                         NET DELAY               0.000                  9.806  2       
-state_19_55_add_4_5/CI0->state_19_55_add_4_5/CO0
+counter_19_55_add_4_5/CI0->counter_19_55_add_4_5/CO0
                                           SLICE_R15C30C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
 n671                                                         NET DELAY               0.000                 10.083  2       
-state_19_55_add_4_5/CI1->state_19_55_add_4_5/CO1
+counter_19_55_add_4_5/CI1->counter_19_55_add_4_5/CO1
                                           SLICE_R15C30C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
 n374                                                         NET DELAY               0.000                 10.360  2       
-state_19_55_add_4_7/CI0->state_19_55_add_4_7/CO0
+counter_19_55_add_4_7/CI0->counter_19_55_add_4_7/CO0
                                           SLICE_R15C30D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
 n674                                                         NET DELAY               0.000                 10.637  2       
-state_19_55_add_4_7/CI1->state_19_55_add_4_7/CO1
+counter_19_55_add_4_7/CI1->counter_19_55_add_4_7/CO1
                                           SLICE_R15C30D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
 n376                                                         NET DELAY               0.555                 11.469  2       
-state_19_55_add_4_9/CI0->state_19_55_add_4_9/CO0
+counter_19_55_add_4_9/CI0->counter_19_55_add_4_9/CO0
                                           SLICE_R15C31A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
 n677                                                         NET DELAY               0.000                 11.746  2       
-state_19_55_add_4_9/CI1->state_19_55_add_4_9/CO1
+counter_19_55_add_4_9/CI1->counter_19_55_add_4_9/CO1
                                           SLICE_R15C31A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
 n378                                                         NET DELAY               0.000                 12.023  2       
-state_19_55_add_4_11/CI0->state_19_55_add_4_11/CO0
+counter_19_55_add_4_11/CI0->counter_19_55_add_4_11/CO0
                                           SLICE_R15C31B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
 n680                                                         NET DELAY               0.661                 12.961  2       
-state_19_55_add_4_11/D1->state_19_55_add_4_11/S1
+counter_19_55_add_4_11/D1->counter_19_55_add_4_11/S1
                                           SLICE_R15C31B      D1_TO_F1_DELAY          0.476                 13.437  1       
 n60                                                          NET DELAY               0.000                 13.437  1       
-state_19_55__i11/D                                           ENDPOINT                0.000                 13.437  1       
+counter_19_55__i11/D                                         ENDPOINT                0.000                 13.437  1       
 
 
 Destination Clock Path
@@ -3236,7 +3245,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/CK",
+        "log_name":"counter_19_55__i10/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -3289,7 +3298,7 @@ Name                                      Cell/Site Name     Delay Name         
                                                              CONSTRAINT              0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  12      
 int_osc                                                      NET DELAY               5.499                 47.165  12      
-{state_19_55__i10/CK   state_19_55__i11/CK}
+{counter_19_55__i10/CK   counter_19_55__i11/CK}
                                                              CLOCK PIN               0.000                 47.165  1       
                                                              Uncertainty          -(0.000)                 47.165  
                                                              Setup time           -(0.198)                 46.967  
@@ -3304,8 +3313,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i1/Q  (SLICE_R15C30A)
-Path End         : state_19_55__i10/D  (SLICE_R15C31B)
+Path Begin       : counter_19_55__i1/Q  (SLICE_R15C30A)
+Path End         : counter_19_55__i10/D  (SLICE_R15C31B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 11
@@ -3328,7 +3337,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/CK",
+        "log_name":"counter_19_55__i1/CK",
         "phy_name":"SLICE_6/CLK"
     },
     "path_sections":[
@@ -3365,7 +3374,7 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  12      
 int_osc                                                      NET DELAY               5.499                  5.499  12      
-state_19_55__i1/CK                                           CLOCK PIN               0.000                  5.499  1       
+counter_19_55__i1/CK                                         CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
@@ -3375,13 +3384,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i1/Q",
+        "log_name":"counter_19_55__i1/Q",
         "phy_name":"SLICE_6/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/D",
+        "log_name":"counter_19_55__i10/D",
         "phy_name":"SLICE_1/DI0"
     },
     "path_sections":[
@@ -3389,12 +3398,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i1/CK",
+            "log_name":"counter_19_55__i1/CK",
             "phy_name":"SLICE_6/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i1/Q",
+            "log_name":"counter_19_55__i1/Q",
             "phy_name":"SLICE_6/Q1"
         },
         "arrive":6.887,
@@ -3414,12 +3423,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_1/C1",
+            "log_name":"counter_19_55_add_4_1/C1",
             "phy_name":"SLICE_6/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_1/CO1",
+            "log_name":"counter_19_55_add_4_1/CO1",
             "phy_name":"SLICE_6/COUT1"
         },
         "arrive":9.252,
@@ -3439,12 +3448,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI0",
+            "log_name":"counter_19_55_add_4_3/CI0",
             "phy_name":"SLICE_5/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO0",
+            "log_name":"counter_19_55_add_4_3/CO0",
             "phy_name":"SLICE_5/COUT0"
         },
         "arrive":9.529,
@@ -3464,12 +3473,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_3/CI1",
+            "log_name":"counter_19_55_add_4_3/CI1",
             "phy_name":"SLICE_5/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_3/CO1",
+            "log_name":"counter_19_55_add_4_3/CO1",
             "phy_name":"SLICE_5/COUT1"
         },
         "arrive":9.806,
@@ -3489,12 +3498,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI0",
+            "log_name":"counter_19_55_add_4_5/CI0",
             "phy_name":"SLICE_4/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO0",
+            "log_name":"counter_19_55_add_4_5/CO0",
             "phy_name":"SLICE_4/COUT0"
         },
         "arrive":10.083,
@@ -3514,12 +3523,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/CI1",
+            "log_name":"counter_19_55_add_4_5/CI1",
             "phy_name":"SLICE_4/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/CO1",
+            "log_name":"counter_19_55_add_4_5/CO1",
             "phy_name":"SLICE_4/COUT1"
         },
         "arrive":10.360,
@@ -3539,12 +3548,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI0",
+            "log_name":"counter_19_55_add_4_7/CI0",
             "phy_name":"SLICE_3/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO0",
+            "log_name":"counter_19_55_add_4_7/CO0",
             "phy_name":"SLICE_3/COUT0"
         },
         "arrive":10.637,
@@ -3564,12 +3573,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/CI1",
+            "log_name":"counter_19_55_add_4_7/CI1",
             "phy_name":"SLICE_3/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/CO1",
+            "log_name":"counter_19_55_add_4_7/CO1",
             "phy_name":"SLICE_3/COUT1"
         },
         "arrive":10.914,
@@ -3589,12 +3598,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI0",
+            "log_name":"counter_19_55_add_4_9/CI0",
             "phy_name":"SLICE_2/CIN0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO0",
+            "log_name":"counter_19_55_add_4_9/CO0",
             "phy_name":"SLICE_2/COUT0"
         },
         "arrive":11.746,
@@ -3614,12 +3623,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/CI1",
+            "log_name":"counter_19_55_add_4_9/CI1",
             "phy_name":"SLICE_2/CIN1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/CO1",
+            "log_name":"counter_19_55_add_4_9/CO1",
             "phy_name":"SLICE_2/COUT1"
         },
         "arrive":12.023,
@@ -3639,12 +3648,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/D0",
+            "log_name":"counter_19_55_add_4_11/D0",
             "phy_name":"SLICE_1/D0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/S0",
+            "log_name":"counter_19_55_add_4_11/S0",
             "phy_name":"SLICE_1/F0"
         },
         "arrive":13.160,
@@ -3681,39 +3690,40 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-state_19_55__i1/CK->state_19_55__i1/Q     SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+counter_19_55__i1/CK->counter_19_55__i1/Q
+                                          SLICE_R15C30A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
 n13                                                          NET DELAY               2.022                  8.909  1       
-state_19_55_add_4_1/C1->state_19_55_add_4_1/CO1
+counter_19_55_add_4_1/C1->counter_19_55_add_4_1/CO1
                                           SLICE_R15C30A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
 n370                                                         NET DELAY               0.000                  9.252  2       
-state_19_55_add_4_3/CI0->state_19_55_add_4_3/CO0
+counter_19_55_add_4_3/CI0->counter_19_55_add_4_3/CO0
                                           SLICE_R15C30B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
 n668                                                         NET DELAY               0.000                  9.529  2       
-state_19_55_add_4_3/CI1->state_19_55_add_4_3/CO1
+counter_19_55_add_4_3/CI1->counter_19_55_add_4_3/CO1
                                           SLICE_R15C30B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
 n372                                                         NET DELAY               0.000                  9.806  2       
-state_19_55_add_4_5/CI0->state_19_55_add_4_5/CO0
+counter_19_55_add_4_5/CI0->counter_19_55_add_4_5/CO0
                                           SLICE_R15C30C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
 n671                                                         NET DELAY               0.000                 10.083  2       
-state_19_55_add_4_5/CI1->state_19_55_add_4_5/CO1
+counter_19_55_add_4_5/CI1->counter_19_55_add_4_5/CO1
                                           SLICE_R15C30C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
 n374                                                         NET DELAY               0.000                 10.360  2       
-state_19_55_add_4_7/CI0->state_19_55_add_4_7/CO0
+counter_19_55_add_4_7/CI0->counter_19_55_add_4_7/CO0
                                           SLICE_R15C30D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
 n674                                                         NET DELAY               0.000                 10.637  2       
-state_19_55_add_4_7/CI1->state_19_55_add_4_7/CO1
+counter_19_55_add_4_7/CI1->counter_19_55_add_4_7/CO1
                                           SLICE_R15C30D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
 n376                                                         NET DELAY               0.555                 11.469  2       
-state_19_55_add_4_9/CI0->state_19_55_add_4_9/CO0
+counter_19_55_add_4_9/CI0->counter_19_55_add_4_9/CO0
                                           SLICE_R15C31A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
 n677                                                         NET DELAY               0.000                 11.746  2       
-state_19_55_add_4_9/CI1->state_19_55_add_4_9/CO1
+counter_19_55_add_4_9/CI1->counter_19_55_add_4_9/CO1
                                           SLICE_R15C31A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
 n378                                                         NET DELAY               0.661                 12.684  2       
-state_19_55_add_4_11/D0->state_19_55_add_4_11/S0
+counter_19_55_add_4_11/D0->counter_19_55_add_4_11/S0
                                           SLICE_R15C31B      D0_TO_F0_DELAY          0.476                 13.160  1       
 n61                                                          NET DELAY               0.000                 13.160  1       
-state_19_55__i10/D                                           ENDPOINT                0.000                 13.160  1       
+counter_19_55__i10/D                                         ENDPOINT                0.000                 13.160  1       
 
 
 Destination Clock Path
@@ -3729,7 +3739,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/CK",
+        "log_name":"counter_19_55__i10/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -3782,7 +3792,7 @@ Name                                      Cell/Site Name     Delay Name         
                                                              CONSTRAINT              0.000                 41.666  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  12      
 int_osc                                                      NET DELAY               5.499                 47.165  12      
-{state_19_55__i10/CK   state_19_55__i11/CK}
+{counter_19_55__i10/CK   counter_19_55__i11/CK}
                                                              CLOCK PIN               0.000                 47.165  1       
                                                              Uncertainty          -(0.000)                 47.165  
                                                              Setup time           -(0.198)                 46.967  
@@ -3808,16 +3818,16 @@ Path Slack  (Passed)                                                            
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-state_19_55__i4/D                        |    1.913 ns 
-state_19_55__i5/D                        |    1.913 ns 
-state_19_55__i6/D                        |    1.913 ns 
-state_19_55__i7/D                        |    1.913 ns 
-state_19_55__i8/D                        |    1.913 ns 
-state_19_55__i9/D                        |    1.913 ns 
-state_19_55__i10/D                       |    1.913 ns 
-state_19_55__i11/D                       |    1.913 ns 
-state_19_55__i12/D                       |    1.913 ns 
-state_19_55__i13/D                       |    1.913 ns 
+counter_19_55__i4/D                      |    1.913 ns 
+counter_19_55__i5/D                      |    1.913 ns 
+counter_19_55__i6/D                      |    1.913 ns 
+counter_19_55__i7/D                      |    1.913 ns 
+counter_19_55__i8/D                      |    1.913 ns 
+counter_19_55__i9/D                      |    1.913 ns 
+counter_19_55__i10/D                     |    1.913 ns 
+counter_19_55__i11/D                     |    1.913 ns 
+counter_19_55__i12/D                     |    1.913 ns 
+counter_19_55__i13/D                     |    1.913 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -3839,8 +3849,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : state_19_55__i4/Q  (SLICE_R15C30C)
-Path End         : state_19_55__i4/D  (SLICE_R15C30C)
+Path Begin       : counter_19_55__i4/Q  (SLICE_R15C30C)
+Path End         : counter_19_55__i4/D  (SLICE_R15C30C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -3863,7 +3873,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i4/CK",
+        "log_name":"counter_19_55__i4/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -3900,7 +3910,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i4/CK   state_19_55__i5/CK}
+{counter_19_55__i4/CK   counter_19_55__i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -3911,13 +3921,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i4/Q",
+        "log_name":"counter_19_55__i4/Q",
         "phy_name":"SLICE_4/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i4/D",
+        "log_name":"counter_19_55__i4/D",
         "phy_name":"SLICE_4/DI0"
     },
     "path_sections":[
@@ -3925,12 +3935,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i4/CK",
+            "log_name":"counter_19_55__i4/CK",
             "phy_name":"SLICE_4/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i4/Q",
+            "log_name":"counter_19_55__i4/Q",
             "phy_name":"SLICE_4/Q0"
         },
         "arrive":3.863,
@@ -3950,12 +3960,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/C0",
+            "log_name":"counter_19_55_add_4_5/C0",
             "phy_name":"SLICE_4/C0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/S0",
+            "log_name":"counter_19_55_add_4_5/S0",
             "phy_name":"SLICE_4/F0"
         },
         "arrive":4.997,
@@ -3992,12 +4002,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i4/CK->state_19_55__i4/Q     SLICE_R15C30C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+counter_19_55__i4/CK->counter_19_55__i4/Q
+                                          SLICE_R15C30C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 n10                                                          NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_5/C0->state_19_55_add_4_5/S0
+counter_19_55_add_4_5/C0->counter_19_55_add_4_5/S0
                                           SLICE_R15C30C      C0_TO_F0_DELAY   0.252                  4.997  1       
 n67                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i4/D                                            ENDPOINT         0.000                  4.997  1       
+counter_19_55__i4/D                                          ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -4013,7 +4024,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i4/CK",
+        "log_name":"counter_19_55__i4/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -4066,7 +4077,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i4/CK   state_19_55__i5/CK}
+{counter_19_55__i4/CK   counter_19_55__i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -4081,8 +4092,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i5/Q  (SLICE_R15C30C)
-Path End         : state_19_55__i5/D  (SLICE_R15C30C)
+Path Begin       : counter_19_55__i5/Q  (SLICE_R15C30C)
+Path End         : counter_19_55__i5/D  (SLICE_R15C30C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -4105,7 +4116,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i4/CK",
+        "log_name":"counter_19_55__i4/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -4142,7 +4153,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i4/CK   state_19_55__i5/CK}
+{counter_19_55__i4/CK   counter_19_55__i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -4153,13 +4164,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i5/Q",
+        "log_name":"counter_19_55__i5/Q",
         "phy_name":"SLICE_4/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i5/D",
+        "log_name":"counter_19_55__i5/D",
         "phy_name":"SLICE_4/DI1"
     },
     "path_sections":[
@@ -4167,12 +4178,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i5/CK",
+            "log_name":"counter_19_55__i5/CK",
             "phy_name":"SLICE_4/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i5/Q",
+            "log_name":"counter_19_55__i5/Q",
             "phy_name":"SLICE_4/Q1"
         },
         "arrive":3.863,
@@ -4192,12 +4203,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_5/C1",
+            "log_name":"counter_19_55_add_4_5/C1",
             "phy_name":"SLICE_4/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_5/S1",
+            "log_name":"counter_19_55_add_4_5/S1",
             "phy_name":"SLICE_4/F1"
         },
         "arrive":4.997,
@@ -4234,12 +4245,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i5/CK->state_19_55__i5/Q     SLICE_R15C30C      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+counter_19_55__i5/CK->counter_19_55__i5/Q
+                                          SLICE_R15C30C      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 n9                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_5/C1->state_19_55_add_4_5/S1
+counter_19_55_add_4_5/C1->counter_19_55_add_4_5/S1
                                           SLICE_R15C30C      C1_TO_F1_DELAY   0.252                  4.997  1       
 n66                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i5/D                                            ENDPOINT         0.000                  4.997  1       
+counter_19_55__i5/D                                          ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -4255,7 +4267,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i4/CK",
+        "log_name":"counter_19_55__i4/CK",
         "phy_name":"SLICE_4/CLK"
     },
     "path_sections":[
@@ -4308,7 +4320,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i4/CK   state_19_55__i5/CK}
+{counter_19_55__i4/CK   counter_19_55__i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -4323,8 +4335,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i6/Q  (SLICE_R15C30D)
-Path End         : state_19_55__i6/D  (SLICE_R15C30D)
+Path Begin       : counter_19_55__i6/Q  (SLICE_R15C30D)
+Path End         : counter_19_55__i6/D  (SLICE_R15C30D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -4347,7 +4359,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i6/CK",
+        "log_name":"counter_19_55__i6/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -4384,7 +4396,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i6/CK   state_19_55__i7/CK}
+{counter_19_55__i6/CK   counter_19_55__i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -4395,13 +4407,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i6/Q",
+        "log_name":"counter_19_55__i6/Q",
         "phy_name":"SLICE_3/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i6/D",
+        "log_name":"counter_19_55__i6/D",
         "phy_name":"SLICE_3/DI0"
     },
     "path_sections":[
@@ -4409,12 +4421,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i6/CK",
+            "log_name":"counter_19_55__i6/CK",
             "phy_name":"SLICE_3/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i6/Q",
+            "log_name":"counter_19_55__i6/Q",
             "phy_name":"SLICE_3/Q0"
         },
         "arrive":3.863,
@@ -4434,12 +4446,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/C0",
+            "log_name":"counter_19_55_add_4_7/C0",
             "phy_name":"SLICE_3/C0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/S0",
+            "log_name":"counter_19_55_add_4_7/S0",
             "phy_name":"SLICE_3/F0"
         },
         "arrive":4.997,
@@ -4476,12 +4488,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i6/CK->state_19_55__i6/Q     SLICE_R15C30D      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+counter_19_55__i6/CK->counter_19_55__i6/Q
+                                          SLICE_R15C30D      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 n8                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_7/C0->state_19_55_add_4_7/S0
+counter_19_55_add_4_7/C0->counter_19_55_add_4_7/S0
                                           SLICE_R15C30D      C0_TO_F0_DELAY   0.252                  4.997  1       
 n65                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i6/D                                            ENDPOINT         0.000                  4.997  1       
+counter_19_55__i6/D                                          ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -4497,7 +4510,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i6/CK",
+        "log_name":"counter_19_55__i6/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -4550,7 +4563,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i6/CK   state_19_55__i7/CK}
+{counter_19_55__i6/CK   counter_19_55__i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -4565,8 +4578,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i7/Q  (SLICE_R15C30D)
-Path End         : state_19_55__i7/D  (SLICE_R15C30D)
+Path Begin       : counter_19_55__i7/Q  (SLICE_R15C30D)
+Path End         : counter_19_55__i7/D  (SLICE_R15C30D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -4589,7 +4602,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i6/CK",
+        "log_name":"counter_19_55__i6/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -4626,7 +4639,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i6/CK   state_19_55__i7/CK}
+{counter_19_55__i6/CK   counter_19_55__i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -4637,13 +4650,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i7/Q",
+        "log_name":"counter_19_55__i7/Q",
         "phy_name":"SLICE_3/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i7/D",
+        "log_name":"counter_19_55__i7/D",
         "phy_name":"SLICE_3/DI1"
     },
     "path_sections":[
@@ -4651,12 +4664,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i7/CK",
+            "log_name":"counter_19_55__i7/CK",
             "phy_name":"SLICE_3/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i7/Q",
+            "log_name":"counter_19_55__i7/Q",
             "phy_name":"SLICE_3/Q1"
         },
         "arrive":3.863,
@@ -4676,12 +4689,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_7/C1",
+            "log_name":"counter_19_55_add_4_7/C1",
             "phy_name":"SLICE_3/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_7/S1",
+            "log_name":"counter_19_55_add_4_7/S1",
             "phy_name":"SLICE_3/F1"
         },
         "arrive":4.997,
@@ -4718,12 +4731,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i7/CK->state_19_55__i7/Q     SLICE_R15C30D      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+counter_19_55__i7/CK->counter_19_55__i7/Q
+                                          SLICE_R15C30D      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 n7                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_7/C1->state_19_55_add_4_7/S1
+counter_19_55_add_4_7/C1->counter_19_55_add_4_7/S1
                                           SLICE_R15C30D      C1_TO_F1_DELAY   0.252                  4.997  1       
 n64                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i7/D                                            ENDPOINT         0.000                  4.997  1       
+counter_19_55__i7/D                                          ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -4739,7 +4753,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i6/CK",
+        "log_name":"counter_19_55__i6/CK",
         "phy_name":"SLICE_3/CLK"
     },
     "path_sections":[
@@ -4792,7 +4806,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i6/CK   state_19_55__i7/CK}
+{counter_19_55__i6/CK   counter_19_55__i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -4807,8 +4821,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i8/Q  (SLICE_R15C31A)
-Path End         : state_19_55__i8/D  (SLICE_R15C31A)
+Path Begin       : counter_19_55__i8/Q  (SLICE_R15C31A)
+Path End         : counter_19_55__i8/D  (SLICE_R15C31A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -4831,7 +4845,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i8/CK",
+        "log_name":"counter_19_55__i8/CK",
         "phy_name":"SLICE_2/CLK"
     },
     "path_sections":[
@@ -4868,7 +4882,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i8/CK   state_19_55__i9/CK}
+{counter_19_55__i8/CK   counter_19_55__i9/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -4879,13 +4893,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i8/Q",
+        "log_name":"counter_19_55__i8/Q",
         "phy_name":"SLICE_2/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i8/D",
+        "log_name":"counter_19_55__i8/D",
         "phy_name":"SLICE_2/DI0"
     },
     "path_sections":[
@@ -4893,12 +4907,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i8/CK",
+            "log_name":"counter_19_55__i8/CK",
             "phy_name":"SLICE_2/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i8/Q",
+            "log_name":"counter_19_55__i8/Q",
             "phy_name":"SLICE_2/Q0"
         },
         "arrive":3.863,
@@ -4918,12 +4932,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/C0",
+            "log_name":"counter_19_55_add_4_9/C0",
             "phy_name":"SLICE_2/C0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/S0",
+            "log_name":"counter_19_55_add_4_9/S0",
             "phy_name":"SLICE_2/F0"
         },
         "arrive":4.997,
@@ -4960,12 +4974,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i8/CK->state_19_55__i8/Q     SLICE_R15C31A      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+counter_19_55__i8/CK->counter_19_55__i8/Q
+                                          SLICE_R15C31A      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 n6                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_9/C0->state_19_55_add_4_9/S0
+counter_19_55_add_4_9/C0->counter_19_55_add_4_9/S0
                                           SLICE_R15C31A      C0_TO_F0_DELAY   0.252                  4.997  1       
 n63                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i8/D                                            ENDPOINT         0.000                  4.997  1       
+counter_19_55__i8/D                                          ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -4981,7 +4996,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i8/CK",
+        "log_name":"counter_19_55__i8/CK",
         "phy_name":"SLICE_2/CLK"
     },
     "path_sections":[
@@ -5034,7 +5049,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i8/CK   state_19_55__i9/CK}
+{counter_19_55__i8/CK   counter_19_55__i9/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -5049,8 +5064,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i9/Q  (SLICE_R15C31A)
-Path End         : state_19_55__i9/D  (SLICE_R15C31A)
+Path Begin       : counter_19_55__i9/Q  (SLICE_R15C31A)
+Path End         : counter_19_55__i9/D  (SLICE_R15C31A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -5073,7 +5088,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i8/CK",
+        "log_name":"counter_19_55__i8/CK",
         "phy_name":"SLICE_2/CLK"
     },
     "path_sections":[
@@ -5110,7 +5125,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i8/CK   state_19_55__i9/CK}
+{counter_19_55__i8/CK   counter_19_55__i9/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -5121,13 +5136,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i9/Q",
+        "log_name":"counter_19_55__i9/Q",
         "phy_name":"SLICE_2/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i9/D",
+        "log_name":"counter_19_55__i9/D",
         "phy_name":"SLICE_2/DI1"
     },
     "path_sections":[
@@ -5135,12 +5150,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i9/CK",
+            "log_name":"counter_19_55__i9/CK",
             "phy_name":"SLICE_2/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i9/Q",
+            "log_name":"counter_19_55__i9/Q",
             "phy_name":"SLICE_2/Q1"
         },
         "arrive":3.863,
@@ -5160,12 +5175,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_9/C1",
+            "log_name":"counter_19_55_add_4_9/C1",
             "phy_name":"SLICE_2/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_9/S1",
+            "log_name":"counter_19_55_add_4_9/S1",
             "phy_name":"SLICE_2/F1"
         },
         "arrive":4.997,
@@ -5202,12 +5217,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i9/CK->state_19_55__i9/Q     SLICE_R15C31A      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+counter_19_55__i9/CK->counter_19_55__i9/Q
+                                          SLICE_R15C31A      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 n5                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_9/C1->state_19_55_add_4_9/S1
+counter_19_55_add_4_9/C1->counter_19_55_add_4_9/S1
                                           SLICE_R15C31A      C1_TO_F1_DELAY   0.252                  4.997  1       
 n62                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i9/D                                            ENDPOINT         0.000                  4.997  1       
+counter_19_55__i9/D                                          ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -5223,7 +5239,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i8/CK",
+        "log_name":"counter_19_55__i8/CK",
         "phy_name":"SLICE_2/CLK"
     },
     "path_sections":[
@@ -5276,7 +5292,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i8/CK   state_19_55__i9/CK}
+{counter_19_55__i8/CK   counter_19_55__i9/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -5291,8 +5307,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i10/Q  (SLICE_R15C31B)
-Path End         : state_19_55__i10/D  (SLICE_R15C31B)
+Path Begin       : counter_19_55__i10/Q  (SLICE_R15C31B)
+Path End         : counter_19_55__i10/D  (SLICE_R15C31B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -5315,7 +5331,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/CK",
+        "log_name":"counter_19_55__i10/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -5352,7 +5368,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i10/CK   state_19_55__i11/CK}
+{counter_19_55__i10/CK   counter_19_55__i11/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -5363,13 +5379,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/Q",
+        "log_name":"counter_19_55__i10/Q",
         "phy_name":"SLICE_1/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/D",
+        "log_name":"counter_19_55__i10/D",
         "phy_name":"SLICE_1/DI0"
     },
     "path_sections":[
@@ -5377,12 +5393,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i10/CK",
+            "log_name":"counter_19_55__i10/CK",
             "phy_name":"SLICE_1/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i10/Q",
+            "log_name":"counter_19_55__i10/Q",
             "phy_name":"SLICE_1/Q0"
         },
         "arrive":3.863,
@@ -5402,12 +5418,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/C0",
+            "log_name":"counter_19_55_add_4_11/C0",
             "phy_name":"SLICE_1/C0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/S0",
+            "log_name":"counter_19_55_add_4_11/S0",
             "phy_name":"SLICE_1/F0"
         },
         "arrive":4.997,
@@ -5444,12 +5460,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i10/CK->state_19_55__i10/Q   SLICE_R15C31B      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+counter_19_55__i10/CK->counter_19_55__i10/Q
+                                          SLICE_R15C31B      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 n4                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_11/C0->state_19_55_add_4_11/S0
+counter_19_55_add_4_11/C0->counter_19_55_add_4_11/S0
                                           SLICE_R15C31B      C0_TO_F0_DELAY   0.252                  4.997  1       
 n61                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i10/D                                           ENDPOINT         0.000                  4.997  1       
+counter_19_55__i10/D                                         ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -5465,7 +5482,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/CK",
+        "log_name":"counter_19_55__i10/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -5518,7 +5535,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i10/CK   state_19_55__i11/CK}
+{counter_19_55__i10/CK   counter_19_55__i11/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -5533,8 +5550,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i11/Q  (SLICE_R15C31B)
-Path End         : state_19_55__i11/D  (SLICE_R15C31B)
+Path Begin       : counter_19_55__i11/Q  (SLICE_R15C31B)
+Path End         : counter_19_55__i11/D  (SLICE_R15C31B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -5557,7 +5574,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/CK",
+        "log_name":"counter_19_55__i10/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -5594,7 +5611,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i10/CK   state_19_55__i11/CK}
+{counter_19_55__i10/CK   counter_19_55__i11/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -5605,13 +5622,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i11/Q",
+        "log_name":"counter_19_55__i11/Q",
         "phy_name":"SLICE_1/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i11/D",
+        "log_name":"counter_19_55__i11/D",
         "phy_name":"SLICE_1/DI1"
     },
     "path_sections":[
@@ -5619,12 +5636,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i11/CK",
+            "log_name":"counter_19_55__i11/CK",
             "phy_name":"SLICE_1/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i11/Q",
+            "log_name":"counter_19_55__i11/Q",
             "phy_name":"SLICE_1/Q1"
         },
         "arrive":3.863,
@@ -5644,12 +5661,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_11/C1",
+            "log_name":"counter_19_55_add_4_11/C1",
             "phy_name":"SLICE_1/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_11/S1",
+            "log_name":"counter_19_55_add_4_11/S1",
             "phy_name":"SLICE_1/F1"
         },
         "arrive":4.997,
@@ -5686,12 +5703,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i11/CK->state_19_55__i11/Q   SLICE_R15C31B      CLK_TO_Q1_DELAY  0.779                  3.863  1       
+counter_19_55__i11/CK->counter_19_55__i11/Q
+                                          SLICE_R15C31B      CLK_TO_Q1_DELAY  0.779                  3.863  1       
 n3                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_11/C1->state_19_55_add_4_11/S1
+counter_19_55_add_4_11/C1->counter_19_55_add_4_11/S1
                                           SLICE_R15C31B      C1_TO_F1_DELAY   0.252                  4.997  1       
 n60                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i11/D                                           ENDPOINT         0.000                  4.997  1       
+counter_19_55__i11/D                                         ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -5707,7 +5725,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i10/CK",
+        "log_name":"counter_19_55__i10/CK",
         "phy_name":"SLICE_1/CLK"
     },
     "path_sections":[
@@ -5760,7 +5778,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i10/CK   state_19_55__i11/CK}
+{counter_19_55__i10/CK   counter_19_55__i11/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -5775,8 +5793,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i12/Q  (SLICE_R15C31C)
-Path End         : state_19_55__i12/D  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i12/Q  (SLICE_R15C31C)
+Path End         : counter_19_55__i12/D  (SLICE_R15C31C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -5799,7 +5817,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -5836,7 +5854,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -5847,13 +5865,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/Q",
+        "log_name":"counter_19_55__i12/Q",
         "phy_name":"SLICE_0/Q0"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/D",
+        "log_name":"counter_19_55__i12/D",
         "phy_name":"SLICE_0/DI0"
     },
     "path_sections":[
@@ -5861,12 +5879,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i12/CK",
+            "log_name":"counter_19_55__i12/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i12/Q",
+            "log_name":"counter_19_55__i12/Q",
             "phy_name":"SLICE_0/Q0"
         },
         "arrive":3.863,
@@ -5886,12 +5904,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_13/C0",
+            "log_name":"counter_19_55_add_4_13/C0",
             "phy_name":"SLICE_0/C0"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_13/S0",
+            "log_name":"counter_19_55_add_4_13/S0",
             "phy_name":"SLICE_0/F0"
         },
         "arrive":4.997,
@@ -5928,12 +5946,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i12/CK->state_19_55__i12/Q   SLICE_R15C31C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+counter_19_55__i12/CK->counter_19_55__i12/Q
+                                          SLICE_R15C31C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
 n2                                                           NET DELAY        0.882                  4.745  1       
-state_19_55_add_4_13/C0->state_19_55_add_4_13/S0
+counter_19_55_add_4_13/C0->counter_19_55_add_4_13/S0
                                           SLICE_R15C31C      C0_TO_F0_DELAY   0.252                  4.997  1       
 n59                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i12/D                                           ENDPOINT         0.000                  4.997  1       
+counter_19_55__i12/D                                         ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -5949,7 +5968,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -6002,7 +6021,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -6017,8 +6036,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : state_19_55__i13/Q  (SLICE_R15C31C)
-Path End         : state_19_55__i13/D  (SLICE_R15C31C)
+Path Begin       : counter_19_55__i13/Q  (SLICE_R15C31C)
+Path End         : counter_19_55__i13/D  (SLICE_R15C31C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -6041,7 +6060,7 @@ Source Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -6078,7 +6097,7 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
@@ -6089,13 +6108,13 @@ Data Path
     "path_begin":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/Q",
+        "log_name":"counter_19_55__i13/Q",
         "phy_name":"SLICE_0/Q1"
     },
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i13/D",
+        "log_name":"counter_19_55__i13/D",
         "phy_name":"SLICE_0/DI1"
     },
     "path_sections":[
@@ -6103,12 +6122,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55__i13/CK",
+            "log_name":"counter_19_55__i13/CK",
             "phy_name":"SLICE_0/CLK"
         },
         "pin1":
         {
-            "log_name":"state_19_55__i13/Q",
+            "log_name":"counter_19_55__i13/Q",
             "phy_name":"SLICE_0/Q1"
         },
         "arrive":3.863,
@@ -6118,8 +6137,8 @@ Data Path
         "type":"net_delay",
         "net":
         {
-            "log_name":"state[12]",
-            "phy_name":"state[12]"
+            "log_name":"counter[12]",
+            "phy_name":"counter[12]"
         },
         "arrive":4.745,
         "delay":0.882
@@ -6128,12 +6147,12 @@ Data Path
         "type":"site_delay",
         "pin0":
         {
-            "log_name":"state_19_55_add_4_13/C1",
+            "log_name":"counter_19_55_add_4_13/C1",
             "phy_name":"SLICE_0/C1"
         },
         "pin1":
         {
-            "log_name":"state_19_55_add_4_13/S1",
+            "log_name":"counter_19_55_add_4_13/S1",
             "phy_name":"SLICE_0/F1"
         },
         "arrive":4.997,
@@ -6170,12 +6189,13 @@ Data Path
 </tapath>
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-state_19_55__i13/CK->state_19_55__i13/Q   SLICE_R15C31C      CLK_TO_Q1_DELAY  0.779                  3.863  7       
-state[12]                                                    NET DELAY        0.882                  4.745  7       
-state_19_55_add_4_13/C1->state_19_55_add_4_13/S1
+counter_19_55__i13/CK->counter_19_55__i13/Q
+                                          SLICE_R15C31C      CLK_TO_Q1_DELAY  0.779                  3.863  7       
+counter[12]                                                  NET DELAY        0.882                  4.745  7       
+counter_19_55_add_4_13/C1->counter_19_55_add_4_13/S1
                                           SLICE_R15C31C      C1_TO_F1_DELAY   0.252                  4.997  1       
 n58                                                          NET DELAY        0.000                  4.997  1       
-state_19_55__i13/D                                           ENDPOINT         0.000                  4.997  1       
+counter_19_55__i13/D                                         ENDPOINT         0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -6191,7 +6211,7 @@ Destination Clock Path
     "path_end":
     {
         "type":"pin",
-        "log_name":"state_19_55__i12/CK",
+        "log_name":"counter_19_55__i12/CK",
         "phy_name":"SLICE_0/CLK"
     },
     "path_sections":[
@@ -6244,7 +6264,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  13      
 int_osc                                                      NET DELAY        3.084                  3.084  13      
-{state_19_55__i12/CK   state_19_55__i13/CK}
+{counter_19_55__i12/CK   counter_19_55__i13/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
