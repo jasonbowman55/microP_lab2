@@ -45,7 +45,6 @@ end
 seven_seg_decoder MOD1 (reset, seg, select);
 
 binary_disp_decoder MOD2 (left, right, led);
-//**
 
 endmodule
 
